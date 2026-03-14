@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Nexus Games - Cyberpunk 2077</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#9f1fef",
+                        "background-light": "#f7f6f8",
+                        "background-dark": "#1b1022",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .material-symbols-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+        <!-- Top Navigation Bar -->
+        <header
+            class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/20 px-6 py-4 md:px-20 lg:px-40 bg-background-dark/80 backdrop-blur-md sticky top-0 z-50">
+            <div class="flex items-center gap-8">
+                <div class="flex items-center gap-3">
+                    <div class="size-8 text-primary">
+                        <svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h2 class="text-slate-100 text-xl font-bold leading-tight tracking-tight">Nexus Games</h2>
+                </div>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium"
+                        href="#">Store</a>
+                    <a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium"
+                        href="#">Library</a>
+                    <a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium"
+                        href="#">Community</a>
+                    <a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium"
+                        href="#">Support</a>
+                </nav>
+            </div>
+            <div class="flex flex-1 justify-end gap-6 items-center">
+                <label class="hidden lg:flex relative min-w-40 h-10 max-w-64">
+                    <span
+                        class="absolute left-3 top-1/2 -translate-y-1/2 text-primary/70 material-symbols-outlined">search</span>
+                    <input
+                        class="w-full h-full pl-10 pr-4 rounded-lg text-slate-100 bg-primary/10 border-none focus:ring-1 focus:ring-primary placeholder:text-slate-500 text-sm font-normal"
+                        placeholder="Search games..." />
+                </label>
+                <div class="flex gap-3">
+                    <button
+                        class="flex items-center justify-center rounded-lg size-10 bg-primary/10 text-slate-100 hover:bg-primary/20 transition-all">
+                        <span class="material-symbols-outlined">shopping_cart</span>
+                    </button>
+                    <button
+                        class="flex items-center justify-center rounded-lg size-10 bg-primary/10 text-slate-100 hover:bg-primary/20 transition-all">
+                        <span class="material-symbols-outlined">person</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main class="flex-1 w-full max-w-[1280px] mx-auto">
+            <!-- Hero Section -->
+            <section class="p-4 md:p-8 lg:p-10">
+                <div class="relative overflow-hidden rounded-xl aspect-[21/9] min-h-[400px] shadow-2xl">
+                    <div class="absolute inset-0 bg-cover bg-center"
+                        data-alt="Cinematic neon futuristic city landscape background"
+                        style="background-image: linear-gradient(to top, rgba(27, 16, 34, 1) 0%, rgba(27, 16, 34, 0.4) 40%, rgba(27, 16, 34, 0) 100%), url('https://lh3.googleusercontent.com/aida-public/AB6AXuBiBn-ZMW-AJC332SXvD7QPVl-yGMPnf5smeKEcxLcwsfrATOZHIsuBHuElMNRiE274t7MjDmVGSwG0JJcqJd7JE0n5QUL-V34e_boSc11Gfsf5FkpeeJdftNaI5ARA8dg_H5eYGsbT7781VulfkSHVTa-cASp-fs6q7Zt7fyH90kKSd5jMapGIgrBul_YcyWtHKiFAMndF8WJ57ntksbiWwhe54gjYpcxB0qcmoK2n8WFrl_iH7KL6be3_tqEwNzxa7sDkDhkhx0mP');">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 p-8 md:p-12 w-full flex flex-col md:flex-row items-end justify-between gap-6">
+                        <div class="flex flex-col gap-2">
+                            <span
+                                class="inline-flex px-3 py-1 bg-primary text-xs font-bold uppercase tracking-widest rounded text-white w-fit">Open
+                                World RPG</span>
+                            <h1 class="text-slate-100 text-4xl md:text-6xl font-bold leading-none tracking-tight">
+                                Cyberpunk 2077</h1>
+                            <p class="text-slate-300 text-lg">Night City changes every man. What will it change in you?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Main Content Area -->
+            <div class="flex flex-col lg:flex-row gap-8 p-4 md:p-8 lg:p-10">
+                <!-- Left Column: Details & Tabs -->
+                <div class="flex-1 flex flex-col gap-8">
+                    <!-- Info Header -->
+                    <div
+                        class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 bg-primary/5 p-6 rounded-xl border border-primary/10">
+                        <div class="flex gap-6 items-center">
+                            <div class="size-24 rounded-lg bg-cover bg-center shadow-lg"
+                                data-alt="Cyberpunk 2077 game box art icon"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCLeAT2pP_kWgZAF0ndmfJAX-SqdVpn5PYJPCAcxQMxYkUHQs5_iHVOn68yd4FfWS1YOfJOCao3EzkQ9O3QnEQdU5LJsokFyQZzMIpddzpxcImvPwtQ2amAPTGdVhZMUlUAq-i9X6eYCgba-FA2fGhhaxDxImeZSoYAR3h_rCePFt9P_g8CWcSSIWjT7lcATfQDIc0rGJzjTXjsqV6ILGm_EGDPvO2_SytUb1pi_0IzvnlIax7c7PSeyxLOb3L3IspeTG5G_CJMpN36');">
+                            </div>
+                            <div class="flex flex-col">
+                                <h3 class="text-xl font-bold">Cyberpunk 2077</h3>
+                                <p class="text-slate-400">CD PROJEKT RED</p>
+                                <p class="text-primary text-sm font-medium">Released: Dec 10, 2020</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3 w-full md:w-auto">
+                            <div class="flex items-center justify-between md:justify-end gap-4">
+                                <span class="text-2xl font-bold text-slate-100">$59.99</span>
+                                <div class="flex gap-2">
+                                    <button
+                                        class="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded-lg transition-all shadow-lg shadow-primary/20">Buy
+                                        Now</button>
+                                    <button
+                                        class="bg-slate-800 hover:bg-slate-700 text-slate-100 p-3 rounded-lg transition-all">
+                                        <span class="material-symbols-outlined">favorite</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tabs -->
+                    <div class="flex flex-col gap-6">
+                        <div class="flex border-b border-primary/20">
+                            <button
+                                class="px-6 py-4 border-b-2 border-primary text-primary font-bold">Description</button>
+                            <button
+                                class="px-6 py-4 border-b-2 border-transparent text-slate-400 hover:text-slate-100 transition-colors">System
+                                Requirements</button>
+                            <button
+                                class="px-6 py-4 border-b-2 border-transparent text-slate-400 hover:text-slate-100 transition-colors">Media</button>
+                        </div>
+                        <div class="space-y-4 text-slate-300 leading-relaxed">
+                            <p>Cyberpunk 2077 is an open-world, action-adventure story set in Night City, a megalopolis
+                                obsessed with power, glamour and body modification. You play as V, a mercenary outlaw
+                                going after a one-of-a-kind implant that is the key to immortality.</p>
+                            <p>You can customize your character’s cyberware, skillset and playstyle, and explore a vast
+                                city where the choices you make shape the story and the world around you.</p>
+                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                                <li class="flex items-start gap-2">
+                                    <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                    <span>Become a Mercenary Outlaw</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                    <span>Live in the City of the Future</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                    <span>Steal the Implant that Grants Eternal Life</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                    <span>Deep Narrative Choices</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- System Requirements Placeholder Section -->
+                        <div class="mt-8">
+                            <h4 class="text-xl font-bold mb-4">System Requirements</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 bg-slate-900/50 p-6 rounded-xl">
+                                <div>
+                                    <h5 class="text-primary font-bold mb-3 uppercase text-xs tracking-wider">Minimum
+                                    </h5>
+                                    <ul class="space-y-2 text-sm text-slate-400">
+                                        <li><strong class="text-slate-300">OS:</strong> Windows 10 64-bit</li>
+                                        <li><strong class="text-slate-300">Processor:</strong> Intel Core i5-3570K / AMD
+                                            FX-8310</li>
+                                        <li><strong class="text-slate-300">Memory:</strong> 8 GB RAM</li>
+                                        <li><strong class="text-slate-300">Graphics:</strong> NVIDIA GeForce GTX 970 /
+                                            AMD Radeon RX 470</li>
+                                        <li><strong class="text-slate-300">Storage:</strong> 70 GB available space (SSD
+                                            recommended)</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h5 class="text-primary font-bold mb-3 uppercase text-xs tracking-wider">Recommended
+                                    </h5>
+                                    <ul class="space-y-2 text-sm text-slate-400">
+                                        <li><strong class="text-slate-300">OS:</strong> Windows 10 64-bit</li>
+                                        <li><strong class="text-slate-300">Processor:</strong> Intel Core i7-4790 / AMD
+                                            Ryzen 3 3200G</li>
+                                        <li><strong class="text-slate-300">Memory:</strong> 12 GB RAM</li>
+                                        <li><strong class="text-slate-300">Graphics:</strong> NVIDIA GeForce GTX 1060 /
+                                            AMD Radeon RX 580</li>
+                                        <li><strong class="text-slate-300">Storage:</strong> 70 GB available space (SSD)
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Column: Rating & Quick Reviews -->
+                <div class="w-full lg:w-80 flex flex-col gap-6">
+                    <div class="bg-primary/5 border border-primary/10 p-6 rounded-xl flex flex-col gap-6">
+                        <h4 class="font-bold text-lg">Player Reviews</h4>
+                        <div class="flex flex-col gap-2">
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-5xl font-black text-primary">4.5</span>
+                                <span class="text-slate-400 text-sm">/ 5.0</span>
+                            </div>
+                            <div class="flex text-primary">
+                                <span class="material-symbols-outlined material-symbols-fill">star</span>
+                                <span class="material-symbols-outlined material-symbols-fill">star</span>
+                                <span class="material-symbols-outlined material-symbols-fill">star</span>
+                                <span class="material-symbols-outlined material-symbols-fill">star</span>
+                                <span class="material-symbols-outlined">star_half</span>
+                            </div>
+                            <p class="text-slate-400 text-sm">Based on 1.2M reviews</p>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3 text-xs">
+                                <span class="w-2">5</span>
+                                <div class="flex-1 h-1.5 bg-primary/10 rounded-full overflow-hidden">
+                                    <div class="h-full bg-primary" style="width: 72%"></div>
+                                </div>
+                                <span class="text-slate-400">72%</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-xs">
+                                <span class="w-2">4</span>
+                                <div class="flex-1 h-1.5 bg-primary/10 rounded-full overflow-hidden">
+                                    <div class="h-full bg-primary" style="width: 18%"></div>
+                                </div>
+                                <span class="text-slate-400">18%</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-xs">
+                                <span class="w-2">3</span>
+                                <div class="flex-1 h-1.5 bg-primary/10 rounded-full overflow-hidden">
+                                    <div class="h-full bg-primary" style="width: 5%"></div>
+                                </div>
+                                <span class="text-slate-400">5%</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-xs">
+                                <span class="w-2">2</span>
+                                <div class="flex-1 h-1.5 bg-primary/10 rounded-full overflow-hidden">
+                                    <div class="h-full bg-primary" style="width: 3%"></div>
+                                </div>
+                                <span class="text-slate-400">3%</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-xs">
+                                <span class="w-2">1</span>
+                                <div class="flex-1 h-1.5 bg-primary/10 rounded-full overflow-hidden">
+                                    <div class="h-full bg-primary" style="width: 2%"></div>
+                                </div>
+                                <span class="text-slate-400">2%</span>
+                            </div>
+                        </div>
+                        <button
+                            class="w-full py-3 border border-primary/30 rounded-lg text-primary font-bold text-sm hover:bg-primary/10 transition-colors">See
+                            All Reviews</button>
+                    </div>
+                    <!-- Game Features Widget -->
+                    <div class="bg-slate-900/40 p-6 rounded-xl space-y-4">
+                        <h4 class="font-bold text-sm uppercase tracking-widest text-slate-500">Features</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-800 rounded text-xs text-slate-300 flex items-center gap-1">
+                                <span class="material-symbols-outlined text-[14px]">person</span> Single-player
+                            </span>
+                            <span class="px-3 py-1 bg-slate-800 rounded text-xs text-slate-300 flex items-center gap-1">
+                                <span class="material-symbols-outlined text-[14px]">emoji_events</span> Achievements
+                            </span>
+                            <span class="px-3 py-1 bg-slate-800 rounded text-xs text-slate-300 flex items-center gap-1">
+                                <span class="material-symbols-outlined text-[14px]">cloud_done</span> Cloud Saves
+                            </span>
+                            <span class="px-3 py-1 bg-slate-800 rounded text-xs text-slate-300 flex items-center gap-1">
+                                <span class="material-symbols-outlined text-[14px]">videogame_asset</span> Controller
+                                Support
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Recent Reviews Section -->
+            <section class="p-4 md:p-8 lg:p-10">
+                <h3 class="text-2xl font-bold mb-8">Recent Reviews</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-slate-900/30 p-6 rounded-xl border border-primary/5">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="flex gap-3 items-center">
+                                <div
+                                    class="size-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">
+                                    JD</div>
+                                <div>
+                                    <h5 class="font-bold text-sm">JohnnySilverhand_2077</h5>
+                                    <p class="text-slate-500 text-xs">Recommended • 240 hours played</p>
+                                </div>
+                            </div>
+                            <div class="text-primary flex">
+                                <span class="material-symbols-outlined text-sm material-symbols-fill">star</span>
+                                <span class="material-symbols-outlined text-sm material-symbols-fill">star</span>
+                                <span class="material-symbols-outlined text-sm material-symbols-fill">star</span>
+                                <span class="material-symbols-outlined text-sm material-symbols-fill">star</span>
+                                <span class="material-symbols-outlined text-sm material-symbols-fill">star</span>
+                            </div>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed">The phantom liberty update fixed everything.
+                            Night city is now a living, breathing masterpiece that everyone needs to experience. The
+                            lighting and atmosphere are unmatched.</p>
+                    </div>
+                    <div class="bg-slate-900/30 p-6 rounded-xl border border-primary/5">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="flex gap-3 items-center">
+                                <div
+                                    class="size-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">
+                                    NS</div>
+                                <div>
+                                    <h5 class="font-bold text-sm">NeonSamurai</h5>
+                                    <p class="text-slate-500 text-xs">Recommended • 85 hours played</p>
+                                </div>
+                            </div>
+                            <div class="text-primary flex">
+                                <span class="material-symbols-outlined text-sm material-symbols-fill">star</span>
+                                <span class="material-symbols-outlined text-sm material-symbols-fill">star</span>
+                                <span class="material-symbols-outlined text-sm material-symbols-fill">star</span>
+                                <span class="material-symbols-outlined text-sm material-symbols-fill">star</span>
+                                <span class="material-symbols-outlined text-sm">star</span>
+                            </div>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed">Solid 4/5. The story is gripping and the
+                            graphics on a high-end PC are breathtaking. Still some minor pathfinding issues but nothing
+                            that breaks the immersion.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer class="mt-20 border-t border-primary/10 bg-background-dark py-12 px-10">
+            <div class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between gap-10">
+                <div class="flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <div class="size-6 text-primary">
+                            <svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h2 class="text-slate-100 text-lg font-bold">Nexus Games</h2>
+                    </div>
+                    <p class="text-slate-500 text-sm max-w-xs">Your ultimate destination for the latest in digital
+                        entertainment and gaming community.</p>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-12">
+                    <div class="flex flex-col gap-4">
+                        <h4 class="text-slate-100 font-bold text-sm">Products</h4>
+                        <a class="text-slate-500 text-sm hover:text-primary transition-colors" href="#">Games</a>
+                        <a class="text-slate-500 text-sm hover:text-primary transition-colors" href="#">Software</a>
+                        <a class="text-slate-500 text-sm hover:text-primary transition-colors" href="#">Hardware</a>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h4 class="text-slate-100 font-bold text-sm">Company</h4>
+                        <a class="text-slate-500 text-sm hover:text-primary transition-colors" href="#">About Us</a>
+                        <a class="text-slate-500 text-sm hover:text-primary transition-colors" href="#">Careers</a>
+                        <a class="text-slate-500 text-sm hover:text-primary transition-colors" href="#">Contact</a>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h4 class="text-slate-100 font-bold text-sm">Legal</h4>
+                        <a class="text-slate-500 text-sm hover:text-primary transition-colors" href="#">Privacy</a>
+                        <a class="text-slate-500 text-sm hover:text-primary transition-colors" href="#">Terms</a>
+                        <a class="text-slate-500 text-sm hover:text-primary transition-colors" href="#">Cookie
+                            Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="max-w-[1280px] mx-auto mt-12 pt-8 border-t border-primary/10 text-center text-slate-600 text-xs">
+                © 2024 Nexus Games. All rights reserved. Cyberpunk 2077 is a trademark of CD PROJEKT RED.
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
