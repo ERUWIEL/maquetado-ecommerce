@@ -1,0 +1,407 @@
+/* ════════════════════════════════════════
+   INDEX.CSS — Nexus Games
+   Estilos específicos de la página principal
+   ════════════════════════════════════════ */
+
+/* ── Hero ── */
+.hero {
+    position: relative;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    margin-bottom: 48px;
+    border: 1px solid var(--border);
+    box-shadow: 0 0 60px rgba(159, 31, 239, 0.15);
+    aspect-ratio: 21 / 9;
+}
+
+.hero-img {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(90deg, rgba(27, 16, 34, 0.95) 0%, rgba(27, 16, 34, 0.5) 55%, transparent 100%),
+        url('https://lh3.googleusercontent.com/aida-public/AB6AXuBZ4e5aNV6COIHISy93pCaf7X5Lh3bANH6Q4l-U5vtBSXf8JgBR52MMW0-NQfWaoa0Wnbj4SGWiFo7y4DbDzhWtLCi7hLF9UgIqldS6ZWHqM3gBEyx2pG5Yk1YwCju1x7rV0dhoNV9KmdaFGkvKM9lH7D1R9vODuFDn4AliQczYBgUEMJ_EjgUZp6fRz_ZCQEaAv2oR-vXLd5hNIj1V4zV5FxJkcDlb3XLnv80Ze1p3CCS4aulvk_Rlf5UWo6fEtTP1tDyOHxh-2w0f');
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.6s ease;
+}
+
+.hero:hover .hero-img {
+    transform: scale(1.03);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 48px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    max-width: 580px;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--primary);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    padding: 5px 12px;
+    border-radius: var(--radius-pill);
+    margin-bottom: 16px;
+    width: fit-content;
+    box-shadow: 0 0 18px var(--primary-glow);
+}
+
+.hero-title {
+    font-family: var(--font-title);
+    font-size: 56px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.0;
+    margin-bottom: 14px;
+    letter-spacing: 0.5px;
+}
+
+.hero-desc {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.65);
+    margin-bottom: 28px;
+    line-height: 1.7;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* ── Grid de juegos trending ── */
+.games-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.game-card {
+    cursor: pointer;
+}
+
+.game-card-img {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-bottom: 12px;
+    border: 1px solid var(--border);
+}
+
+.game-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.game-card:hover .game-card-img img {
+    transform: scale(1.07);
+}
+
+.game-card:hover .game-card-img {
+    border-color: var(--border-hover);
+}
+
+.game-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(27, 16, 34, 0.7), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.game-card:hover .game-card-overlay {
+    opacity: 1;
+}
+
+.game-card-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.game-card-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+    transition: color 0.2s;
+}
+
+.game-card:hover .game-card-name {
+    color: var(--primary-light);
+}
+
+.game-card-price {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.game-card-price .current {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--primary-light);
+}
+
+.game-card-price .original {
+    font-size: 12px;
+    color: var(--text-dim);
+    text-decoration: line-through;
+}
+
+/* ── New Releases (scroll horizontal) ── */
+.releases-scroll {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) transparent;
+}
+
+.release-card {
+    flex: none;
+    width: 300px;
+    cursor: pointer;
+}
+
+.release-card-img {
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    margin-bottom: 10px;
+    border: 1px solid var(--border);
+}
+
+.release-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.release-card:hover .release-card-img img {
+    transform: scale(1.06);
+}
+
+.release-card:hover .release-card-img {
+    border-color: var(--border-hover);
+}
+
+.release-card-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.release-card-info h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.release-card-info p {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.release-card-info .price {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--primary-light);
+}
+
+/* ── Nav arrows ── */
+.nav-arrows {
+    display: flex;
+    gap: 6px;
+}
+
+.nav-arrow {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.nav-arrow:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    background: var(--primary-soft);
+}
+
+.nav-arrow.active {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+.nav-arrow .material-symbols-outlined {
+    font-size: 18px;
+}
+
+/* ── Footer ampliado del index ── */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 40px;
+    padding: 40px 40px 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 16px;
+}
+
+.footer-brand p {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 10px;
+    line-height: 1.7;
+}
+
+.footer-social {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.footer-social a {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--primary-soft);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-light);
+    transition: all 0.2s;
+}
+
+.footer-social a:hover {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+.footer-social .material-symbols-outlined {
+    font-size: 16px;
+}
+
+.footer-col h4 {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.footer-col li {
+    margin-bottom: 10px;
+}
+
+.footer-col a {
+    font-size: 13px;
+    color: var(--text-muted);
+    transition: color 0.2s;
+}
+
+.footer-col a:hover {
+    color: var(--primary-light);
+}
+
+.footer-newsletter p {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.footer-newsletter .newsletter-form {
+    display: flex;
+    gap: 8px;
+}
+
+.footer-newsletter input {
+    flex: 1;
+    background: var(--primary-soft);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 8px 14px;
+    color: var(--text);
+    font-size: 13px;
+    font-family: var(--font-body);
+    outline: none;
+}
+
+.footer-newsletter input:focus {
+    border-color: var(--primary);
+}
+
+.footer-newsletter button {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius-md);
+    padding: 8px 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.footer-newsletter button .material-symbols-outlined {
+    font-size: 18px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+    .games-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero-title {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 640px) {
+    .games-grid-4 {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-title {
+        font-size: 30px;
+    }
+
+    .hero-content {
+        padding: 24px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 24px 16px;
+    }
+}
