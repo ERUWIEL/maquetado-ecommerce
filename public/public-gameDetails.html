@@ -12,34 +12,31 @@
 
 <body>
     <div class="game-layout">
-        <!-- Top Navigation Bar -->
-        <header class="game-header">
-            <div class="game-header-brand">
-                <a href="../index.html" class="topbar-brand">
-                    <div class="topbar-logo">
-                        <span class="material-symbols-outlined">rocket_launch</span>
-                    </div>
-                    <span class="topbar-name">NEXUS GAMES</span>
-                </a>
-                <nav class="game-nav">
-                    <a href="#">Store</a>
-                    <a href="#">Library</a>
-                    <a href="#">Community</a>
-                    <a href="#">Support</a>
-                </nav>
-            </div>
-            <div class="game-header-actions">
-                <div class="game-search-wrapper">
-                    <span class="material-symbols-outlined">search</span>
-                    <input class="input" placeholder="Search games..." />
+        <!-- ══════════════════════════════════════
+       MAIN UNIFIED HEADER
+  ══════════════════════════════════════ -->
+        <header class="navbar">
+            <div class="container navbar-container">
+                <div class="brand">
+                    <a href="../index.html" class="brand-icon" style="text-decoration: none;">
+                        <img src="../images/2-removebg-preview.png" alt="Nexus Games" style="height: 32px; padding: 2px; background: rgba(139, 92, 246, 0.1); border-radius: 8px;">
+                    </a>
+                    <h1 class="brand-name">Nexus Games</h1>
                 </div>
-                <div class="game-actions-btns">
-                    <button class="game-action-btn">
-                        <span class="material-symbols-outlined">shopping_cart</span>
-                    </button>
-                    <button class="game-action-btn">
-                        <span class="material-symbols-outlined">person</span>
-                    </button>
+
+                <nav class="nav-links">
+                    <a href="pulbic-home.html">Home</a>
+                    <a href="public-catalog.html">Store</a>
+                    <a href="#">Library</a>
+                </nav>
+
+                <div class="nav-actions">
+                    <div class="search-bar">
+                        <span class="material-symbols-outlined search-icon">search</span>
+                        <input type="text" placeholder="Search games..." />
+                    </div>
+                    <button class="icon-btn"><span class="material-symbols-outlined">shopping_cart</span></button>
+                    <button class="icon-btn"><span class="material-symbols-outlined">account_circle</span></button>
                 </div>
             </div>
         </header>
@@ -47,7 +44,9 @@
             <!-- Hero Section -->
             <section class="game-hero-section">
                 <div class="game-hero">
-                    <div class="game-hero-bg" style="background-image: linear-gradient(to top, rgba(27, 16, 34, 1) 0%, rgba(27, 16, 34, 0.4) 40%, rgba(27, 16, 34, 0) 100%), url('https://lh3.googleusercontent.com/aida-public/AB6AXuBiBn-ZMW-AJC332SXvD7QPVl-yGMPnf5smeKEcxLcwsfrATOZHIsuBHuElMNRiE274t7MjDmVGSwG0JJcqJd7JE0n5QUL-V34e_boSc11Gfsf5FkpeeJdftNaI5ARA8dg_H5eYGsbT7781VulfkSHVTa-cASp-fs6q7Zt7fyH90kKSd5jMapGIgrBul_YcyWtHKiFAMndF8WJ57ntksbiWwhe54gjYpcxB0qcmoK2n8WFrl_iH7KL6be3_tqEwNzxa7sDkDhkhx0mP');"></div>
+                    <div class="game-hero-bg"
+                        style="background-image: linear-gradient(to top, rgba(27, 16, 34, 1) 0%, rgba(27, 16, 34, 0.4) 40%, rgba(27, 16, 34, 0) 100%), url('https://lh3.googleusercontent.com/aida-public/AB6AXuBiBn-ZMW-AJC332SXvD7QPVl-yGMPnf5smeKEcxLcwsfrATOZHIsuBHuElMNRiE274t7MjDmVGSwG0JJcqJd7JE0n5QUL-V34e_boSc11Gfsf5FkpeeJdftNaI5ARA8dg_H5eYGsbT7781VulfkSHVTa-cASp-fs6q7Zt7fyH90kKSd5jMapGIgrBul_YcyWtHKiFAMndF8WJ57ntksbiWwhe54gjYpcxB0qcmoK2n8WFrl_iH7KL6be3_tqEwNzxa7sDkDhkhx0mP');">
+                    </div>
                     <div class="game-hero-content">
                         <span class="game-hero-badge">Open World RPG</span>
                         <h1 class="game-hero-title">Cyberpunk 2077</h1>
@@ -55,7 +54,7 @@
                     </div>
                 </div>
             </section>
-            
+
             <!-- Main Content Area -->
             <div class="game-content-layout">
                 <!-- Left Column: Details & Tabs -->
@@ -63,7 +62,9 @@
                     <!-- Info Header -->
                     <div class="game-info-header">
                         <div class="game-info-left">
-                            <div class="game-info-icon" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCLeAT2pP_kWgZAF0ndmfJAX-SqdVpn5PYJPCAcxQMxYkUHQs5_iHVOn68yd4FfWS1YOfJOCao3EzkQ9O3QnEQdU5LJsokFyQZzMIpddzpxcImvPwtQ2amAPTGdVhZMUlUAq-i9X6eYCgba-FA2fGhhaxDxImeZSoYAR3h_rCePFt9P_g8CWcSSIWjT7lcATfQDIc0rGJzjTXjsqV6ILGm_EGDPvO2_SytUb1pi_0IzvnlIax7c7PSeyxLOb3L3IspeTG5G_CJMpN36');"></div>
+                            <div class="game-info-icon"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCLeAT2pP_kWgZAF0ndmfJAX-SqdVpn5PYJPCAcxQMxYkUHQs5_iHVOn68yd4FfWS1YOfJOCao3EzkQ9O3QnEQdU5LJsokFyQZzMIpddzpxcImvPwtQ2amAPTGdVhZMUlUAq-i9X6eYCgba-FA2fGhhaxDxImeZSoYAR3h_rCePFt9P_g8CWcSSIWjT7lcATfQDIc0rGJzjTXjsqV6ILGm_EGDPvO2_SytUb1pi_0IzvnlIax7c7PSeyxLOb3L3IspeTG5G_CJMpN36');">
+                            </div>
                             <div class="game-info-text">
                                 <h3>Cyberpunk 2077</h3>
                                 <p class="dev">CD PROJEKT RED</p>
@@ -74,11 +75,12 @@
                             <span class="game-info-price">$59.99</span>
                             <div class="game-info-actions">
                                 <button class="btn btn-primary" style="padding: 12px 32px;">Buy Now</button>
-                                <button class="btn btn-ghost" style="padding: 12px;"><span class="material-symbols-outlined">favorite</span></button>
+                                <button class="btn btn-ghost" style="padding: 12px;"><span
+                                        class="material-symbols-outlined">favorite</span></button>
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Tabs -->
                     <div>
                         <div class="game-tabs">
@@ -88,17 +90,25 @@
                         </div>
                         <div style="padding-top: 24px;">
                             <div class="game-desc-content">
-                                <p>Cyberpunk 2077 is an open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification. You play as V, a mercenary outlaw going after a one-of-a-kind implant that is the key to immortality.</p>
-                                <p>You can customize your character’s cyberware, skillset and playstyle, and explore a vast city where the choices you make shape the story and the world around you.</p>
+                                <p>Cyberpunk 2077 is an open-world, action-adventure story set in Night City, a
+                                    megalopolis obsessed with power, glamour and body modification. You play as V, a
+                                    mercenary outlaw going after a one-of-a-kind implant that is the key to immortality.
+                                </p>
+                                <p>You can customize your character’s cyberware, skillset and playstyle, and explore a
+                                    vast city where the choices you make shape the story and the world around you.</p>
                                 <ul class="game-features-ul">
-                                    <li><span class="material-symbols-outlined">check_circle</span> <span>Become a Mercenary Outlaw</span></li>
-                                    <li><span class="material-symbols-outlined">check_circle</span> <span>Live in the City of the Future</span></li>
-                                    <li><span class="material-symbols-outlined">check_circle</span> <span>Steal the Implant that Grants Eternal Life</span></li>
-                                    <li><span class="material-symbols-outlined">check_circle</span> <span>Deep Narrative Choices</span></li>
+                                    <li><span class="material-symbols-outlined">check_circle</span> <span>Become a
+                                            Mercenary Outlaw</span></li>
+                                    <li><span class="material-symbols-outlined">check_circle</span> <span>Live in the
+                                            City of the Future</span></li>
+                                    <li><span class="material-symbols-outlined">check_circle</span> <span>Steal the
+                                            Implant that Grants Eternal Life</span></li>
+                                    <li><span class="material-symbols-outlined">check_circle</span> <span>Deep Narrative
+                                            Choices</span></li>
                                 </ul>
                             </div>
                         </div>
-                        
+
                         <!-- System Requirements -->
                         <div class="sys-req-section">
                             <h4>System Requirements</h4>
@@ -127,7 +137,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Right Column: Sidebar Widgets -->
                 <div class="game-sidebar-col">
                     <div class="game-widget">
@@ -138,10 +148,14 @@
                                 <span class="total">/ 5.0</span>
                             </div>
                             <div class="review-stars">
-                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined"
+                                    style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined"
+                                    style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined"
+                                    style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined"
+                                    style="font-variation-settings: 'FILL' 1;">star</span>
                                 <span class="material-symbols-outlined">star_half</span>
                             </div>
                             <span class="review-count">Based on 1.2M reviews</span>
@@ -149,45 +163,59 @@
                         <div class="review-bars">
                             <div class="review-bar-row">
                                 <span class="label">5</span>
-                                <div class="review-bar-track"><div class="review-bar-fill" style="width: 72%;"></div></div>
+                                <div class="review-bar-track">
+                                    <div class="review-bar-fill" style="width: 72%;"></div>
+                                </div>
                                 <span class="pct">72%</span>
                             </div>
                             <div class="review-bar-row">
                                 <span class="label">4</span>
-                                <div class="review-bar-track"><div class="review-bar-fill" style="width: 18%;"></div></div>
+                                <div class="review-bar-track">
+                                    <div class="review-bar-fill" style="width: 18%;"></div>
+                                </div>
                                 <span class="pct">18%</span>
                             </div>
                             <div class="review-bar-row">
                                 <span class="label">3</span>
-                                <div class="review-bar-track"><div class="review-bar-fill" style="width: 5%;"></div></div>
+                                <div class="review-bar-track">
+                                    <div class="review-bar-fill" style="width: 5%;"></div>
+                                </div>
                                 <span class="pct">5%</span>
                             </div>
                             <div class="review-bar-row">
                                 <span class="label">2</span>
-                                <div class="review-bar-track"><div class="review-bar-fill" style="width: 3%;"></div></div>
+                                <div class="review-bar-track">
+                                    <div class="review-bar-fill" style="width: 3%;"></div>
+                                </div>
                                 <span class="pct">3%</span>
                             </div>
                             <div class="review-bar-row">
                                 <span class="label">1</span>
-                                <div class="review-bar-track"><div class="review-bar-fill" style="width: 2%;"></div></div>
+                                <div class="review-bar-track">
+                                    <div class="review-bar-fill" style="width: 2%;"></div>
+                                </div>
                                 <span class="pct">2%</span>
                             </div>
                         </div>
                         <button class="review-all-btn">See All Reviews</button>
                     </div>
-                    
+
                     <div class="game-widget features-widget">
                         <h4>Features</h4>
                         <div class="features-tags">
-                            <span class="feature-tag"><span class="material-symbols-outlined">person</span> Single-player</span>
-                            <span class="feature-tag"><span class="material-symbols-outlined">emoji_events</span> Achievements</span>
-                            <span class="feature-tag"><span class="material-symbols-outlined">cloud_done</span> Cloud Saves</span>
-                            <span class="feature-tag"><span class="material-symbols-outlined">videogame_asset</span> Controller Support</span>
+                            <span class="feature-tag"><span class="material-symbols-outlined">person</span>
+                                Single-player</span>
+                            <span class="feature-tag"><span class="material-symbols-outlined">emoji_events</span>
+                                Achievements</span>
+                            <span class="feature-tag"><span class="material-symbols-outlined">cloud_done</span> Cloud
+                                Saves</span>
+                            <span class="feature-tag"><span class="material-symbols-outlined">videogame_asset</span>
+                                Controller Support</span>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Recent Reviews -->
             <section class="recent-reviews-section">
                 <h3>Recent Reviews</h3>
@@ -202,16 +230,23 @@
                                 </div>
                             </div>
                             <div class="review-stars">
-                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; font-size: 16px;">star</span>
-                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; font-size: 16px;">star</span>
-                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; font-size: 16px;">star</span>
-                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; font-size: 16px;">star</span>
-                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; font-size: 16px;">star</span>
+                                <span class="material-symbols-outlined"
+                                    style="font-variation-settings: 'FILL' 1; font-size: 16px;">star</span>
+                                <span class="material-symbols-outlined"
+                                    style="font-variation-settings: 'FILL' 1; font-size: 16px;">star</span>
+                                <span class="material-symbols-outlined"
+                                    style="font-variation-settings: 'FILL' 1; font-size: 16px;">star</span>
+                                <span class="material-symbols-outlined"
+                                    style="font-variation-settings: 'FILL' 1; font-size: 16px;">star</span>
+                                <span class="material-symbols-outlined"
+                                    style="font-variation-settings: 'FILL' 1; font-size: 16px;">star</span>
                             </div>
                         </div>
-                        <p class="review-card-content">The phantom liberty update fixed everything. Night city is now a living, breathing masterpiece that everyone needs to experience. The lighting and atmosphere are unmatched.</p>
+                        <p class="review-card-content">The phantom liberty update fixed everything. Night city is now a
+                            living, breathing masterpiece that everyone needs to experience. The lighting and atmosphere
+                            are unmatched.</p>
                     </div>
-                    
+
                     <div class="review-card">
                         <div class="review-card-header">
                             <div class="review-card-user">
@@ -222,56 +257,31 @@
                                 </div>
                             </div>
                             <div class="review-stars">
-                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; font-size: 16px;">star</span>
-                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; font-size: 16px;">star</span>
-                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; font-size: 16px;">star</span>
-                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; font-size: 16px;">star</span>
+                                <span class="material-symbols-outlined"
+                                    style="font-variation-settings: 'FILL' 1; font-size: 16px;">star</span>
+                                <span class="material-symbols-outlined"
+                                    style="font-variation-settings: 'FILL' 1; font-size: 16px;">star</span>
+                                <span class="material-symbols-outlined"
+                                    style="font-variation-settings: 'FILL' 1; font-size: 16px;">star</span>
+                                <span class="material-symbols-outlined"
+                                    style="font-variation-settings: 'FILL' 1; font-size: 16px;">star</span>
                                 <span class="material-symbols-outlined" style="font-size: 16px;">star</span>
                             </div>
                         </div>
-                        <p class="review-card-content">Solid 4/5. The story is gripping and the graphics on a high-end PC are breathtaking. Still some minor pathfinding issues but nothing that breaks the immersion.</p>
+                        <p class="review-card-content">Solid 4/5. The story is gripping and the graphics on a high-end
+                            PC are breathtaking. Still some minor pathfinding issues but nothing that breaks the
+                            immersion.</p>
                     </div>
                 </div>
             </section>
         </main>
-        
+
         <!-- Footer -->
-        <footer class="game-footer">
-            <div class="game-footer-inner">
-                <div class="game-footer-brand">
-                    <a href="../index.html" class="topbar-brand" style="margin-bottom: 16px;">
-                        <div class="topbar-logo">
-                            <span class="material-symbols-outlined">rocket_launch</span>
-                        </div>
-                        <span class="topbar-name">NEXUS GAMES</span>
-                    </a>
-                    <p>Your ultimate destination for the latest in digital entertainment and gaming community.</p>
-                </div>
-                <div class="game-footer-links-grid">
-                    <div class="game-footer-col">
-                        <h4>Products</h4>
-                        <a href="#">Games</a>
-                        <a href="#">Software</a>
-                        <a href="#">Hardware</a>
-                    </div>
-                    <div class="game-footer-col">
-                        <h4>Company</h4>
-                        <a href="#">About Us</a>
-                        <a href="#">Careers</a>
-                        <a href="#">Contact</a>
-                    </div>
-                    <div class="game-footer-col">
-                        <h4>Legal</h4>
-                        <a href="#">Privacy</a>
-                        <a href="#">Terms</a>
-                        <a href="#">Cookie Policy</a>
-                    </div>
-                </div>
-            </div>
-            <div class="game-footer-bottom">
-                © 2024 Nexus Games. All rights reserved. Cyberpunk 2077 is a trademark of CD PROJEKT RED.
-            </div>
+        <footer class="game-footer"
+            style="padding: 24px; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); margin-top: auto;">
+            <p style="color: var(--text-muted); font-size: 14px;">© 2024 Nexus Games. All rights reserved.</p>
         </footer>
     </div>
 </body>
+
 </html>

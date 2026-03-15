@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,27 +10,34 @@
     <link rel="stylesheet" href="../css/sidebar.css" />
     <link rel="stylesheet" href="../css/catalog.css" />
 </head>
+
 <body>
     <div class="layout">
-        <!-- TOPBAR -->
-        <header class="topbar">
-            <a href="../index.html" class="topbar-brand">
-                <div class="topbar-logo">
-                    <span class="material-symbols-outlined">rocket_launch</span>
+        <!-- ══════════════════════════════════════
+       MAIN UNIFIED HEADER
+  ══════════════════════════════════════ -->
+        <header class="navbar">
+            <div class="container navbar-container">
+                <div class="brand">
+                    <a href="../index.html" class="brand-icon" style="text-decoration: none;">
+                        <img src="../images/2-removebg-preview.png" alt="Nexus Games" style="height: 32px; padding: 2px; background: rgba(139, 92, 246, 0.1); border-radius: 8px;">
+                    </a>
+                    <h1 class="brand-name">Nexus Games</h1>
                 </div>
-                <span class="topbar-name">NEXUS GAMES</span>
-            </a>
-            
-            <div class="catalog-search-wrapper">
-                <span class="material-symbols-outlined">search</span>
-                <input placeholder="Search for games, expansions, or publishers" />
-            </div>
 
-            <div class="topbar-actions">
-                <a href="#" class="topbar-icon-btn"><span class="material-symbols-outlined">shopping_cart</span></a>
-                <a href="#" class="topbar-icon-btn"><span class="material-symbols-outlined">person</span></a>
-                <div class="catalog-avatar">
-                   <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbY2Coo1vyVqFMljxxOXZLQ2v331DDR9QGXpDzRO1aoQR6qHmu7oEzfW5mCMtwFD7Ht7h01KmMdJOSX9WyYz-fc0ylgObaQTktOlacfaYV8ppDKGnSpuL5bw43QWiKAZSDgXQME3eXRSdHKQ6ei32Lphruu5bLxvfZ88-vhI6C_WHzfuTtKIGbNavBw0zA66bBlroYIrO0kbc-GCdd60-OcMw7pd250MHikx41vTO3Mcm0O-3AYBT0OtGR17lsZoaKl6-L8ZGfXJ4P" alt="User">
+                <nav class="nav-links">
+                    <a href="pulbic-home.html">Home</a>
+                    <a href="public-catalog.html" class="active">Store</a>
+                    <a href="#">Library</a>
+                </nav>
+
+                <div class="nav-actions">
+                    <div class="search-bar">
+                        <span class="material-symbols-outlined search-icon">search</span>
+                        <input type="text" placeholder="Search games..." />
+                    </div>
+                    <button class="icon-btn"><span class="material-symbols-outlined">shopping_cart</span></button>
+                    <button class="icon-btn"><span class="material-symbols-outlined">account_circle</span></button>
                 </div>
             </div>
         </header>
@@ -51,10 +59,14 @@
                 <div class="filter-section">
                     <h3>Platform</h3>
                     <div class="filter-group">
-                        <label class="filter-item"><input type="radio" name="platform" checked><span>PC (Windows)</span></label>
-                        <label class="filter-item"><input type="radio" name="platform"><span>PlayStation 5</span></label>
-                        <label class="filter-item"><input type="radio" name="platform"><span>Xbox Series X</span></label>
-                        <label class="filter-item"><input type="radio" name="platform"><span>Nintendo Switch</span></label>
+                        <label class="filter-item"><input type="radio" name="platform" checked><span>PC
+                                (Windows)</span></label>
+                        <label class="filter-item"><input type="radio" name="platform"><span>PlayStation
+                                5</span></label>
+                        <label class="filter-item"><input type="radio" name="platform"><span>Xbox Series
+                                X</span></label>
+                        <label class="filter-item"><input type="radio" name="platform"><span>Nintendo
+                                Switch</span></label>
                     </div>
                 </div>
 
@@ -78,7 +90,8 @@
                                 <span class="material-symbols-outlined">star</span>
                                 <span class="material-symbols-outlined">star</span>
                                 <span class="material-symbols-outlined">star</span>
-                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">star</span>
+                                <span class="material-symbols-outlined"
+                                    style="font-variation-settings: 'FILL' 0;">star</span>
                             </span>
                             &amp; up
                         </button>
@@ -110,18 +123,21 @@
                 <!-- Card 1 -->
                 <div class="catalog-card">
                     <div class="catalog-card-image">
-                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhTDuLlftmYbM6YE4TPSxc4tdyBz2GzdGqJB-yfQmY3Ynfvs-Fq6-FWmp6UN2cyE1pfTDD25v7u6keWsIiIGkQaRb-lebeqmXcO70IQH9svFW3Q2X6c6wiKHbOtpdrpKf6-R_sKgPogKvBjiWmQleYe-TzuFCS2IQLWQKGcYHP7bQf3Jed4hKk6iVrkuaT813FPTDGQK9encyQz7Zayb9UYuLb1u2cWLi2pS6ei4chugDi-RflKyXAe2-gppT66LpCTr0XIOJBv_bK" alt="Nebula Protocol">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhTDuLlftmYbM6YE4TPSxc4tdyBz2GzdGqJB-yfQmY3Ynfvs-Fq6-FWmp6UN2cyE1pfTDD25v7u6keWsIiIGkQaRb-lebeqmXcO70IQH9svFW3Q2X6c6wiKHbOtpdrpKf6-R_sKgPogKvBjiWmQleYe-TzuFCS2IQLWQKGcYHP7bQf3Jed4hKk6iVrkuaT813FPTDGQK9encyQz7Zayb9UYuLb1u2cWLi2pS6ei4chugDi-RflKyXAe2-gppT66LpCTr0XIOJBv_bK"
+                            alt="Nebula Protocol">
                         <span class="catalog-badge-bestseller">Bestseller</span>
                     </div>
                     <div class="catalog-card-body">
                         <div class="catalog-card-top">
                             <div class="catalog-card-title">Nebula Protocol</div>
-                            <div class="catalog-card-rating"><span class="material-symbols-outlined">star</span><span>4.9</span></div>
+                            <div class="catalog-card-rating"><span
+                                    class="material-symbols-outlined">star</span><span>4.9</span></div>
                         </div>
                         <div class="catalog-card-tags">Sci-Fi • Action RPG</div>
                         <div class="catalog-card-bottom">
                             <div class="catalog-price-wrap"><span class="catalog-price">$59.99</span></div>
-                            <button class="catalog-add-btn"><span class="material-symbols-outlined">add_shopping_cart</span> Add</button>
+                            <button class="catalog-add-btn"><span
+                                    class="material-symbols-outlined">add_shopping_cart</span> Add</button>
                         </div>
                     </div>
                 </div>
@@ -129,18 +145,22 @@
                 <!-- Card 2 -->
                 <div class="catalog-card">
                     <div class="catalog-card-image">
-                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsj9rAonha8LWP38VSqrJiJS9XV-il54ELuUhwbS0V8g8oTx-IcumHo_DXcUxI2SrtFBHC6KZtcHry5mON1UDU5itZXg7spqcgHFPC_jCTDNL66oT4WkJaJEj9Sr6RjDP8QcBH9u2KW8FZPbOfLb3D7IRnNaqWXvZ2d2KSxMEcfnixgKwFi-Rm9L6SZkpN7CpL49VN7SnC6nuHXeLcLlRHyGCtMdFT_RcmYeBVm2KXQJ78kQ8PCuj1YgKv574nk5AbEUeth5Pwv040" alt="Elder Realms">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsj9rAonha8LWP38VSqrJiJS9XV-il54ELuUhwbS0V8g8oTx-IcumHo_DXcUxI2SrtFBHC6KZtcHry5mON1UDU5itZXg7spqcgHFPC_jCTDNL66oT4WkJaJEj9Sr6RjDP8QcBH9u2KW8FZPbOfLb3D7IRnNaqWXvZ2d2KSxMEcfnixgKwFi-Rm9L6SZkpN7CpL49VN7SnC6nuHXeLcLlRHyGCtMdFT_RcmYeBVm2KXQJ78kQ8PCuj1YgKv574nk5AbEUeth5Pwv040"
+                            alt="Elder Realms">
                         <span class="catalog-badge-discount">-20%</span>
                     </div>
                     <div class="catalog-card-body">
                         <div class="catalog-card-top">
                             <div class="catalog-card-title">Elder Realms</div>
-                            <div class="catalog-card-rating"><span class="material-symbols-outlined">star</span><span>4.7</span></div>
+                            <div class="catalog-card-rating"><span
+                                    class="material-symbols-outlined">star</span><span>4.7</span></div>
                         </div>
                         <div class="catalog-card-tags">Fantasy • Open World</div>
                         <div class="catalog-card-bottom">
-                            <div class="catalog-price-wrap"><span class="catalog-price-old">$49.99</span><span class="catalog-price">$39.99</span></div>
-                            <button class="catalog-add-btn"><span class="material-symbols-outlined">add_shopping_cart</span> Add</button>
+                            <div class="catalog-price-wrap"><span class="catalog-price-old">$49.99</span><span
+                                    class="catalog-price">$39.99</span></div>
+                            <button class="catalog-add-btn"><span
+                                    class="material-symbols-outlined">add_shopping_cart</span> Add</button>
                         </div>
                     </div>
                 </div>
@@ -148,17 +168,20 @@
                 <!-- Card 3 -->
                 <div class="catalog-card">
                     <div class="catalog-card-image">
-                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgewoKRGtN3T67dlq4gkVQWkCPITIKZQq1rTqnLD4w0ACmyqEs07k0c7aEJXhmjFEfyVhpoZ5yiSZpSrVgA6geXd23_yk7ilI9WCpE6PGpBwQqPwxBMjArahBk0i6-J4UwwbybrGHgDI8loctg_Y4bIv7GZjIlWBZUut7ePFSetMzMyuvoaBiuflZGpUZou6UAZIlQ6mZbuHGjXdQi6mk0-LLx-oU8eONtP2QujWNZDUvTJ4hqqv07rPE52djJbR49eFPoU7PedgjJ" alt="Paper Planes">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgewoKRGtN3T67dlq4gkVQWkCPITIKZQq1rTqnLD4w0ACmyqEs07k0c7aEJXhmjFEfyVhpoZ5yiSZpSrVgA6geXd23_yk7ilI9WCpE6PGpBwQqPwxBMjArahBk0i6-J4UwwbybrGHgDI8loctg_Y4bIv7GZjIlWBZUut7ePFSetMzMyuvoaBiuflZGpUZou6UAZIlQ6mZbuHGjXdQi6mk0-LLx-oU8eONtP2QujWNZDUvTJ4hqqv07rPE52djJbR49eFPoU7PedgjJ"
+                            alt="Paper Planes">
                     </div>
                     <div class="catalog-card-body">
                         <div class="catalog-card-top">
                             <div class="catalog-card-title">Paper Planes</div>
-                            <div class="catalog-card-rating"><span class="material-symbols-outlined">star</span><span>5.0</span></div>
+                            <div class="catalog-card-rating"><span
+                                    class="material-symbols-outlined">star</span><span>5.0</span></div>
                         </div>
                         <div class="catalog-card-tags">Indie • Puzzle</div>
                         <div class="catalog-card-bottom">
                             <div class="catalog-price-wrap"><span class="catalog-price">$14.99</span></div>
-                            <button class="catalog-add-btn"><span class="material-symbols-outlined">add_shopping_cart</span> Add</button>
+                            <button class="catalog-add-btn"><span
+                                    class="material-symbols-outlined">add_shopping_cart</span> Add</button>
                         </div>
                     </div>
                 </div>
@@ -166,17 +189,20 @@
                 <!-- Card 4 -->
                 <div class="catalog-card">
                     <div class="catalog-card-image">
-                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSZTDrTEtcbD2O5v_VJShWb3otST7Ga7JZBWCQC4001a4gFVLYQ_ZRbCB8vZiuQlYPDmGdimm4tTx7PAeivTvkRTXdZUki_D0cz9EfU5TUWWvG1AgRULcn6VgC82fDHdYJswR9GxJNaREJ64GxIUNIwNOjO2c-TwrBe0Zz7AHQE--j4hmWT_KrZKcZac9kjlxg_Z2pGKSTgJdGdX0aRJA0dCUGKoqaKGCvSyVwwSOI8NhLMnHR5pPJDBSPUfYMIbGx0YcUpBB41BCl" alt="Cyber Dash">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSZTDrTEtcbD2O5v_VJShWb3otST7Ga7JZBWCQC4001a4gFVLYQ_ZRbCB8vZiuQlYPDmGdimm4tTx7PAeivTvkRTXdZUki_D0cz9EfU5TUWWvG1AgRULcn6VgC82fDHdYJswR9GxJNaREJ64GxIUNIwNOjO2c-TwrBe0Zz7AHQE--j4hmWT_KrZKcZac9kjlxg_Z2pGKSTgJdGdX0aRJA0dCUGKoqaKGCvSyVwwSOI8NhLMnHR5pPJDBSPUfYMIbGx0YcUpBB41BCl"
+                            alt="Cyber Dash">
                     </div>
                     <div class="catalog-card-body">
                         <div class="catalog-card-top">
                             <div class="catalog-card-title">Cyber Dash</div>
-                            <div class="catalog-card-rating"><span class="material-symbols-outlined">star</span><span>4.2</span></div>
+                            <div class="catalog-card-rating"><span
+                                    class="material-symbols-outlined">star</span><span>4.2</span></div>
                         </div>
                         <div class="catalog-card-tags">Platformer • Arcade</div>
                         <div class="catalog-card-bottom">
                             <div class="catalog-price-wrap"><span class="catalog-price">$24.99</span></div>
-                            <button class="catalog-add-btn"><span class="material-symbols-outlined">add_shopping_cart</span> Add</button>
+                            <button class="catalog-add-btn"><span
+                                    class="material-symbols-outlined">add_shopping_cart</span> Add</button>
                         </div>
                     </div>
                 </div>
@@ -184,17 +210,20 @@
                 <!-- Card 5 -->
                 <div class="catalog-card">
                     <div class="catalog-card-image">
-                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYnZcsv_sqHpr9JbUZSChFw5eEJMiRLdoNJ6-08fYfFib_LznzfbCn6X-5OydcmVvqGmMSPfzNqJGAruwuzg31QA7kzXXf20p3NHQpxSg6icCEOzN7aON8LYi-NWYUiKRtzZgZZy2FUCfxl7gElqt5YntexMwADmxrim4zH-nLeSQrRNeRkecayzzsob20sLvXpJlm8lN9N2Dgw_ZUbWGER_g9n0WDCy90MyaWsIzpf-cNB9RgidHYVWrFjyy9U6YmqJ6dPyTVzrv4" alt="Velocity 2077">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYnZcsv_sqHpr9JbUZSChFw5eEJMiRLdoNJ6-08fYfFib_LznzfbCn6X-5OydcmVvqGmMSPfzNqJGAruwuzg31QA7kzXXf20p3NHQpxSg6icCEOzN7aON8LYi-NWYUiKRtzZgZZy2FUCfxl7gElqt5YntexMwADmxrim4zH-nLeSQrRNeRkecayzzsob20sLvXpJlm8lN9N2Dgw_ZUbWGER_g9n0WDCy90MyaWsIzpf-cNB9RgidHYVWrFjyy9U6YmqJ6dPyTVzrv4"
+                            alt="Velocity 2077">
                     </div>
                     <div class="catalog-card-body">
                         <div class="catalog-card-top">
                             <div class="catalog-card-title">Velocity 2077</div>
-                            <div class="catalog-card-rating"><span class="material-symbols-outlined">star</span><span>4.5</span></div>
+                            <div class="catalog-card-rating"><span
+                                    class="material-symbols-outlined">star</span><span>4.5</span></div>
                         </div>
                         <div class="catalog-card-tags">Racing • Simulation</div>
                         <div class="catalog-card-bottom">
                             <div class="catalog-price-wrap"><span class="catalog-price">$69.99</span></div>
-                            <button class="catalog-add-btn"><span class="material-symbols-outlined">add_shopping_cart</span> Add</button>
+                            <button class="catalog-add-btn"><span
+                                    class="material-symbols-outlined">add_shopping_cart</span> Add</button>
                         </div>
                     </div>
                 </div>
@@ -202,17 +231,20 @@
                 <!-- Card 6 -->
                 <div class="catalog-card">
                     <div class="catalog-card-image">
-                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzmjfSk1X0x09OXANq6u0PtuQpUDy_4nmTjGyesPxv8Za23AYl_DhDAhyfXNMr-xFRdwCy4PjIXBqF_kFtDNyYnEelIDwEDahG3rzeUhfigU6sPf0mg973DwTdnAnmzQz8AZSlXUWzHzKTvednh5R2wtvsCeg6gXGQRDdynq9NBjeOEuELSRLks8rCIvV4CDPlAuA-tZJs9HYTsA3UPW-qmD_19yW4MbWk3AsmDRZcGk4JPV1ib620Kn8YZRziWFKhIzzEOPs9KVyP" alt="Iron Command">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzmjfSk1X0x09OXANq6u0PtuQpUDy_4nmTjGyesPxv8Za23AYl_DhDAhyfXNMr-xFRdwCy4PjIXBqF_kFtDNyYnEelIDwEDahG3rzeUhfigU6sPf0mg973DwTdnAnmzQz8AZSlXUWzHzKTvednh5R2wtvsCeg6gXGQRDdynq9NBjeOEuELSRLks8rCIvV4CDPlAuA-tZJs9HYTsA3UPW-qmD_19yW4MbWk3AsmDRZcGk4JPV1ib620Kn8YZRziWFKhIzzEOPs9KVyP"
+                            alt="Iron Command">
                     </div>
                     <div class="catalog-card-body">
                         <div class="catalog-card-top">
                             <div class="catalog-card-title">Iron Command</div>
-                            <div class="catalog-card-rating"><span class="material-symbols-outlined">star</span><span>4.8</span></div>
+                            <div class="catalog-card-rating"><span
+                                    class="material-symbols-outlined">star</span><span>4.8</span></div>
                         </div>
                         <div class="catalog-card-tags">Strategy • War</div>
                         <div class="catalog-card-bottom">
                             <div class="catalog-price-wrap"><span class="catalog-price">$44.99</span></div>
-                            <button class="catalog-add-btn"><span class="material-symbols-outlined">add_shopping_cart</span> Add</button>
+                            <button class="catalog-add-btn"><span
+                                    class="material-symbols-outlined">add_shopping_cart</span> Add</button>
                         </div>
                     </div>
                 </div>
@@ -220,17 +252,20 @@
                 <!-- Card 7 -->
                 <div class="catalog-card">
                     <div class="catalog-card-image">
-                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDemtwGE_HJFNPdZv1IlWzxrpKErSced8vOY5AAR0s0PNVHGWWY5Fh26b4-Fz4JLNnqAPx2MEVuqJGTaxqwLwAgg1dLtd5044Qa9gbR10Aw2cyXJptLwJAMnsLDfVfVBNPcYWxw-GE6SyCrSdtpsYoQzw3b3ae0rM8Qr1zFd0g2ECOS4O98pwX0bvNUcZmfsDvcPbCYcHIUzkUA_hon6SYjrCwTK8yvEenNX53rBGQii1qmjJmAXV5RL-dqYSLbdmdutKjGvbhQFE0W" alt="Cursed Souls">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDemtwGE_HJFNPdZv1IlWzxrpKErSced8vOY5AAR0s0PNVHGWWY5Fh26b4-Fz4JLNnqAPx2MEVuqJGTaxqwLwAgg1dLtd5044Qa9gbR10Aw2cyXJptLwJAMnsLDfVfVBNPcYWxw-GE6SyCrSdtpsYoQzw3b3ae0rM8Qr1zFd0g2ECOS4O98pwX0bvNUcZmfsDvcPbCYcHIUzkUA_hon6SYjrCwTK8yvEenNX53rBGQii1qmjJmAXV5RL-dqYSLbdmdutKjGvbhQFE0W"
+                            alt="Cursed Souls">
                     </div>
                     <div class="catalog-card-body">
                         <div class="catalog-card-top">
                             <div class="catalog-card-title">Cursed Souls</div>
-                            <div class="catalog-card-rating"><span class="material-symbols-outlined">star</span><span>4.6</span></div>
+                            <div class="catalog-card-rating"><span
+                                    class="material-symbols-outlined">star</span><span>4.6</span></div>
                         </div>
                         <div class="catalog-card-tags">Action • RPG</div>
                         <div class="catalog-card-bottom">
                             <div class="catalog-price-wrap"><span class="catalog-price">$54.99</span></div>
-                            <button class="catalog-add-btn"><span class="material-symbols-outlined">add_shopping_cart</span> Add</button>
+                            <button class="catalog-add-btn"><span
+                                    class="material-symbols-outlined">add_shopping_cart</span> Add</button>
                         </div>
                     </div>
                 </div>
@@ -238,17 +273,20 @@
                 <!-- Card 8 -->
                 <div class="catalog-card">
                     <div class="catalog-card-image">
-                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgW9WlaXnfBAB2U1EQezZqSXETtwMyR57xeYJwZweYEllwL69AXnV0LUgSJfGxDcrmwX9l_CCqtAHwdHVylNQB12N0SDdYBbcpeK1UI9GkDckLja95lvqSpDKQM5GXkfAID6Iduu7yO4R5_CpdigJ2paDcbwj2NX2O6fzPkpdFpcrgcRNyqfNvCmpypaw_1hRgLa6QcbCSALDnYaMdUcyy4OpEJRzyEQdryU-FsSZ6aDHuXBRyA3kjR7QQvhxUcluNyh7eRR5T7IHy" alt="Pet Pals Island">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgW9WlaXnfBAB2U1EQezZqSXETtwMyR57xeYJwZweYEllwL69AXnV0LUgSJfGxDcrmwX9l_CCqtAHwdHVylNQB12N0SDdYBbcpeK1UI9GkDckLja95lvqSpDKQM5GXkfAID6Iduu7yO4R5_CpdigJ2paDcbwj2NX2O6fzPkpdFpcrgcRNyqfNvCmpypaw_1hRgLa6QcbCSALDnYaMdUcyy4OpEJRzyEQdryU-FsSZ6aDHuXBRyA3kjR7QQvhxUcluNyh7eRR5T7IHy"
+                            alt="Pet Pals Island">
                     </div>
                     <div class="catalog-card-body">
                         <div class="catalog-card-top">
                             <div class="catalog-card-title">Pet Pals Island</div>
-                            <div class="catalog-card-rating"><span class="material-symbols-outlined">star</span><span>4.4</span></div>
+                            <div class="catalog-card-rating"><span
+                                    class="material-symbols-outlined">star</span><span>4.4</span></div>
                         </div>
                         <div class="catalog-card-tags">Simulation • Casual</div>
                         <div class="catalog-card-bottom">
                             <div class="catalog-price-wrap"><span class="catalog-price">$29.99</span></div>
-                            <button class="catalog-add-btn"><span class="material-symbols-outlined">add_shopping_cart</span> Add</button>
+                            <button class="catalog-add-btn"><span
+                                    class="material-symbols-outlined">add_shopping_cart</span> Add</button>
                         </div>
                     </div>
                 </div>
@@ -264,11 +302,13 @@
                 <button class="page-btn"><span class="material-symbols-outlined">chevron_right</span></button>
             </div>
         </main>
-        
+
         <!-- FOOTER -->
-        <footer class="footer">
-            <p>Nexus Games Global Ltd. © 2024</p>
+        <footer class="footer"
+            style="padding: 24px; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); margin-top: auto;">
+            <p style="color: var(--text-muted); font-size: 14px;">© 2024 Nexus Games. All rights reserved.</p>
         </footer>
     </div>
 </body>
+
 </html>
