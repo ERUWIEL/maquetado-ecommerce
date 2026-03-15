@@ -1,359 +1,240 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="en">
-
+<html lang="en">
 <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#9f1fef",
-                        "background-light": "#f7f6f8",
-                        "background-dark": "#1b1022",
-                    },
-                    fontFamily: {
-                        "display": ["Space Grotesk", "sans-serif"]
-                    },
-                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
-                },
-            },
-        }
-    </script>
-    <style>
-        body {
-            font-family: 'Space Grotesk', sans-serif;
-        }
-
-        .custom-scrollbar::-webkit-scrollbar {
-            height: 4px;
-        }
-
-        .custom-scrollbar::-webkit-scrollbar-track {
-            background: rgba(159, 31, 239, 0.1);
-        }
-
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: #9f1fef;
-            border-radius: 10px;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexus Games | Home</title>
+    <link rel="stylesheet" href="../css/globals.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/home.css" />
 </head>
-
-<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
-    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
-        <header
-            class="sticky top-0 z-50 w-full border-b border-primary/20 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-6 lg:px-20 py-4">
-            <div class="max-w-7xl mx-auto flex items-center justify-between gap-8">
-                <div class="flex items-center gap-12">
-                    <div class="flex items-center gap-3 text-primary">
-                        <div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
-                            <span class="material-symbols-outlined">rocket_launch</span>
-                        </div>
-                        <h2 class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-tight">Nexus
-                            Games</h2>
+<body>
+    <div class="home-layout">
+        <!-- TOPBAR -->
+        <header class="home-topbar">
+            <div class="home-topbar-inner">
+                <div style="display:flex; align-items:center; gap: 48px;">
+                    <div style="display:flex; align-items:center; gap: 12px; color: var(--primary);">
+                        <div class="home-action-btn primary" style="border-radius: 8px;"><span class="material-symbols-outlined">rocket_launch</span></div>
+                        <h2 style="font-weight: 700; font-size: 20px; color: var(--text);">Nexus Games</h2>
                     </div>
-                    <nav class="hidden md:flex items-center gap-8">
-                        <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors"
-                            href="#">Store</a>
-                        <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors"
-                            href="#">Library</a>
-                        <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors"
-                            href="#">Community</a>
-                        <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors"
-                            href="#">Support</a>
+                    <nav class="home-nav-links">
+                        <a href="#">Store</a>
+                        <a href="#">Library</a>
+                        <a href="#">Community</a>
+                        <a href="#">Support</a>
                     </nav>
                 </div>
-                <div class="flex flex-1 justify-end gap-4 max-w-md">
-                    <div class="relative flex-1 group">
-                        <div
-                            class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400 group-focus-within:text-primary transition-colors">
-                            <span class="material-symbols-outlined text-xl">search</span>
-                        </div>
-                        <input
-                            class="block w-full rounded-xl border-none bg-primary/5 dark:bg-primary/10 py-2.5 pl-10 pr-3 text-sm placeholder:text-slate-400 focus:ring-2 focus:ring-primary dark:text-white transition-all"
-                            placeholder="Search games, mods, players..." type="text" />
+                
+                <div class="home-actions">
+                    <div class="home-search">
+                        <span class="material-symbols-outlined">search</span>
+                        <input type="text" placeholder="Search games, mods, players..." />
                     </div>
-                    <div class="flex gap-2">
-                        <button
-                            class="flex items-center justify-center rounded-xl h-10 w-10 bg-primary/10 hover:bg-primary/20 text-primary transition-colors">
-                            <span class="material-symbols-outlined">shopping_cart</span>
-                        </button>
-                        <button
-                            class="flex items-center justify-center rounded-xl h-10 w-10 bg-primary text-white hover:bg-primary/90 transition-colors">
-                            <span class="material-symbols-outlined">person</span>
-                        </button>
-                    </div>
+                    <button class="home-action-btn"><span class="material-symbols-outlined">shopping_cart</span></button>
+                    <button class="home-action-btn primary"><span class="material-symbols-outlined">person</span></button>
                 </div>
             </div>
         </header>
-        <main class="flex-1 w-full max-w-7xl mx-auto px-6 lg:px-20 py-8">
-            <section class="mb-12">
-                <div class="relative overflow-hidden rounded-3xl aspect-[21/9] flex items-center group">
-                    <div class="absolute inset-0 z-0 scale-105 group-hover:scale-100 transition-transform duration-700 bg-cover bg-center"
-                        data-alt="Cinematic space exploration scene with spaceships and planets"
-                        style="background-image: linear-gradient(to right, rgba(27, 16, 34, 0.95) 0%, rgba(27, 16, 34, 0.4) 50%, rgba(27, 16, 34, 0) 100%), url('https://lh3.googleusercontent.com/aida-public/AB6AXuBZ4e5aNV6COIHISy93pCaf7X5Lh3bANH6Q4l-U5vtBSXf8JgBR52MMW0-NQfWaoa0Wnbj4SGWiFo7y4DbDzhWtLCi7hLF9UgIqldS6ZWHqM3gBEyx2pG5Yk1YwCju1x7rV0dhoNV9KmdaFGkvKM9lH7D1R9vODuFDn4AliQczYBgUEMJ_EjgUZp6fRz_ZCQEaAv2oR-vXLd5hNIj1V4zV5FxJkcDlb3XLnv80Ze1p3CCS4aulvk_Rlf5UWo6fEtTP1tDyOHxh-2w0f');">
-                    </div>
-                    <div class="relative z-10 p-10 lg:p-16 max-w-2xl">
-                        <span
-                            class="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold uppercase tracking-widest mb-4">Featured
-                            Game</span>
-                        <h1 class="text-slate-100 text-5xl lg:text-7xl font-bold leading-none mb-6">Starfield</h1>
-                        <p class="text-slate-300 text-lg lg:text-xl font-normal leading-relaxed mb-8">
-                            Experience the next generation of space exploration. Create any character you want and
-                            explore with unparalleled freedom.
-                        </p>
-                        <div class="flex items-center gap-4">
-                            <button
-                                class="px-8 py-4 bg-primary text-white rounded-xl font-bold hover:shadow-lg hover:shadow-primary/30 transition-all flex items-center gap-2">
-                                Buy Now <span class="material-symbols-outlined">arrow_forward</span>
-                            </button>
-                            <button
-                                class="px-8 py-4 bg-white/10 backdrop-blur-md text-white border border-white/20 rounded-xl font-bold hover:bg-white/20 transition-all">
-                                View Details
-                            </button>
+
+        <!-- MAIN -->
+        <main class="home-main">
+            <!-- HERO -->
+            <section class="home-section">
+                <div class="home-hero">
+                    <div class="home-hero-bg" style="background-image: linear-gradient(to right, rgba(27, 16, 34, 0.95) 0%, rgba(27, 16, 34, 0.4) 50%, rgba(27, 16, 34, 0) 100%), url('https://lh3.googleusercontent.com/aida-public/AB6AXuBZ4e5aNV6COIHISy93pCaf7X5Lh3bANH6Q4l-U5vtBSXf8JgBR52MMW0-NQfWaoa0Wnbj4SGWiFo7y4DbDzhWtLCi7hLF9UgIqldS6ZWHqM3gBEyx2pG5Yk1YwCju1x7rV0dhoNV9KmdaFGkvKM9lH7D1R9vODuFDn4AliQczYBgUEMJ_EjgUZp6fRz_ZCQEaAv2oR-vXLd5hNIj1V4zV5FxJkcDlb3XLnv80Ze1p3CCS4aulvk_Rlf5UWo6fEtTP1tDyOHxh-2w0f');"></div>
+                    <div class="home-hero-content">
+                        <span class="home-hero-badge">Featured Game</span>
+                        <h1 class="home-hero-title">Starfield</h1>
+                        <p class="home-hero-desc">Experience the next generation of space exploration. Create any character you want and explore with unparalleled freedom.</p>
+                        <div class="home-hero-actions">
+                            <button class="home-btn-hero home-btn-primary">Buy Now <span class="material-symbols-outlined">arrow_forward</span></button>
+                            <button class="home-btn-hero home-btn-outline">View Details</button>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="mb-12">
-                <div class="flex items-center justify-between mb-8">
-                    <h2 class="text-2xl lg:text-3xl font-bold flex items-center gap-3">
-                        <span class="material-symbols-outlined text-primary">trending_up</span> Trending Now
-                    </h2>
-                    <a class="text-primary font-medium hover:underline flex items-center gap-1 text-sm" href="#">View
-                        All <span class="material-symbols-outlined text-sm">chevron_right</span></a>
+
+            <!-- TRENDING -->
+            <section class="home-section">
+                <div class="home-section-header">
+                    <h2 class="home-section-title"><span class="material-symbols-outlined">trending_up</span> Trending Now</h2>
+                    <a href="#" class="home-section-link">View All <span class="material-symbols-outlined">chevron_right</span></a>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="group cursor-pointer">
-                        <div class="relative aspect-[3/4] overflow-hidden rounded-2xl mb-4">
-                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
-                                data-alt="Cyberpunk city with neon lights and futuristic characters"
-                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDFLG5A1Pk6eQV4v18EKaI2TOY0vCQwHXuZVlDfB5aeA_4F-6RzkfJwiCjzrEKAj2zfr4dDf2cF3TkRWlb-NrEPBaAi6xJQHVnB6cjqeI5DSXk5Tvhfj5rfRiz2xSAXGuZ8LggOWguSeBXw3ZCQpdhG4mMZA-LgfmHjXoCfdNonm8liiDEDuopGGV19uc72cMmm2HMv5a-UU596YjGTuiZOZ3q9vco82rncnjdMfN_3BRo2ZiRx_m0ch_YdRH-RHZh3R_SDo2PtoIWo');">
-                            </div>
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-background-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-                            </div>
-                            <div class="absolute bottom-4 left-4 right-4 flex justify-between items-end">
-                                <span class="bg-primary px-2 py-1 rounded text-white text-xs font-bold">SALE -33%</span>
-                            </div>
+                <div class="home-grid-trending">
+                    <!-- Card 1 -->
+                    <div class="home-card-trending">
+                        <div class="home-card-trending-img">
+                            <div class="home-card-trending-bg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDFLG5A1Pk6eQV4v18EKaI2TOY0vCQwHXuZVlDfB5aeA_4F-6RzkfJwiCjzrEKAj2zfr4dDf2cF3TkRWlb-NrEPBaAi6xJQHVnB6cjqeI5DSXk5Tvhfj5rfRiz2xSAXGuZ8LggOWguSeBXw3ZCQpdhG4mMZA-LgfmHjXoCfdNonm8liiDEDuopGGV19uc72cMmm2HMv5a-UU596YjGTuiZOZ3q9vco82rncnjdMfN_3BRo2ZiRx_m0ch_YdRH-RHZh3R_SDo2PtoIWo');"></div>
+                            <div class="home-card-trending-overlay"></div>
+                            <span class="home-card-badge">SALE -33%</span>
                         </div>
-                        <h3 class="text-lg font-bold group-hover:text-primary transition-colors">Cyberpunk 2077</h3>
-                        <div class="flex items-center gap-2 mt-1">
-                            <p class="text-primary font-bold">$39.99</p>
-                            <p class="text-slate-500 line-through text-sm">$59.99</p>
+                        <h3 class="home-card-trending-title">Cyberpunk 2077</h3>
+                        <div class="home-card-trending-price">
+                            <span class="current">$39.99</span>
+                            <span class="old">$59.99</span>
                         </div>
                     </div>
-                    <div class="group cursor-pointer">
-                        <div class="relative aspect-[3/4] overflow-hidden rounded-2xl mb-4">
-                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
-                                data-alt="Epic fantasy landscape with a massive golden tree"
-                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB5awxteUiDubQGo9KJ69f7HzgCxY6q-AqT76ruMnXpGbLba9fAMaE1nmTKgFWJc0YgQl5Q1HF8Yc97I3j1NWjp3B8i9lp0JfVoh7Mhch84U3cp5h4uzodvMyPSUrt-S8uaZ7mh2zrwcMVXycZ2ea0MtNu1pDrDjd7CccnI7YTay09rb3wkOBIrP2QOjsrOUhDRlf7e-cpiXeeKRskeV7ZJrBh8OE9p4BRG6zCLdCxdx8jzui7ofpOlXaE7HvLPDkKj5Hi67GM4KWQX');">
-                            </div>
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-background-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-                            </div>
+                    <!-- Card 2 -->
+                    <div class="home-card-trending">
+                        <div class="home-card-trending-img">
+                            <div class="home-card-trending-bg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB5awxteUiDubQGo9KJ69f7HzgCxY6q-AqT76ruMnXpGbLba9fAMaE1nmTKgFWJc0YgQl5Q1HF8Yc97I3j1NWjp3B8i9lp0JfVoh7Mhch84U3cp5h4uzodvMyPSUrt-S8uaZ7mh2zrwcMVXycZ2ea0MtNu1pDrDjd7CccnI7YTay09rb3wkOBIrP2QOjsrOUhDRlf7e-cpiXeeKRskeV7ZJrBh8OE9p4BRG6zCLdCxdx8jzui7ofpOlXaE7HvLPDkKj5Hi67GM4KWQX');"></div>
+                            <div class="home-card-trending-overlay"></div>
                         </div>
-                        <h3 class="text-lg font-bold group-hover:text-primary transition-colors">Elden Ring</h3>
-                        <p class="text-primary font-bold mt-1">$49.99</p>
+                        <h3 class="home-card-trending-title">Elden Ring</h3>
+                        <div class="home-card-trending-price">
+                            <span class="current">$49.99</span>
+                        </div>
                     </div>
-                    <div class="group cursor-pointer">
-                        <div class="relative aspect-[3/4] overflow-hidden rounded-2xl mb-4">
-                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
-                                data-alt="Group of diverse fantasy adventurers ready for battle"
-                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCcYR7gcTtclvJLq1RRYvR-HWEzqNquC3GoYi5FkeV6Xk4SolA3kGvT6sb57zA0P5MHLstLMU5NFGnXeK01YaIW_D1a5G7z5JTmzIiFBH1Jtpzq2_0QYB0dQPJ1NPdbbQcgYUMPu3B33nZJ4_LQ_GPiygH1CCGImG4GQjPN-TSLKah0U8gUfwo0mlh5XP5E6mx7Xl4rA8FLpHlYxHODdjtYOH7Z5TIRsQTHQDqTYwZl-Lc0XxqH-Eie--1Fa868KHSfHpwQ3pB2KsZC');">
-                            </div>
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-background-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-                            </div>
+                    <!-- Card 3 -->
+                    <div class="home-card-trending">
+                        <div class="home-card-trending-img">
+                            <div class="home-card-trending-bg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCcYR7gcTtclvJLq1RRYvR-HWEzqNquC3GoYi5FkeV6Xk4SolA3kGvT6sb57zA0P5MHLstLMU5NFGnXeK01YaIW_D1a5G7z5JTmzIiFBH1Jtpzq2_0QYB0dQPJ1NPdbbQcgYUMPu3B33nZJ4_LQ_GPiygH1CCGImG4GQjPN-TSLKah0U8gUfwo0mlh5XP5E6mx7Xl4rA8FLpHlYxHODdjtYOH7Z5TIRsQTHQDqTYwZl-Lc0XxqH-Eie--1Fa868KHSfHpwQ3pB2KsZC');"></div>
+                            <div class="home-card-trending-overlay"></div>
                         </div>
-                        <h3 class="text-lg font-bold group-hover:text-primary transition-colors">Baldur's Gate 3</h3>
-                        <p class="text-primary font-bold mt-1">$69.99</p>
+                        <h3 class="home-card-trending-title">Baldur's Gate 3</h3>
+                        <div class="home-card-trending-price">
+                            <span class="current">$69.99</span>
+                        </div>
                     </div>
-                    <div class="group cursor-pointer">
-                        <div class="relative aspect-[3/4] overflow-hidden rounded-2xl mb-4">
-                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
-                                data-alt="Post-apocalyptic ruins overgrown with lush vegetation"
-                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCpNFtHKvPlFZmTRVKacu_lrZzZ1nrOP7H2VXVQdZ51Lj-SQHwHLSYe5cPO_p6H6aGhOLR8CxApzhJ4okB6G-quCqdgHP_3AKMnfxevIZ_6O9O7lVR1jPKComkoOM02jXaxtM2soKx0tRcStKIeiIzvjsFvwzNMIx-Di2-SfGDfTtr3WWyY9WuzoLcFPve4Rrq-rUxE0GSlMKWkQRryBvnWkOKfB0kzKGz213bhSmrfH70UOnNGCghVAcqLa5gqxi4kJwXQVgwKDv-I');">
-                            </div>
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-background-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-                            </div>
+                    <!-- Card 4 -->
+                    <div class="home-card-trending">
+                        <div class="home-card-trending-img">
+                            <div class="home-card-trending-bg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCpNFtHKvPlFZmTRVKacu_lrZzZ1nrOP7H2VXVQdZ51Lj-SQHwHLSYe5cPO_p6H6aGhOLR8CxApzhJ4okB6G-quCqdgHP_3AKMnfxevIZ_6O9O7lVR1jPKComkoOM02jXaxtM2soKx0tRcStKIeiIzvjsFvwzNMIx-Di2-SfGDfTtr3WWyY9WuzoLcFPve4Rrq-rUxE0GSlMKWkQRryBvnWkOKfB0kzKGz213bhSmrfH70UOnNGCghVAcqLa5gqxi4kJwXQVgwKDv-I');"></div>
+                            <div class="home-card-trending-overlay"></div>
                         </div>
-                        <h3 class="text-lg font-bold group-hover:text-primary transition-colors">Horizon Forbidden West
-                        </h3>
-                        <p class="text-primary font-bold mt-1">$59.99</p>
+                        <h3 class="home-card-trending-title">Horizon Forbidden West</h3>
+                        <div class="home-card-trending-price">
+                            <span class="current">$59.99</span>
+                        </div>
                     </div>
                 </div>
             </section>
-            <section class="mb-12">
-                <div class="flex items-center justify-between mb-8">
-                    <h2 class="text-2xl lg:text-3xl font-bold flex items-center gap-3">
-                        <span class="material-symbols-outlined text-primary">new_releases</span> New Releases
-                    </h2>
-                    <div class="flex gap-2">
-                        <button class="p-2 rounded-full border border-primary/20 hover:bg-primary/10 transition-colors">
-                            <span class="material-symbols-outlined">chevron_left</span>
-                        </button>
-                        <button class="p-2 rounded-full bg-primary text-white hover:bg-primary/90 transition-colors">
-                            <span class="material-symbols-outlined">chevron_right</span>
-                        </button>
+
+            <!-- NEW RELEASES -->
+            <section class="home-section">
+                <div class="home-section-header">
+                    <h2 class="home-section-title"><span class="material-symbols-outlined">new_releases</span> New Releases</h2>
+                    <div class="home-slider-nav">
+                        <button class="home-slider-btn"><span class="material-symbols-outlined">chevron_left</span></button>
+                        <button class="home-slider-btn active"><span class="material-symbols-outlined">chevron_right</span></button>
                     </div>
                 </div>
-                <div class="flex overflow-x-auto gap-6 pb-6 custom-scrollbar scroll-smooth no-scrollbar">
-                    <div class="flex-none w-[320px] group">
-                        <div class="relative aspect-video rounded-xl overflow-hidden mb-3">
-                            <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
-                                data-alt="Futuristic racing cars on a neon track"
-                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCbK48EWZVHd5nCiOZ12mEEDpf9skNNBu68SmmabaRHySSYBaoZmqbZ5sp84z9LL__27g7jV_5MJrCiooYsB6jR6kjmbiZc03WBagJuGJuRXt9VGxCLQS2TxahOWhoWdK_2Ylzyo6zDGNgWdy_OxG7rWAZxrXqQF8FFWdpegC-o9mSYBowfzb1yhimjgvAe1BTR1ryK6G8gTjiiJeZJUlD5Up4wyrgXICoVFqqGHNjxX7PEs1JRfwO8MlHSVLeiuVF6dBZkr3lVjeaO');">
-                            </div>
+                <div class="home-slider">
+                    <!-- Release 1 -->
+                    <div class="home-card-release">
+                        <div class="home-card-release-img">
+                            <div class="home-card-release-bg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCbK48EWZVHd5nCiOZ12mEEDpf9skNNBu68SmmabaRHySSYBaoZmqbZ5sp84z9LL__27g7jV_5MJrCiooYsB6jR6kjmbiZc03WBagJuGJuRXt9VGxCLQS2TxahOWhoWdK_2Ylzyo6zDGNgWdy_OxG7rWAZxrXqQF8FFWdpegC-o9mSYBowfzb1yhimjgvAe1BTR1ryK6G8gTjiiJeZJUlD5Up4wyrgXICoVFqqGHNjxX7PEs1JRfwO8MlHSVLeiuVF6dBZkr3lVjeaO');"></div>
                         </div>
-                        <div class="flex justify-between items-start">
+                        <div class="home-card-release-info">
                             <div>
-                                <h4 class="font-bold">Nitro Speedsters</h4>
-                                <p class="text-slate-400 text-xs">Racing • Multi-player</p>
+                                <h4 class="home-card-release-title">Nitro Speedsters</h4>
+                                <p class="home-card-release-desc">Racing • Multi-player</p>
                             </div>
-                            <span class="text-primary font-bold">$24.99</span>
+                            <span class="home-card-release-price">$24.99</span>
                         </div>
                     </div>
-                    <div class="flex-none w-[320px] group">
-                        <div class="relative aspect-video rounded-xl overflow-hidden mb-3">
-                            <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
-                                data-alt="Medieval castle during a siege"
-                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAHkS1BtHRwz0ir2gtSQ6wewG5wVtz9NHCCCb8mT5UhHUDkn13zfQWe69v96hKUd65JJWszXDqAzLpjPx04MTeZenpZ6eOGDFNIZHIgDtgyK2udQK7ftcp1TJbEfA-OB39oWgECd2NHwqW7HMR04QFwq-_yNfhQOzK63Ee6TqXv325qVx-9f1CLmPv6xNdT-mXXGvoFoIxPA1Q6fzY0CjmTsBDuxi1Y4DdQ5PScjJH5N13ZHD5dJJYGfVS03jWlE2H9fKUYshnpaATT');">
-                            </div>
+                    <!-- Release 2 -->
+                    <div class="home-card-release">
+                        <div class="home-card-release-img">
+                            <div class="home-card-release-bg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAHkS1BtHRwz0ir2gtSQ6wewG5wVtz9NHCCCb8mT5UhHUDkn13zfQWe69v96hKUd65JJWszXDqAzLpjPx04MTeZenpZ6eOGDFNIZHIgDtgyK2udQK7ftcp1TJbEfA-OB39oWgECd2NHwqW7HMR04QFwq-_yNfhQOzK63Ee6TqXv325qVx-9f1CLmPv6xNdT-mXXGvoFoIxPA1Q6fzY0CjmTsBDuxi1Y4DdQ5PScjJH5N13ZHD5dJJYGfVS03jWlE2H9fKUYshnpaATT');"></div>
                         </div>
-                        <div class="flex justify-between items-start">
+                        <div class="home-card-release-info">
                             <div>
-                                <h4 class="font-bold">Kingdom Forge</h4>
-                                <p class="text-slate-400 text-xs">Strategy • Simulation</p>
+                                <h4 class="home-card-release-title">Kingdom Forge</h4>
+                                <p class="home-card-release-desc">Strategy • Simulation</p>
                             </div>
-                            <span class="text-primary font-bold">$34.99</span>
+                            <span class="home-card-release-price">$34.99</span>
                         </div>
                     </div>
-                    <div class="flex-none w-[320px] group">
-                        <div class="relative aspect-video rounded-xl overflow-hidden mb-3">
-                            <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
-                                data-alt="Abstract mystical dimension with floating portals"
-                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAmXVUebl_4Ymy476tncGGcU_DzHz7so_JT9KKbraBDRoJB7xpzHifsWoiCNSpPg-CHMUp2N4a3ioFB-q-D85W2jk0t3NNzdF1rdyiO7p2fhON_NAoDIcn5UW2eQhtM650g-bxhksqZwhCKpwWDBkkxpyIEO3aOC89n7zxejHQK1Zbt5BFwNBJIuO78Oj8CcPXQY-c2izjy7dFt68f5ifflxWijzc8iXBlGHLdwtlyByfBxGDT7XuAshHgOovXsYC9XYznD8ulfsphn');">
-                            </div>
+                    <!-- Release 3 -->
+                    <div class="home-card-release">
+                        <div class="home-card-release-img">
+                            <div class="home-card-release-bg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAmXVUebl_4Ymy476tncGGcU_DzHz7so_JT9KKbraBDRoJB7xpzHifsWoiCNSpPg-CHMUp2N4a3ioFB-q-D85W2jk0t3NNzdF1rdyiO7p2fhON_NAoDIcn5UW2eQhtM650g-bxhksqZwhCKpwWDBkkxpyIEO3aOC89n7zxejHQK1Zbt5BFwNBJIuO78Oj8CcPXQY-c2izjy7dFt68f5ifflxWijzc8iXBlGHLdwtlyByfBxGDT7XuAshHgOovXsYC9XYznD8ulfsphn');"></div>
                         </div>
-                        <div class="flex justify-between items-start">
+                        <div class="home-card-release-info">
                             <div>
-                                <h4 class="font-bold">Ethereal Rift</h4>
-                                <p class="text-slate-400 text-xs">Puzzle • Adventure</p>
+                                <h4 class="home-card-release-title">Ethereal Rift</h4>
+                                <p class="home-card-release-desc">Puzzle • Adventure</p>
                             </div>
-                            <span class="text-primary font-bold">$19.99</span>
+                            <span class="home-card-release-price">$19.99</span>
                         </div>
                     </div>
-                    <div class="flex-none w-[320px] group">
-                        <div class="relative aspect-video rounded-xl overflow-hidden mb-3">
-                            <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
-                                data-alt="Dark dungeon with glowing crystals"
-                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBsgZRY5AP8hPEQ3A_PLnb5_ALeorjgisTMYMn31QxlQawavos0IGLKoUzXFoPubQgJWue0R0tQu2leWxHMiEGiskk5BUiawrGQ2oxxVoCZNknhfWbqvqI86hmYD8-wgEK2E7sSmjTy4UJHo3YWKQnwv0D8giBu_zuydJ8U-ujhLw64vKlY8hvdk6_q8ObBXzUM2O7VZPlVJYkbTguHZ6Ummj5Fgr5akyiCUCvRs68uwCjZCNX6XNf-MIfnGdCrkoNbrf0-aQ9kTT7J');">
-                            </div>
+                    <!-- Release 4 -->
+                    <div class="home-card-release">
+                        <div class="home-card-release-img">
+                            <div class="home-card-release-bg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBsgZRY5AP8hPEQ3A_PLnb5_ALeorjgisTMYMn31QxlQawavos0IGLKoUzXFoPubQgJWue0R0tQu2leWxHMiEGiskk5BUiawrGQ2oxxVoCZNknhfWbqvqI86hmYD8-wgEK2E7sSmjTy4UJHo3YWKQnwv0D8giBu_zuydJ8U-ujhLw64vKlY8hvdk6_q8ObBXzUM2O7VZPlVJYkbTguHZ6Ummj5Fgr5akyiCUCvRs68uwCjZCNX6XNf-MIfnGdCrkoNbrf0-aQ9kTT7J');"></div>
                         </div>
-                        <div class="flex justify-between items-start">
+                        <div class="home-card-release-info">
                             <div>
-                                <h4 class="font-bold">Shadow Dweller</h4>
-                                <p class="text-slate-400 text-xs">Action • Horror</p>
+                                <h4 class="home-card-release-title">Shadow Dweller</h4>
+                                <p class="home-card-release-desc">Action • Horror</p>
                             </div>
-                            <span class="text-primary font-bold">$29.99</span>
+                            <span class="home-card-release-price">$29.99</span>
                         </div>
                     </div>
                 </div>
             </section>
         </main>
-        <footer class="bg-primary/5 dark:bg-primary/10 border-t border-primary/20 pt-16 pb-8 px-6 lg:px-20 mt-12">
-            <div class="max-w-7xl mx-auto">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-                    <div class="flex flex-col gap-6">
-                        <div class="flex items-center gap-3 text-primary">
-                            <div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
-                                <span class="material-symbols-outlined">rocket_launch</span>
+
+        <!-- FOOTER -->
+        <footer class="home-footer">
+            <div class="home-footer-inner">
+                <div class="home-footer-grid">
+                    <div class="home-footer-brand">
+                        <h2>
+                            <div class="home-action-btn primary" style="height: 32px; width: 32px; border-radius: 8px;">
+                                <span class="material-symbols-outlined" style="font-size: 18px;">rocket_launch</span>
                             </div>
-                            <h2 class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-tight">
-                                Nexus Games</h2>
-                        </div>
-                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
-                            The ultimate destination for gamers. Discover, play, and connect with millions of players
-                            worldwide.
-                        </p>
-                        <div class="flex gap-4">
-                            <a class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all"
-                                href="#">
-                                <span class="material-symbols-outlined">share</span>
-                            </a>
-                            <a class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all"
-                                href="#">
-                                <span class="material-symbols-outlined">public</span>
-                            </a>
+                            Nexus Games
+                        </h2>
+                        <p>The ultimate destination for gamers. Discover, play, and connect with millions of players worldwide.</p>
+                        <div class="home-footer-social">
+                            <a href="#" class="home-social-link"><span class="material-symbols-outlined">share</span></a>
+                            <a href="#" class="home-social-link"><span class="material-symbols-outlined">public</span></a>
                         </div>
                     </div>
-                    <div>
-                        <h4 class="text-slate-900 dark:text-white font-bold mb-6">Store</h4>
-                        <ul class="space-y-4 text-sm">
-                            <li><a class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors"
-                                    href="#">Featured</a></li>
-                            <li><a class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors"
-                                    href="#">Free to Play</a></li>
-                            <li><a class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors"
-                                    href="#">Gift Cards</a></li>
-                            <li><a class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors"
-                                    href="#">Sales</a></li>
+                    
+                    <div class="home-footer-col">
+                        <h4>Store</h4>
+                        <ul>
+                            <li><a href="#">Featured</a></li>
+                            <li><a href="#">Free to Play</a></li>
+                            <li><a href="#">Gift Cards</a></li>
+                            <li><a href="#">Sales</a></li>
                         </ul>
                     </div>
-                    <div>
-                        <h4 class="text-slate-900 dark:text-white font-bold mb-6">Support</h4>
-                        <ul class="space-y-4 text-sm">
-                            <li><a class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors"
-                                    href="#">Help Center</a></li>
-                            <li><a class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors"
-                                    href="#">Contact Us</a></li>
-                            <li><a class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors"
-                                    href="#">Refund Policy</a></li>
-                            <li><a class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors"
-                                    href="#">Security</a></li>
+
+                    <div class="home-footer-col">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Refund Policy</a></li>
+                            <li><a href="#">Security</a></li>
                         </ul>
                     </div>
-                    <div>
-                        <h4 class="text-slate-900 dark:text-white font-bold mb-6">Newsletter</h4>
-                        <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Get the latest deals and news right
-                            in your inbox.</p>
-                        <div class="flex gap-2">
-                            <input
-                                class="flex-1 bg-white dark:bg-background-dark border border-primary/20 rounded-lg px-4 py-2 text-sm focus:ring-2 focus:ring-primary focus:outline-none"
-                                placeholder="Email address" type="email" />
-                            <button class="bg-primary text-white p-2 rounded-lg hover:bg-primary/90 transition-colors">
-                                <span class="material-symbols-outlined">send</span>
-                            </button>
+
+                    <div class="home-footer-newsletter">
+                        <h4 style="font-weight: 700; color: var(--text); margin-bottom: 24px;">Newsletter</h4>
+                        <p>Get the latest deals and news right in your inbox.</p>
+                        <div class="home-newsletter-form">
+                            <input type="email" placeholder="Email address" />
+                            <button><span class="material-symbols-outlined">send</span></button>
                         </div>
                     </div>
                 </div>
-                <div
-                    class="pt-8 border-t border-primary/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500 dark:text-slate-400">
+                
+                <div class="home-footer-bottom">
                     <p>© 2024 Nexus Games. All rights reserved.</p>
-                    <div class="flex gap-8">
-                        <a class="hover:text-primary" href="#">Privacy Policy</a>
-                        <a class="hover:text-primary" href="#">Terms of Service</a>
-                        <a class="hover:text-primary" href="#">Cookie Settings</a>
+                    <div class="home-footer-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Settings</a>
                     </div>
                 </div>
             </div>
         </footer>
     </div>
 </body>
-
 </html>

@@ -1,527 +1,274 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="en">
-
+<html lang="es">
 <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Nexus Games | Product Catalog</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#9f1fef",
-                        "background-light": "#f7f6f8",
-                        "background-dark": "#1b1022",
-                    },
-                    fontFamily: {
-                        "display": ["Space Grotesk"]
-                    },
-                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
-                },
-            },
-        }
-    </script>
-    <style>
-        body {
-            font-family: 'Space Grotesk', sans-serif;
-        }
-
-        .custom-scrollbar::-webkit-scrollbar {
-            width: 6px;
-        }
-
-        .custom-scrollbar::-webkit-scrollbar-track {
-            background: transparent;
-        }
-
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: #3a2348;
-            border-radius: 10px;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexus Games | Catálogo</title>
+    <link rel="stylesheet" href="../css/globals.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/sidebar.css" />
+    <link rel="stylesheet" href="../css/catalog.css" />
 </head>
+<body>
+    <div class="layout">
+        <!-- TOPBAR -->
+        <header class="topbar">
+            <div class="topbar-brand">
+                <div class="topbar-logo">
+                    <span class="material-symbols-outlined">rocket_launch</span>
+                </div>
+                <span class="topbar-name">NEXUS GAMES</span>
+            </div>
+            
+            <div class="catalog-search-wrapper">
+                <span class="material-symbols-outlined">search</span>
+                <input placeholder="Search for games, expansions, or publishers" />
+            </div>
 
-<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
-    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
-        <header
-            class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/20 bg-background-light dark:bg-background-dark px-6 md:px-10 py-4 sticky top-0 z-50">
-            <div class="flex items-center gap-4 text-primary">
-                <div class="size-8">
-                    <svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z"
-                            fill="currentColor"></path>
-                    </svg>
-                </div>
-                <h2 class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-tight">Nexus Games
-                </h2>
-            </div>
-            <div class="hidden md:flex flex-1 justify-center px-8">
-                <div class="flex w-full max-w-xl items-stretch rounded-lg h-11 bg-primary/10 border border-primary/20">
-                    <div class="text-primary flex items-center justify-center pl-4">
-                        <span class="material-symbols-outlined">search</span>
-                    </div>
-                    <input
-                        class="w-full border-none bg-transparent focus:ring-0 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 px-4 text-base"
-                        placeholder="Search for games, expansions, or publishers" value="" />
-                </div>
-            </div>
-            <div class="flex items-center gap-4">
-                <button
-                    class="flex items-center justify-center rounded-lg h-10 w-10 bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
-                    <span class="material-symbols-outlined">shopping_cart</span>
-                </button>
-                <button
-                    class="flex items-center justify-center rounded-lg h-10 w-10 bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
-                    <span class="material-symbols-outlined">person</span>
-                </button>
-                <div class="h-10 w-10 rounded-full bg-primary/30 border border-primary/50 overflow-hidden">
-                    <img alt="User Avatar" class="h-full w-full object-cover"
-                        data-alt="User profile avatar illustration"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbY2Coo1vyVqFMljxxOXZLQ2v331DDR9QGXpDzRO1aoQR6qHmu7oEzfW5mCMtwFD7Ht7h01KmMdJOSX9WyYz-fc0ylgObaQTktOlacfaYV8ppDKGnSpuL5bw43QWiKAZSDgXQME3eXRSdHKQ6ei32Lphruu5bLxvfZ88-vhI6C_WHzfuTtKIGbNavBw0zA66bBlroYIrO0kbc-GCdd60-OcMw7pd250MHikx41vTO3Mcm0O-3AYBT0OtGR17lsZoaKl6-L8ZGfXJ4P" />
+            <div class="topbar-actions">
+                <a href="#" class="topbar-icon-btn"><span class="material-symbols-outlined">shopping_cart</span></a>
+                <a href="#" class="topbar-icon-btn"><span class="material-symbols-outlined">person</span></a>
+                <div class="catalog-avatar">
+                   <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbY2Coo1vyVqFMljxxOXZLQ2v331DDR9QGXpDzRO1aoQR6qHmu7oEzfW5mCMtwFD7Ht7h01KmMdJOSX9WyYz-fc0ylgObaQTktOlacfaYV8ppDKGnSpuL5bw43QWiKAZSDgXQME3eXRSdHKQ6ei32Lphruu5bLxvfZ88-vhI6C_WHzfuTtKIGbNavBw0zA66bBlroYIrO0kbc-GCdd60-OcMw7pd250MHikx41vTO3Mcm0O-3AYBT0OtGR17lsZoaKl6-L8ZGfXJ4P" alt="User">
                 </div>
             </div>
         </header>
-        <main class="flex flex-1 overflow-hidden">
-            <aside
-                class="hidden lg:flex flex-col w-72 border-r border-primary/10 bg-background-light dark:bg-background-dark p-6 overflow-y-auto custom-scrollbar">
-                <div class="space-y-8">
-                    <div>
-                        <h3 class="text-slate-900 dark:text-white text-sm font-bold uppercase tracking-widest mb-4">
-                            Genre</h3>
-                        <div class="flex flex-col gap-2">
-                            <label class="flex items-center gap-3 cursor-pointer group">
-                                <input checked=""
-                                    class="rounded border-primary/30 text-primary focus:ring-primary/50 bg-transparent"
-                                    type="checkbox" />
-                                <span
-                                    class="text-slate-600 dark:text-slate-400 group-hover:text-primary transition-colors">Action</span>
-                            </label>
-                            <label class="flex items-center gap-3 cursor-pointer group">
-                                <input checked=""
-                                    class="rounded border-primary/30 text-primary focus:ring-primary/50 bg-transparent"
-                                    type="checkbox" />
-                                <span
-                                    class="text-slate-600 dark:text-slate-400 group-hover:text-primary transition-colors">RPG</span>
-                            </label>
-                            <label class="flex items-center gap-3 cursor-pointer group">
-                                <input
-                                    class="rounded border-primary/30 text-primary focus:ring-primary/50 bg-transparent"
-                                    type="checkbox" />
-                                <span
-                                    class="text-slate-600 dark:text-slate-400 group-hover:text-primary transition-colors">Indie</span>
-                            </label>
-                            <label class="flex items-center gap-3 cursor-pointer group">
-                                <input
-                                    class="rounded border-primary/30 text-primary focus:ring-primary/50 bg-transparent"
-                                    type="checkbox" />
-                                <span
-                                    class="text-slate-600 dark:text-slate-400 group-hover:text-primary transition-colors">Adventure</span>
-                            </label>
-                            <label class="flex items-center gap-3 cursor-pointer group">
-                                <input
-                                    class="rounded border-primary/30 text-primary focus:ring-primary/50 bg-transparent"
-                                    type="checkbox" />
-                                <span
-                                    class="text-slate-600 dark:text-slate-400 group-hover:text-primary transition-colors">Strategy</span>
-                            </label>
-                        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div style="padding: 0 20px;">
+                <div class="filter-section">
+                    <h3>Genre</h3>
+                    <div class="filter-group">
+                        <label class="filter-item"><input type="checkbox" checked><span>Action</span></label>
+                        <label class="filter-item"><input type="checkbox" checked><span>RPG</span></label>
+                        <label class="filter-item"><input type="checkbox"><span>Indie</span></label>
+                        <label class="filter-item"><input type="checkbox"><span>Adventure</span></label>
+                        <label class="filter-item"><input type="checkbox"><span>Strategy</span></label>
                     </div>
-                    <div>
-                        <h3 class="text-slate-900 dark:text-white text-sm font-bold uppercase tracking-widest mb-4">
-                            Platform</h3>
-                        <div class="flex flex-col gap-2">
-                            <label class="flex items-center gap-3 cursor-pointer group">
-                                <input checked=""
-                                    class="border-primary/30 text-primary focus:ring-primary/50 bg-transparent"
-                                    name="platform" type="radio" />
-                                <span
-                                    class="text-slate-600 dark:text-slate-400 group-hover:text-primary transition-colors">PC
-                                    (Windows)</span>
-                            </label>
-                            <label class="flex items-center gap-3 cursor-pointer group">
-                                <input class="border-primary/30 text-primary focus:ring-primary/50 bg-transparent"
-                                    name="platform" type="radio" />
-                                <span
-                                    class="text-slate-600 dark:text-slate-400 group-hover:text-primary transition-colors">PlayStation
-                                    5</span>
-                            </label>
-                            <label class="flex items-center gap-3 cursor-pointer group">
-                                <input class="border-primary/30 text-primary focus:ring-primary/50 bg-transparent"
-                                    name="platform" type="radio" />
-                                <span
-                                    class="text-slate-600 dark:text-slate-400 group-hover:text-primary transition-colors">Xbox
-                                    Series X</span>
-                            </label>
-                            <label class="flex items-center gap-3 cursor-pointer group">
-                                <input class="border-primary/30 text-primary focus:ring-primary/50 bg-transparent"
-                                    name="platform" type="radio" />
-                                <span
-                                    class="text-slate-600 dark:text-slate-400 group-hover:text-primary transition-colors">Nintendo
-                                    Switch</span>
-                            </label>
-                        </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Platform</h3>
+                    <div class="filter-group">
+                        <label class="filter-item"><input type="radio" name="platform" checked><span>PC (Windows)</span></label>
+                        <label class="filter-item"><input type="radio" name="platform"><span>PlayStation 5</span></label>
+                        <label class="filter-item"><input type="radio" name="platform"><span>Xbox Series X</span></label>
+                        <label class="filter-item"><input type="radio" name="platform"><span>Nintendo Switch</span></label>
                     </div>
-                    <div>
-                        <h3 class="text-slate-900 dark:text-white text-sm font-bold uppercase tracking-widest mb-4">
-                            Price Range</h3>
-                        <div class="px-2">
-                            <input
-                                class="w-full h-2 bg-primary/20 rounded-lg appearance-none cursor-pointer accent-primary"
-                                type="range" />
-                            <div class="flex justify-between mt-2 text-xs text-slate-500 font-medium">
-                                <span>$0</span>
-                                <span>$100+</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="text-slate-900 dark:text-white text-sm font-bold uppercase tracking-widest mb-4">
-                            Ratings</h3>
-                        <div class="flex flex-col gap-2">
-                            <button
-                                class="flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-primary transition-colors text-sm">
-                                <span class="material-symbols-outlined text-sm fill-current text-yellow-500">star</span>
-                                <span class="material-symbols-outlined text-sm fill-current text-yellow-500">star</span>
-                                <span class="material-symbols-outlined text-sm fill-current text-yellow-500">star</span>
-                                <span class="material-symbols-outlined text-sm fill-current text-yellow-500">star</span>
-                                <span class="material-symbols-outlined text-sm text-yellow-500">star</span>
-                                <span>&amp; up</span>
-                            </button>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Price Range</h3>
+                    <div class="range-slider">
+                        <input type="range">
+                        <div class="range-labels">
+                            <span>$0</span>
+                            <span>$100+</span>
                         </div>
                     </div>
                 </div>
-            </aside>
-            <section class="flex-1 p-6 md:p-8 overflow-y-auto custom-scrollbar">
-                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
-                    <div>
-                        <h1 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white">New &amp; Trending
-                        </h1>
-                        <p class="text-slate-500 dark:text-slate-400 mt-1">Discover the latest blockbusters and indie
-                            gems.</p>
+
+                <div class="filter-section">
+                    <h3>Ratings</h3>
+                    <div class="filter-group">
+                        <button class="filter-rating-btn">
+                            <span class="stars">
+                                <span class="material-symbols-outlined">star</span>
+                                <span class="material-symbols-outlined">star</span>
+                                <span class="material-symbols-outlined">star</span>
+                                <span class="material-symbols-outlined">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">star</span>
+                            </span>
+                            &amp; up
+                        </button>
                     </div>
-                    <div class="flex items-center gap-3">
-                        <span class="text-sm text-slate-500 whitespace-nowrap">Sort by:</span>
-                        <select
-                            class="bg-primary/10 border-none rounded-lg text-sm text-slate-900 dark:text-white focus:ring-primary/50 pr-10">
-                            <option>Relevance</option>
-                            <option>Price: Low to High</option>
-                            <option>Price: High to Low</option>
-                            <option>Release Date</option>
-                            <option>Average Rating</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                    <div
-                        class="group bg-primary/5 hover:bg-primary/10 border border-primary/10 rounded-xl overflow-hidden transition-all duration-300">
-                        <div class="aspect-[3/4] relative overflow-hidden">
-                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                data-alt="Action sci-fi game cover art"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhTDuLlftmYbM6YE4TPSxc4tdyBz2GzdGqJB-yfQmY3Ynfvs-Fq6-FWmp6UN2cyE1pfTDD25v7u6keWsIiIGkQaRb-lebeqmXcO70IQH9svFW3Q2X6c6wiKHbOtpdrpKf6-R_sKgPogKvBjiWmQleYe-TzuFCS2IQLWQKGcYHP7bQf3Jed4hKk6iVrkuaT813FPTDGQK9encyQz7Zayb9UYuLb1u2cWLi2pS6ei4chugDi-RflKyXAe2-gppT66LpCTr0XIOJBv_bK" />
-                            <div
-                                class="absolute top-3 left-3 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">
-                                Bestseller</div>
-                        </div>
-                        <div class="p-4">
-                            <div class="flex justify-between items-start mb-1">
-                                <h3 class="font-bold text-lg text-slate-900 dark:text-white truncate">Nebula Protocol
-                                </h3>
-                                <div class="flex items-center text-yellow-500">
-                                    <span class="material-symbols-outlined text-xs fill-current">star</span>
-                                    <span class="text-xs font-bold ml-1">4.9</span>
-                                </div>
-                            </div>
-                            <p class="text-slate-500 dark:text-slate-400 text-xs mb-4">Sci-Fi • Action RPG</p>
-                            <div class="flex items-center justify-between">
-                                <span class="text-xl font-bold text-primary">$59.99</span>
-                                <button
-                                    class="bg-primary hover:bg-primary/80 text-white rounded-lg px-3 py-1.5 flex items-center gap-2 text-sm font-bold transition-colors">
-                                    <span class="material-symbols-outlined text-sm">add_shopping_cart</span>
-                                    Add
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="group bg-primary/5 hover:bg-primary/10 border border-primary/10 rounded-xl overflow-hidden transition-all duration-300">
-                        <div class="aspect-[3/4] relative overflow-hidden">
-                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                data-alt="Medieval fantasy RPG game cover art"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsj9rAonha8LWP38VSqrJiJS9XV-il54ELuUhwbS0V8g8oTx-IcumHo_DXcUxI2SrtFBHC6KZtcHry5mON1UDU5itZXg7spqcgHFPC_jCTDNL66oT4WkJaJEj9Sr6RjDP8QcBH9u2KW8FZPbOfLb3D7IRnNaqWXvZ2d2KSxMEcfnixgKwFi-Rm9L6SZkpN7CpL49VN7SnC6nuHXeLcLlRHyGCtMdFT_RcmYeBVm2KXQJ78kQ8PCuj1YgKv574nk5AbEUeth5Pwv040" />
-                            <div
-                                class="absolute top-3 right-3 bg-background-dark/80 backdrop-blur-md text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">
-                                -20%</div>
-                        </div>
-                        <div class="p-4">
-                            <div class="flex justify-between items-start mb-1">
-                                <h3 class="font-bold text-lg text-slate-900 dark:text-white truncate">Elder Realms</h3>
-                                <div class="flex items-center text-yellow-500">
-                                    <span class="material-symbols-outlined text-xs fill-current">star</span>
-                                    <span class="text-xs font-bold ml-1">4.7</span>
-                                </div>
-                            </div>
-                            <p class="text-slate-500 dark:text-slate-400 text-xs mb-4">Fantasy • Open World</p>
-                            <div class="flex items-center justify-between">
-                                <div class="flex flex-col">
-                                    <span class="text-slate-500 line-through text-xs">$49.99</span>
-                                    <span class="text-xl font-bold text-primary">$39.99</span>
-                                </div>
-                                <button
-                                    class="bg-primary hover:bg-primary/80 text-white rounded-lg px-3 py-1.5 flex items-center gap-2 text-sm font-bold transition-colors">
-                                    <span class="material-symbols-outlined text-sm">add_shopping_cart</span>
-                                    Add
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="group bg-primary/5 hover:bg-primary/10 border border-primary/10 rounded-xl overflow-hidden transition-all duration-300">
-                        <div class="aspect-[3/4] relative overflow-hidden">
-                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                data-alt="Minimalist indie adventure game cover art"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgewoKRGtN3T67dlq4gkVQWkCPITIKZQq1rTqnLD4w0ACmyqEs07k0c7aEJXhmjFEfyVhpoZ5yiSZpSrVgA6geXd23_yk7ilI9WCpE6PGpBwQqPwxBMjArahBk0i6-J4UwwbybrGHgDI8loctg_Y4bIv7GZjIlWBZUut7ePFSetMzMyuvoaBiuflZGpUZou6UAZIlQ6mZbuHGjXdQi6mk0-LLx-oU8eONtP2QujWNZDUvTJ4hqqv07rPE52djJbR49eFPoU7PedgjJ" />
-                        </div>
-                        <div class="p-4">
-                            <div class="flex justify-between items-start mb-1">
-                                <h3 class="font-bold text-lg text-slate-900 dark:text-white truncate">Paper Planes</h3>
-                                <div class="flex items-center text-yellow-500">
-                                    <span class="material-symbols-outlined text-xs fill-current">star</span>
-                                    <span class="text-xs font-bold ml-1">5.0</span>
-                                </div>
-                            </div>
-                            <p class="text-slate-500 dark:text-slate-400 text-xs mb-4">Indie • Puzzle</p>
-                            <div class="flex items-center justify-between">
-                                <span class="text-xl font-bold text-primary">$14.99</span>
-                                <button
-                                    class="bg-primary hover:bg-primary/80 text-white rounded-lg px-3 py-1.5 flex items-center gap-2 text-sm font-bold transition-colors">
-                                    <span class="material-symbols-outlined text-sm">add_shopping_cart</span>
-                                    Add
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="group bg-primary/5 hover:bg-primary/10 border border-primary/10 rounded-xl overflow-hidden transition-all duration-300">
-                        <div class="aspect-[3/4] relative overflow-hidden">
-                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                data-alt="Retro pixel art platformer game cover"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSZTDrTEtcbD2O5v_VJShWb3otST7Ga7JZBWCQC4001a4gFVLYQ_ZRbCB8vZiuQlYPDmGdimm4tTx7PAeivTvkRTXdZUki_D0cz9EfU5TUWWvG1AgRULcn6VgC82fDHdYJswR9GxJNaREJ64GxIUNIwNOjO2c-TwrBe0Zz7AHQE--j4hmWT_KrZKcZac9kjlxg_Z2pGKSTgJdGdX0aRJA0dCUGKoqaKGCvSyVwwSOI8NhLMnHR5pPJDBSPUfYMIbGx0YcUpBB41BCl" />
-                        </div>
-                        <div class="p-4">
-                            <div class="flex justify-between items-start mb-1">
-                                <h3 class="font-bold text-lg text-slate-900 dark:text-white truncate">Cyber Dash</h3>
-                                <div class="flex items-center text-yellow-500">
-                                    <span class="material-symbols-outlined text-xs fill-current">star</span>
-                                    <span class="text-xs font-bold ml-1">4.2</span>
-                                </div>
-                            </div>
-                            <p class="text-slate-500 dark:text-slate-400 text-xs mb-4">Platformer • Arcade</p>
-                            <div class="flex items-center justify-between">
-                                <span class="text-xl font-bold text-primary">$24.99</span>
-                                <button
-                                    class="bg-primary hover:bg-primary/80 text-white rounded-lg px-3 py-1.5 flex items-center gap-2 text-sm font-bold transition-colors">
-                                    <span class="material-symbols-outlined text-sm">add_shopping_cart</span>
-                                    Add
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="group bg-primary/5 hover:bg-primary/10 border border-primary/10 rounded-xl overflow-hidden transition-all duration-300">
-                        <div class="aspect-[3/4] relative overflow-hidden">
-                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                data-alt="Futuristic racing game cover art"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYnZcsv_sqHpr9JbUZSChFw5eEJMiRLdoNJ6-08fYfFib_LznzfbCn6X-5OydcmVvqGmMSPfzNqJGAruwuzg31QA7kzXXf20p3NHQpxSg6icCEOzN7aON8LYi-NWYUiKRtzZgZZy2FUCfxl7gElqt5YntexMwADmxrim4zH-nLeSQrRNeRkecayzzsob20sLvXpJlm8lN9N2Dgw_ZUbWGER_g9n0WDCy90MyaWsIzpf-cNB9RgidHYVWrFjyy9U6YmqJ6dPyTVzrv4" />
-                        </div>
-                        <div class="p-4">
-                            <div class="flex justify-between items-start mb-1">
-                                <h3 class="font-bold text-lg text-slate-900 dark:text-white truncate">Velocity 2077</h3>
-                                <div class="flex items-center text-yellow-500">
-                                    <span class="material-symbols-outlined text-xs fill-current">star</span>
-                                    <span class="text-xs font-bold ml-1">4.5</span>
-                                </div>
-                            </div>
-                            <p class="text-slate-500 dark:text-slate-400 text-xs mb-4">Racing • Simulation</p>
-                            <div class="flex items-center justify-between">
-                                <span class="text-xl font-bold text-primary">$69.99</span>
-                                <button
-                                    class="bg-primary hover:bg-primary/80 text-white rounded-lg px-3 py-1.5 flex items-center gap-2 text-sm font-bold transition-colors">
-                                    <span class="material-symbols-outlined text-sm">add_shopping_cart</span>
-                                    Add
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="group bg-primary/5 hover:bg-primary/10 border border-primary/10 rounded-xl overflow-hidden transition-all duration-300">
-                        <div class="aspect-[3/4] relative overflow-hidden">
-                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                data-alt="Tactical strategy game cover art"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzmjfSk1X0x09OXANq6u0PtuQpUDy_4nmTjGyesPxv8Za23AYl_DhDAhyfXNMr-xFRdwCy4PjIXBqF_kFtDNyYnEelIDwEDahG3rzeUhfigU6sPf0mg973DwTdnAnmzQz8AZSlXUWzHzKTvednh5R2wtvsCeg6gXGQRDdynq9NBjeOEuELSRLks8rCIvV4CDPlAuA-tZJs9HYTsA3UPW-qmD_19yW4MbWk3AsmDRZcGk4JPV1ib620Kn8YZRziWFKhIzzEOPs9KVyP" />
-                        </div>
-                        <div class="p-4">
-                            <div class="flex justify-between items-start mb-1">
-                                <h3 class="font-bold text-lg text-slate-900 dark:text-white truncate">Iron Command</h3>
-                                <div class="flex items-center text-yellow-500">
-                                    <span class="material-symbols-outlined text-xs fill-current">star</span>
-                                    <span class="text-xs font-bold ml-1">4.8</span>
-                                </div>
-                            </div>
-                            <p class="text-slate-500 dark:text-slate-400 text-xs mb-4">Strategy • War</p>
-                            <div class="flex items-center justify-between">
-                                <span class="text-xl font-bold text-primary">$44.99</span>
-                                <button
-                                    class="bg-primary hover:bg-primary/80 text-white rounded-lg px-3 py-1.5 flex items-center gap-2 text-sm font-bold transition-colors">
-                                    <span class="material-symbols-outlined text-sm">add_shopping_cart</span>
-                                    Add
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="group bg-primary/5 hover:bg-primary/10 border border-primary/10 rounded-xl overflow-hidden transition-all duration-300">
-                        <div class="aspect-[3/4] relative overflow-hidden">
-                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                data-alt="Dark souls-like action game cover"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDemtwGE_HJFNPdZv1IlWzxrpKErSced8vOY5AAR0s0PNVHGWWY5Fh26b4-Fz4JLNnqAPx2MEVuqJGTaxqwLwAgg1dLtd5044Qa9gbR10Aw2cyXJptLwJAMnsLDfVfVBNPcYWxw-GE6SyCrSdtpsYoQzw3b3ae0rM8Qr1zFd0g2ECOS4O98pwX0bvNUcZmfsDvcPbCYcHIUzkUA_hon6SYjrCwTK8yvEenNX53rBGQii1qmjJmAXV5RL-dqYSLbdmdutKjGvbhQFE0W" />
-                        </div>
-                        <div class="p-4">
-                            <div class="flex justify-between items-start mb-1">
-                                <h3 class="font-bold text-lg text-slate-900 dark:text-white truncate">Cursed Souls</h3>
-                                <div class="flex items-center text-yellow-500">
-                                    <span class="material-symbols-outlined text-xs fill-current">star</span>
-                                    <span class="text-xs font-bold ml-1">4.6</span>
-                                </div>
-                            </div>
-                            <p class="text-slate-500 dark:text-slate-400 text-xs mb-4">Action • RPG</p>
-                            <div class="flex items-center justify-between">
-                                <span class="text-xl font-bold text-primary">$54.99</span>
-                                <button
-                                    class="bg-primary hover:bg-primary/80 text-white rounded-lg px-3 py-1.5 flex items-center gap-2 text-sm font-bold transition-colors">
-                                    <span class="material-symbols-outlined text-sm">add_shopping_cart</span>
-                                    Add
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="group bg-primary/5 hover:bg-primary/10 border border-primary/10 rounded-xl overflow-hidden transition-all duration-300">
-                        <div class="aspect-[3/4] relative overflow-hidden">
-                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                data-alt="Cute creature collection game cover"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgW9WlaXnfBAB2U1EQezZqSXETtwMyR57xeYJwZweYEllwL69AXnV0LUgSJfGxDcrmwX9l_CCqtAHwdHVylNQB12N0SDdYBbcpeK1UI9GkDckLja95lvqSpDKQM5GXkfAID6Iduu7yO4R5_CpdigJ2paDcbwj2NX2O6fzPkpdFpcrgcRNyqfNvCmpypaw_1hRgLa6QcbCSALDnYaMdUcyy4OpEJRzyEQdryU-FsSZ6aDHuXBRyA3kjR7QQvhxUcluNyh7eRR5T7IHy" />
-                        </div>
-                        <div class="p-4">
-                            <div class="flex justify-between items-start mb-1">
-                                <h3 class="font-bold text-lg text-slate-900 dark:text-white truncate">Pet Pals Island
-                                </h3>
-                                <div class="flex items-center text-yellow-500">
-                                    <span class="material-symbols-outlined text-xs fill-current">star</span>
-                                    <span class="text-xs font-bold ml-1">4.4</span>
-                                </div>
-                            </div>
-                            <p class="text-slate-500 dark:text-slate-400 text-xs mb-4">Simulation • Casual</p>
-                            <div class="flex items-center justify-between">
-                                <span class="text-xl font-bold text-primary">$29.99</span>
-                                <button
-                                    class="bg-primary hover:bg-primary/80 text-white rounded-lg px-3 py-1.5 flex items-center gap-2 text-sm font-bold transition-colors">
-                                    <span class="material-symbols-outlined text-sm">add_shopping_cart</span>
-                                    Add
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-12 flex items-center justify-center gap-2">
-                    <button
-                        class="w-10 h-10 rounded-lg border border-primary/20 flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition-colors">
-                        <span class="material-symbols-outlined">chevron_left</span>
-                    </button>
-                    <button
-                        class="w-10 h-10 rounded-lg bg-primary text-white flex items-center justify-center font-bold">1</button>
-                    <button
-                        class="w-10 h-10 rounded-lg border border-primary/20 flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition-colors">2</button>
-                    <button
-                        class="w-10 h-10 rounded-lg border border-primary/20 flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition-colors">3</button>
-                    <span class="px-2 text-slate-500">...</span>
-                    <button
-                        class="w-10 h-10 rounded-lg border border-primary/20 flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition-colors">12</button>
-                    <button
-                        class="w-10 h-10 rounded-lg border border-primary/20 flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition-colors">
-                        <span class="material-symbols-outlined">chevron_right</span>
-                    </button>
-                </div>
-            </section>
-        </main>
-        <footer class="bg-background-light dark:bg-[#120a17] border-t border-primary/10 py-12 px-6 md:px-10">
-            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
-                <div class="col-span-1 md:col-span-1">
-                    <div class="flex items-center gap-3 text-primary mb-6">
-                        <div class="size-6">
-                            <svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z"
-                                    fill="currentColor"></path>
-                            </svg>
-                        </div>
-                        <h2 class="text-xl font-bold">Nexus Games</h2>
-                    </div>
-                    <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
-                        The ultimate destination for gamers. Discover, collect, and play the world's most immersive
-                        titles in one place.
-                    </p>
-                </div>
-                <div>
-                    <h4 class="text-slate-900 dark:text-white font-bold mb-6">Explore</h4>
-                    <ul class="space-y-4 text-slate-500 dark:text-slate-400 text-sm">
-                        <li><a class="hover:text-primary transition-colors" href="#">Top Charts</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Upcoming Releases</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Free Games</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Gift Cards</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-slate-900 dark:text-white font-bold mb-6">Support</h4>
-                    <ul class="space-y-4 text-slate-500 dark:text-slate-400 text-sm">
-                        <li><a class="hover:text-primary transition-colors" href="#">Help Center</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Account Issues</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Refund Policy</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Safety Guidelines</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-slate-900 dark:text-white font-bold mb-6">Connect</h4>
-                    <div class="flex gap-4 mb-6">
-                        <a class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all"
-                            href="#">
-                            <span class="material-symbols-outlined text-xl">brand_family</span>
-                        </a>
-                        <a class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all"
-                            href="#">
-                            <span class="material-symbols-outlined text-xl">share</span>
-                        </a>
-                        <a class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all"
-                            href="#">
-                            <span class="material-symbols-outlined text-xl">alternate_email</span>
-                        </a>
-                    </div>
-                    <p class="text-xs text-slate-500">© 2024 Nexus Games Global Ltd.</p>
                 </div>
             </div>
+        </aside>
+
+        <!-- CONTENT -->
+        <main class="content">
+            <div class="catalog-header">
+                <div class="catalog-title">
+                    <h1>New &amp; Trending</h1>
+                    <p>Discover the latest blockbusters and indie gems.</p>
+                </div>
+                <div class="catalog-sort">
+                    <span>Sort by:</span>
+                    <select>
+                        <option>Relevance</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Release Date</option>
+                        <option>Average Rating</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="catalog-grid">
+                <!-- Card 1 -->
+                <div class="catalog-card">
+                    <div class="catalog-card-image">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhTDuLlftmYbM6YE4TPSxc4tdyBz2GzdGqJB-yfQmY3Ynfvs-Fq6-FWmp6UN2cyE1pfTDD25v7u6keWsIiIGkQaRb-lebeqmXcO70IQH9svFW3Q2X6c6wiKHbOtpdrpKf6-R_sKgPogKvBjiWmQleYe-TzuFCS2IQLWQKGcYHP7bQf3Jed4hKk6iVrkuaT813FPTDGQK9encyQz7Zayb9UYuLb1u2cWLi2pS6ei4chugDi-RflKyXAe2-gppT66LpCTr0XIOJBv_bK" alt="Nebula Protocol">
+                        <span class="catalog-badge-bestseller">Bestseller</span>
+                    </div>
+                    <div class="catalog-card-body">
+                        <div class="catalog-card-top">
+                            <div class="catalog-card-title">Nebula Protocol</div>
+                            <div class="catalog-card-rating"><span class="material-symbols-outlined">star</span><span>4.9</span></div>
+                        </div>
+                        <div class="catalog-card-tags">Sci-Fi • Action RPG</div>
+                        <div class="catalog-card-bottom">
+                            <div class="catalog-price-wrap"><span class="catalog-price">$59.99</span></div>
+                            <button class="catalog-add-btn"><span class="material-symbols-outlined">add_shopping_cart</span> Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="catalog-card">
+                    <div class="catalog-card-image">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsj9rAonha8LWP38VSqrJiJS9XV-il54ELuUhwbS0V8g8oTx-IcumHo_DXcUxI2SrtFBHC6KZtcHry5mON1UDU5itZXg7spqcgHFPC_jCTDNL66oT4WkJaJEj9Sr6RjDP8QcBH9u2KW8FZPbOfLb3D7IRnNaqWXvZ2d2KSxMEcfnixgKwFi-Rm9L6SZkpN7CpL49VN7SnC6nuHXeLcLlRHyGCtMdFT_RcmYeBVm2KXQJ78kQ8PCuj1YgKv574nk5AbEUeth5Pwv040" alt="Elder Realms">
+                        <span class="catalog-badge-discount">-20%</span>
+                    </div>
+                    <div class="catalog-card-body">
+                        <div class="catalog-card-top">
+                            <div class="catalog-card-title">Elder Realms</div>
+                            <div class="catalog-card-rating"><span class="material-symbols-outlined">star</span><span>4.7</span></div>
+                        </div>
+                        <div class="catalog-card-tags">Fantasy • Open World</div>
+                        <div class="catalog-card-bottom">
+                            <div class="catalog-price-wrap"><span class="catalog-price-old">$49.99</span><span class="catalog-price">$39.99</span></div>
+                            <button class="catalog-add-btn"><span class="material-symbols-outlined">add_shopping_cart</span> Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="catalog-card">
+                    <div class="catalog-card-image">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgewoKRGtN3T67dlq4gkVQWkCPITIKZQq1rTqnLD4w0ACmyqEs07k0c7aEJXhmjFEfyVhpoZ5yiSZpSrVgA6geXd23_yk7ilI9WCpE6PGpBwQqPwxBMjArahBk0i6-J4UwwbybrGHgDI8loctg_Y4bIv7GZjIlWBZUut7ePFSetMzMyuvoaBiuflZGpUZou6UAZIlQ6mZbuHGjXdQi6mk0-LLx-oU8eONtP2QujWNZDUvTJ4hqqv07rPE52djJbR49eFPoU7PedgjJ" alt="Paper Planes">
+                    </div>
+                    <div class="catalog-card-body">
+                        <div class="catalog-card-top">
+                            <div class="catalog-card-title">Paper Planes</div>
+                            <div class="catalog-card-rating"><span class="material-symbols-outlined">star</span><span>5.0</span></div>
+                        </div>
+                        <div class="catalog-card-tags">Indie • Puzzle</div>
+                        <div class="catalog-card-bottom">
+                            <div class="catalog-price-wrap"><span class="catalog-price">$14.99</span></div>
+                            <button class="catalog-add-btn"><span class="material-symbols-outlined">add_shopping_cart</span> Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="catalog-card">
+                    <div class="catalog-card-image">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSZTDrTEtcbD2O5v_VJShWb3otST7Ga7JZBWCQC4001a4gFVLYQ_ZRbCB8vZiuQlYPDmGdimm4tTx7PAeivTvkRTXdZUki_D0cz9EfU5TUWWvG1AgRULcn6VgC82fDHdYJswR9GxJNaREJ64GxIUNIwNOjO2c-TwrBe0Zz7AHQE--j4hmWT_KrZKcZac9kjlxg_Z2pGKSTgJdGdX0aRJA0dCUGKoqaKGCvSyVwwSOI8NhLMnHR5pPJDBSPUfYMIbGx0YcUpBB41BCl" alt="Cyber Dash">
+                    </div>
+                    <div class="catalog-card-body">
+                        <div class="catalog-card-top">
+                            <div class="catalog-card-title">Cyber Dash</div>
+                            <div class="catalog-card-rating"><span class="material-symbols-outlined">star</span><span>4.2</span></div>
+                        </div>
+                        <div class="catalog-card-tags">Platformer • Arcade</div>
+                        <div class="catalog-card-bottom">
+                            <div class="catalog-price-wrap"><span class="catalog-price">$24.99</span></div>
+                            <button class="catalog-add-btn"><span class="material-symbols-outlined">add_shopping_cart</span> Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="catalog-card">
+                    <div class="catalog-card-image">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYnZcsv_sqHpr9JbUZSChFw5eEJMiRLdoNJ6-08fYfFib_LznzfbCn6X-5OydcmVvqGmMSPfzNqJGAruwuzg31QA7kzXXf20p3NHQpxSg6icCEOzN7aON8LYi-NWYUiKRtzZgZZy2FUCfxl7gElqt5YntexMwADmxrim4zH-nLeSQrRNeRkecayzzsob20sLvXpJlm8lN9N2Dgw_ZUbWGER_g9n0WDCy90MyaWsIzpf-cNB9RgidHYVWrFjyy9U6YmqJ6dPyTVzrv4" alt="Velocity 2077">
+                    </div>
+                    <div class="catalog-card-body">
+                        <div class="catalog-card-top">
+                            <div class="catalog-card-title">Velocity 2077</div>
+                            <div class="catalog-card-rating"><span class="material-symbols-outlined">star</span><span>4.5</span></div>
+                        </div>
+                        <div class="catalog-card-tags">Racing • Simulation</div>
+                        <div class="catalog-card-bottom">
+                            <div class="catalog-price-wrap"><span class="catalog-price">$69.99</span></div>
+                            <button class="catalog-add-btn"><span class="material-symbols-outlined">add_shopping_cart</span> Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="catalog-card">
+                    <div class="catalog-card-image">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzmjfSk1X0x09OXANq6u0PtuQpUDy_4nmTjGyesPxv8Za23AYl_DhDAhyfXNMr-xFRdwCy4PjIXBqF_kFtDNyYnEelIDwEDahG3rzeUhfigU6sPf0mg973DwTdnAnmzQz8AZSlXUWzHzKTvednh5R2wtvsCeg6gXGQRDdynq9NBjeOEuELSRLks8rCIvV4CDPlAuA-tZJs9HYTsA3UPW-qmD_19yW4MbWk3AsmDRZcGk4JPV1ib620Kn8YZRziWFKhIzzEOPs9KVyP" alt="Iron Command">
+                    </div>
+                    <div class="catalog-card-body">
+                        <div class="catalog-card-top">
+                            <div class="catalog-card-title">Iron Command</div>
+                            <div class="catalog-card-rating"><span class="material-symbols-outlined">star</span><span>4.8</span></div>
+                        </div>
+                        <div class="catalog-card-tags">Strategy • War</div>
+                        <div class="catalog-card-bottom">
+                            <div class="catalog-price-wrap"><span class="catalog-price">$44.99</span></div>
+                            <button class="catalog-add-btn"><span class="material-symbols-outlined">add_shopping_cart</span> Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="catalog-card">
+                    <div class="catalog-card-image">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDemtwGE_HJFNPdZv1IlWzxrpKErSced8vOY5AAR0s0PNVHGWWY5Fh26b4-Fz4JLNnqAPx2MEVuqJGTaxqwLwAgg1dLtd5044Qa9gbR10Aw2cyXJptLwJAMnsLDfVfVBNPcYWxw-GE6SyCrSdtpsYoQzw3b3ae0rM8Qr1zFd0g2ECOS4O98pwX0bvNUcZmfsDvcPbCYcHIUzkUA_hon6SYjrCwTK8yvEenNX53rBGQii1qmjJmAXV5RL-dqYSLbdmdutKjGvbhQFE0W" alt="Cursed Souls">
+                    </div>
+                    <div class="catalog-card-body">
+                        <div class="catalog-card-top">
+                            <div class="catalog-card-title">Cursed Souls</div>
+                            <div class="catalog-card-rating"><span class="material-symbols-outlined">star</span><span>4.6</span></div>
+                        </div>
+                        <div class="catalog-card-tags">Action • RPG</div>
+                        <div class="catalog-card-bottom">
+                            <div class="catalog-price-wrap"><span class="catalog-price">$54.99</span></div>
+                            <button class="catalog-add-btn"><span class="material-symbols-outlined">add_shopping_cart</span> Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="catalog-card">
+                    <div class="catalog-card-image">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgW9WlaXnfBAB2U1EQezZqSXETtwMyR57xeYJwZweYEllwL69AXnV0LUgSJfGxDcrmwX9l_CCqtAHwdHVylNQB12N0SDdYBbcpeK1UI9GkDckLja95lvqSpDKQM5GXkfAID6Iduu7yO4R5_CpdigJ2paDcbwj2NX2O6fzPkpdFpcrgcRNyqfNvCmpypaw_1hRgLa6QcbCSALDnYaMdUcyy4OpEJRzyEQdryU-FsSZ6aDHuXBRyA3kjR7QQvhxUcluNyh7eRR5T7IHy" alt="Pet Pals Island">
+                    </div>
+                    <div class="catalog-card-body">
+                        <div class="catalog-card-top">
+                            <div class="catalog-card-title">Pet Pals Island</div>
+                            <div class="catalog-card-rating"><span class="material-symbols-outlined">star</span><span>4.4</span></div>
+                        </div>
+                        <div class="catalog-card-tags">Simulation • Casual</div>
+                        <div class="catalog-card-bottom">
+                            <div class="catalog-price-wrap"><span class="catalog-price">$29.99</span></div>
+                            <button class="catalog-add-btn"><span class="material-symbols-outlined">add_shopping_cart</span> Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="catalog-pagination">
+                <button class="page-btn"><span class="material-symbols-outlined">chevron_left</span></button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <span class="page-dots">...</span>
+                <button class="page-btn">12</button>
+                <button class="page-btn"><span class="material-symbols-outlined">chevron_right</span></button>
+            </div>
+        </main>
+        
+        <!-- FOOTER -->
+        <footer class="footer">
+            <p>Nexus Games Global Ltd. © 2024</p>
         </footer>
     </div>
 </body>
-
 </html>

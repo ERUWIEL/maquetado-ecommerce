@@ -1,0 +1,252 @@
+/* ════════════════════════════════════════
+   AUTH.CSS — Nexus Games
+   Estilos para las pantallas de Login y Registro
+   ════════════════════════════════════════ */
+
+.auth-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.auth-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 48px;
+    z-index: 10;
+}
+
+.auth-header-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.auth-header-nav {
+    display: flex;
+    gap: 24px;
+}
+
+.auth-header-nav a {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text);
+    transition: color 0.2s;
+}
+
+.auth-header-nav a:hover {
+    color: var(--primary);
+}
+
+.auth-bg-overlay {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(159, 31, 239, 0.15) 0%, rgba(27, 16, 34, 0) 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 440px;
+    z-index: 10;
+}
+
+.auth-container.register {
+    max-width: 520px;
+}
+
+.auth-card {
+    background: var(--bg-card);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.auth-title-wrapper {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.auth-title {
+    font-family: var(--font-title);
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text);
+    letter-spacing: 0.5px;
+}
+
+.auth-subtitle {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.auth-input-wrapper {
+    position: relative;
+}
+
+.auth-input-wrapper .material-symbols-outlined {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-dim);
+    font-size: 20px;
+}
+
+.auth-input-wrapper .input {
+    padding-left: 44px;
+    height: 48px;
+}
+
+.auth-forgot-link {
+    font-size: 12px;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.auth-forgot-link:hover {
+    text-decoration: underline;
+}
+
+.auth-divider {
+    display: flex;
+    align-items: center;
+    margin: 32px 0;
+    color: var(--text-dim);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+    content: '';
+    flex: 1;
+    border-top: 1px solid var(--border);
+}
+
+.auth-divider span {
+    padding: 0 16px;
+}
+
+.auth-social-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.auth-btn-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.auth-btn-social:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.auth-btn-social svg {
+    width: 20px;
+    height: 20px;
+}
+
+.auth-footer-text {
+    margin-top: 32px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.auth-footer-text a {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.auth-footer-text a:hover {
+    text-decoration: underline;
+}
+
+.auth-bottom-footer {
+    position: absolute;
+    bottom: 24px;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.auth-terms-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.auth-terms-checkbox input {
+    margin-top: 3px;
+    accent-color: var(--primary);
+}
+
+.auth-terms-checkbox label {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.auth-terms-checkbox a {
+    color: var(--primary);
+}
+
+.auth-terms-checkbox a:hover {
+    text-decoration: underline;
+}
+
+/* ── Specific for Register header ── */
+.register-header {
+    background: var(--bg-header);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+}
+
+.register-main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 24px;
+    background: radial-gradient(circle at top right, var(--primary-soft), transparent);
+}
