@@ -21,7 +21,9 @@
 }
 
 @media(min-width: 1024px) {
-    .home-topbar { padding: 16px 80px; }
+    .home-topbar {
+        padding: 16px 80px;
+    }
 }
 
 .home-topbar-inner {
@@ -40,7 +42,9 @@
 }
 
 @media(min-width: 768px) {
-    .home-nav-links { display: flex; }
+    .home-nav-links {
+        display: flex;
+    }
 }
 
 .home-nav-links a {
@@ -130,7 +134,9 @@
 }
 
 @media(min-width: 1024px) {
-    .home-main { padding: 32px 80px; }
+    .home-main {
+        padding: 32px 80px;
+    }
 }
 
 .home-section {
@@ -167,7 +173,9 @@
 }
 
 @media(min-width: 1024px) {
-    .home-hero-content { padding: 64px; }
+    .home-hero-content {
+        padding: 64px;
+    }
 }
 
 .home-hero-badge {
@@ -192,7 +200,9 @@
 }
 
 @media(min-width: 1024px) {
-    .home-hero-title { font-size: 72px; }
+    .home-hero-title {
+        font-size: 72px;
+    }
 }
 
 .home-hero-desc {
@@ -203,7 +213,9 @@
 }
 
 @media(min-width: 1024px) {
-    .home-hero-desc { font-size: 20px; }
+    .home-hero-desc {
+        font-size: 20px;
+    }
 }
 
 .home-hero-actions {
@@ -263,7 +275,9 @@
 }
 
 @media(min-width: 1024px) {
-    .home-section-title { font-size: 30px; }
+    .home-section-title {
+        font-size: 30px;
+    }
 }
 
 .home-section-title .material-symbols-outlined {
@@ -291,11 +305,15 @@
 }
 
 @media(min-width: 640px) {
-    .home-grid-trending { grid-template-columns: repeat(2, 1fr); }
+    .home-grid-trending {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media(min-width: 1024px) {
-    .home-grid-trending { grid-template-columns: repeat(4, 1fr); }
+    .home-grid-trending {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 .home-card-trending {
@@ -409,11 +427,13 @@
     overflow-x: auto;
     gap: 24px;
     padding-bottom: 24px;
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
 .home-slider::-webkit-scrollbar {
-    display: none; /* Chrome */
+    display: none;
+    /* Chrome */
 }
 
 .home-card-release {
@@ -473,7 +493,9 @@
 }
 
 @media(min-width: 1024px) {
-    .home-footer { padding: 64px 80px 32px; }
+    .home-footer {
+        padding: 64px 80px 32px;
+    }
 }
 
 .home-footer-inner {
@@ -489,11 +511,15 @@
 }
 
 @media(min-width: 768px) {
-    .home-footer-grid { grid-template-columns: repeat(2, 1fr); }
+    .home-footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media(min-width: 1024px) {
-    .home-footer-grid { grid-template-columns: repeat(4, 1fr); }
+    .home-footer-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 .home-footer-brand h2 {
