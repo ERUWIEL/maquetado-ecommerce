@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexus Games — Crear Producto</title>
+    <link rel="stylesheet" href="../css/globals.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/sidebar.css" />
+    <link rel="stylesheet" href="../css/admin-product-new.css" />
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <!-- ══════════════════════════════════════
+       TOPBAR
+  ══════════════════════════════════════ -->
+        <header class="topbar">
+            <div class="topbar-brand">
+                <div class="topbar-logo">
+                    <span class="material-symbols-outlined">videogame_asset</span>
+                </div>
+                <span class="topbar-name">NEXUS GAMES</span>
+            </div>
+
+            <div style="flex:1; max-width:480px; margin:0 32px; position:relative;">
+                <span class="material-symbols-outlined"
+                    style="position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:18px;color:var(--text-dim);">search</span>
+                <input class="input" style="padding-left:40px;" placeholder="Buscar recursos..." type="text" />
+            </div>
+
+            <div class="topbar-actions">
+                <button class="topbar-icon-btn" title="Notificaciones">
+                    <span class="material-symbols-outlined">notifications</span>
+                </button>
+                <a href="profile.html" class="topbar-icon-btn" title="Perfil">
+                    <span class="material-symbols-outlined">person</span>
+                </a>
+                <a href="login.html" class="topbar-icon-btn" title="Cerrar sesión">
+                    <span class="material-symbols-outlined">logout</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- ══════════════════════════════════════
+       SIDEBAR
+  ══════════════════════════════════════ -->
+        <nav class="sidebar">
+            <span class="sidebar-section-label">Menú</span>
+
+            <a href="../index.html" class="sidebar-link">
+                <span class="material-symbols-outlined">home</span>
+                Inicio
+            </a>
+            <a href="catalog.html" class="sidebar-link">
+                <span class="material-symbols-outlined">storefront</span>
+                Catálogo
+            </a>
+            <a href="cart.html" class="sidebar-link">
+                <span class="material-symbols-outlined">shopping_cart</span>
+                Carrito
+            </a>
+            <a href="orders.html" class="sidebar-link">
+                <span class="material-symbols-outlined">receipt_long</span>
+                Mis Pedidos
+            </a>
+
+            <div class="sidebar-divider"></div>
+
+            <span class="sidebar-section-label">Admin</span>
+
+            <a href="admin-index.html" class="sidebar-link">
+                <span class="material-symbols-outlined">dashboard</span>
+                Panel Admin
+            </a>
+            <a href="admin-users.html" class="sidebar-link">
+                <span class="material-symbols-outlined">group</span>
+                Usuarios
+            </a>
+            <a href="admin-catalog.html" class="sidebar-link active">
+                <span class="material-symbols-outlined">category</span>
+                Catálogo Admin
+            </a>
+            <a href="admin-orders.html" class="sidebar-link">
+                <span class="material-symbols-outlined">shopping_bag</span>
+                Pedidos Admin
+            </a>
+            <a href="admin-reviews.html" class="sidebar-link">
+                <span class="material-symbols-outlined">reviews</span>
+                Reseñas Admin
+            </a>
+
+            <div class="sidebar-divider"></div>
+
+            <a href="login.html" class="sidebar-link">
+                <span class="material-symbols-outlined">login</span>
+                Iniciar sesión
+            </a>
+        </nav>
+
+        <!-- ══════════════════════════════════════
+       CONTENIDO PRINCIPAL
+  ══════════════════════════════════════ -->
+        <main class="content">
+
+            <!-- Encabezado -->
+            <div class="page-header">
+                <h2>Agregar Nuevo Producto</h2>
+                <p>Registra un nuevo activo digital en la base de datos de Nexus.</p>
+            </div>
+
+            <form>
+
+                <!-- ── Sección: Datos principales (requeridos por el doc) ── -->
+                <div class="form-section">
+                    <div class="form-section-title">
+                        <span class="material-symbols-outlined">info</span>
+                        <h3>Datos del Producto</h3>
+                    </div>
+
+                    <div class="form-grid-2">
+
+                        <!-- Nombre del producto (doc 12.2.1) -->
+                        <div class="form-field">
+                            <label class="form-label" for="prod-name">Nombre del producto</label>
+                            <input class="input" id="prod-name" type="text" placeholder="ej. Neon Protocol 2077" />
+                        </div>
+
+                        <!-- Precio (doc 12.2.1) -->
+                        <div class="form-field">
+                            <label class="form-label" for="prod-price">Precio (USD)</label>
+                            <div class="input-prefix-wrap">
+                                <span>$</span>
+                                <input class="input" id="prod-price" type="number" step="0.01" placeholder="59.99" />
+                            </div>
+                        </div>
+
+                        <!-- Descripción (doc 12.2.1) — ocupa fila completa -->
+                        <div class="form-field full">
+                            <label class="form-label" for="prod-desc">Descripción</label>
+                            <textarea class="form-textarea" id="prod-desc" rows="4"
+                                placeholder="Describe las características del juego, mecánicas, historia..."></textarea>
+                        </div>
+
+                        <!-- Cantidad en stock (doc 12.2.1) -->
+                        <div class="form-field">
+                            <label class="form-label" for="prod-stock">Cantidad en stock</label>
+                            <input class="input" id="prod-stock" type="number" min="0" placeholder="100" />
+                        </div>
+
+                        <!-- Género / Categoría -->
+                        <div class="form-field">
+                            <label class="form-label" for="prod-genre">Género</label>
+                            <select class="form-select" id="prod-genre">
+                                <option>RPG / Cyberpunk</option>
+                                <option>Acción</option>
+                                <option>Sigilo / Infiltración</option>
+                                <option>Aventura narrativa</option>
+                                <option>Arcade</option>
+                                <option>Puzzle</option>
+                                <option>Estrategia</option>
+                            </select>
+                        </div>
+
+                        <!-- Plataformas (checkboxes — usa el elemento requerido) -->
+                        <div class="form-field full">
+                            <label class="form-label">Plataformas disponibles</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="platform" value="pc" /> PC
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="platform" value="ps5" /> PS5
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="platform" value="xbox" /> Xbox Series X
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="platform" value="deck" /> Nexus Deck
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ── Sección: Especificaciones + Imagen ── -->
+                <div class="form-grid-tech">
+
+                    <!-- Especificaciones técnicas -->
+                    <div class="form-section" style="margin-bottom:0;">
+                        <div class="form-section-title">
+                            <span class="material-symbols-outlined">memory</span>
+                            <h3>Especificaciones del Sistema</h3>
+                        </div>
+
+                        <div class="form-field" style="margin-bottom:16px;">
+                            <label class="form-label">Requisitos mínimos</label>
+                            <textarea class="form-textarea" rows="3"
+                                placeholder="CPU, GPU, RAM, almacenamiento..."></textarea>
+                        </div>
+
+                        <div class="form-field">
+                            <label class="form-label">Requisitos recomendados</label>
+                            <textarea class="form-textarea" rows="3"
+                                placeholder="CPU, GPU, RAM, almacenamiento..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Imagen / activo visual -->
+                    <div class="form-section" style="margin-bottom:0; display:flex; flex-direction:column;">
+                        <div class="form-section-title">
+                            <span class="material-symbols-outlined">image</span>
+                            <h3>Imagen</h3>
+                        </div>
+
+                        <div class="upload-zone" style="flex:1;">
+                            <div class="upload-icon">
+                                <span class="material-symbols-outlined">cloud_upload</span>
+                            </div>
+                            <div class="upload-title">Portada del producto</div>
+                            <div class="upload-sub">PNG, JPG o WEBP (máx. 5MB)</div>
+                            <div class="upload-link">Seleccionar archivo</div>
+                        </div>
+
+                        <div class="status-card" style="margin-top:16px;">
+                            <p>Estado del servidor</p>
+                            <div class="status-online">
+                                <span class="status-dot"></span>
+                                Servidor en línea
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- /.form-grid-tech -->
+
+                <!-- ── Botones de acción (doc 12.2.1: añadir + cancelar) ── -->
+                <div class="form-footer">
+                    <a href="admin-catalog.html" class="btn btn-ghost">
+                        Cancelar
+                    </a>
+                    <button type="submit" class="btn btn-primary">
+                        <span class="material-symbols-outlined">save</span>
+                        Añadir producto
+                    </button>
+                </div>
+
+            </form>
+
+        </main>
+
+        <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+        <footer class="footer">
+            <p>Aplicaciones Web – Unidad 2</p>
+        </footer>
+
+    </div><!-- /.layout -->
+
+</body>
+
+</html>

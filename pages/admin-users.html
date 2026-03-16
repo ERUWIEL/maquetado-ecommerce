@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexus Games — Administrar Usuarios</title>
+    <link rel="stylesheet" href="../css/globals.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/sidebar.css" />
+    <link rel="stylesheet" href="../css/admin-users.css" />
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <!-- ══════════════════════════════════════
+       TOPBAR
+  ══════════════════════════════════════ -->
+        <header class="topbar">
+            <div class="topbar-brand">
+                <div class="topbar-logo">
+                    <span class="material-symbols-outlined">videogame_asset</span>
+                </div>
+                <span class="topbar-name">NEXUS GAMES</span>
+            </div>
+
+            <div style="flex:1; max-width:480px; margin:0 32px; position:relative;">
+                <span class="material-symbols-outlined"
+                    style="position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:18px;color:var(--text-dim);">search</span>
+                <input class="input" style="padding-left:40px;" placeholder="Buscar en el sistema..." type="text" />
+            </div>
+
+            <div class="topbar-actions">
+                <a href="profile.html" class="topbar-icon-btn" title="Perfil">
+                    <span class="material-symbols-outlined">person</span>
+                </a>
+                <a href="login.html" class="topbar-icon-btn" title="Cerrar sesión">
+                    <span class="material-symbols-outlined">logout</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- ══════════════════════════════════════
+       SIDEBAR — coherente con casos de uso
+  ══════════════════════════════════════ -->
+        <nav class="sidebar">
+            <span class="sidebar-section-label">Menú</span>
+
+            <a href="../index.html" class="sidebar-link">
+                <span class="material-symbols-outlined">home</span>
+                Inicio
+            </a>
+            <a href="catalog.html" class="sidebar-link">
+                <span class="material-symbols-outlined">storefront</span>
+                Catálogo
+            </a>
+            <a href="cart.html" class="sidebar-link">
+                <span class="material-symbols-outlined">shopping_cart</span>
+                Carrito
+            </a>
+            <a href="orders.html" class="sidebar-link">
+                <span class="material-symbols-outlined">receipt_long</span>
+                Mis Pedidos
+            </a>
+
+            <div class="sidebar-divider"></div>
+
+            <span class="sidebar-section-label">Admin</span>
+
+            <a href="admin-index.html" class="sidebar-link">
+                <span class="material-symbols-outlined">dashboard</span>
+                Panel Admin
+            </a>
+            <a href="admin-users.html" class="sidebar-link active">
+                <span class="material-symbols-outlined">group</span>
+                Usuarios
+            </a>
+            <a href="admin-catalog.html" class="sidebar-link">
+                <span class="material-symbols-outlined">category</span>
+                Catálogo Admin
+            </a>
+            <a href="admin-orders.html" class="sidebar-link">
+                <span class="material-symbols-outlined">shopping_bag</span>
+                Pedidos Admin
+            </a>
+            <a href="admin-reviews.html" class="sidebar-link">
+                <span class="material-symbols-outlined">reviews</span>
+                Reseñas Admin
+            </a>
+
+            <div class="sidebar-divider"></div>
+
+            <a href="login.html" class="sidebar-link">
+                <span class="material-symbols-outlined">login</span>
+                Iniciar sesión
+            </a>
+        </nav>
+
+        <!-- ══════════════════════════════════════
+       CONTENIDO PRINCIPAL
+  ══════════════════════════════════════ -->
+        <main class="content">
+
+            <!-- Encabezado de página -->
+            <div class="page-header">
+                <div class="page-header-text">
+                    <h2>Administrar Usuarios</h2>
+                    <p>Supervisa y controla las cuentas de la plataforma Nexus.</p>
+                </div>
+                <button class="btn btn-primary">
+                    <span class="material-symbols-outlined">person_add</span>
+                    Nuevo Usuario
+                </button>
+            </div>
+
+            <!-- KPIs -->
+            <div class="users-kpi-grid">
+
+                <div class="users-kpi">
+                    <span class="material-symbols-outlined users-kpi-bg-icon">groups</span>
+                    <div class="users-kpi-label">Total de Jugadores</div>
+                    <div class="users-kpi-value">128,492</div>
+                    <div class="users-kpi-trend up">
+                        <span class="material-symbols-outlined">trending_up</span>
+                        +12% este mes
+                    </div>
+                </div>
+
+                <div class="users-kpi">
+                    <span class="material-symbols-outlined users-kpi-bg-icon">online_prediction</span>
+                    <div class="users-kpi-label">Activos Ahora</div>
+                    <div class="users-kpi-value">4,219</div>
+                    <div class="users-kpi-trend live">
+                        <span class="material-symbols-outlined">fiber_manual_record</span>
+                        Estadísticas en vivo
+                    </div>
+                </div>
+
+                <div class="users-kpi">
+                    <span class="material-symbols-outlined users-kpi-bg-icon">gavel</span>
+                    <div class="users-kpi-label">Baneados Hoy</div>
+                    <div class="users-kpi-value">12</div>
+                    <div class="users-kpi-trend danger">
+                        <span class="material-symbols-outlined">shield</span>
+                        Seguridad automática
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Tabla de usuarios -->
+            <div class="users-table-panel">
+
+                <!-- Toolbar: búsqueda y filtros -->
+                <div class="users-table-toolbar">
+                    <div class="users-search-wrap">
+                        <span class="material-symbols-outlined">search</span>
+                        <input type="text" placeholder="Buscar por ID, nombre o correo..." />
+                    </div>
+                    <div class="toolbar-filters">
+                        <button class="filter-btn">
+                            <span class="material-symbols-outlined">filter_alt</span>
+                            Todos
+                            <span class="material-symbols-outlined">expand_more</span>
+                        </button>
+                        <button class="filter-btn">
+                            <span class="material-symbols-outlined">sort</span>
+                            Fecha de registro
+                            <span class="material-symbols-outlined">expand_more</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tabla -->
+                <div class="table-wrap" style="border:none; border-radius:0;">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>ID Usuario</th>
+                                <th>Nombre</th>
+                                <th>Correo</th>
+                                <th>Fecha Registro</th>
+                                <th style="text-align:center;">Estado</th>
+                                <th style="text-align:right;">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr>
+                                <td style="font-family:monospace; color:var(--primary); font-weight:600;">#NX-001</td>
+                                <td>
+                                    <div class="user-cell">
+                                        <div class="user-avatar">CP</div>
+                                        <span class="user-name">Cipher_Punk</span>
+                                    </div>
+                                </td>
+                                <td style="color:var(--text-muted);">cipher@nexus.com</td>
+                                <td style="color:var(--text-muted);">12 Oct, 2023</td>
+                                <td style="text-align:center;">
+                                    <span class="badge badge-success">Activo</span>
+                                </td>
+                                <td>
+                                    <div class="row-actions">
+                                        <button class="action-btn edit" title="Editar">
+                                            <span class="material-symbols-outlined">edit</span>
+                                        </button>
+                                        <button class="action-btn ban" title="Banear">
+                                            <span class="material-symbols-outlined">block</span>
+                                        </button>
+                                        <button class="action-btn del" title="Eliminar">
+                                            <span class="material-symbols-outlined">delete</span>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="font-family:monospace; color:var(--primary); font-weight:600;">#NX-002</td>
+                                <td>
+                                    <div class="user-cell">
+                                        <div class="user-avatar banned">NG</div>
+                                        <span class="user-name">Neon_Ghost</span>
+                                    </div>
+                                </td>
+                                <td style="color:var(--text-muted);">ghost@matrix.net</td>
+                                <td style="color:var(--text-muted);">05 Nov, 2023</td>
+                                <td style="text-align:center;">
+                                    <span class="badge badge-danger">Baneado</span>
+                                </td>
+                                <td>
+                                    <div class="row-actions">
+                                        <button class="action-btn edit" title="Editar">
+                                            <span class="material-symbols-outlined">edit</span>
+                                        </button>
+                                        <button class="action-btn unban" title="Desbanear">
+                                            <span class="material-symbols-outlined">check_circle</span>
+                                        </button>
+                                        <button class="action-btn del" title="Eliminar">
+                                            <span class="material-symbols-outlined">delete</span>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="font-family:monospace; color:var(--primary); font-weight:600;">#NX-003</td>
+                                <td>
+                                    <div class="user-cell">
+                                        <div class="user-avatar">BR</div>
+                                        <span class="user-name">Blade_Runner</span>
+                                    </div>
+                                </td>
+                                <td style="color:var(--text-muted);">rick@replicant.io</td>
+                                <td style="color:var(--text-muted);">20 Nov, 2023</td>
+                                <td style="text-align:center;">
+                                    <span class="badge badge-success">Activo</span>
+                                </td>
+                                <td>
+                                    <div class="row-actions">
+                                        <button class="action-btn edit" title="Editar">
+                                            <span class="material-symbols-outlined">edit</span>
+                                        </button>
+                                        <button class="action-btn ban" title="Banear">
+                                            <span class="material-symbols-outlined">block</span>
+                                        </button>
+                                        <button class="action-btn del" title="Eliminar">
+                                            <span class="material-symbols-outlined">delete</span>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="font-family:monospace; color:var(--primary); font-weight:600;">#NX-004</td>
+                                <td>
+                                    <div class="user-cell">
+                                        <div class="user-avatar">SW</div>
+                                        <span class="user-name">Synth_Wave</span>
+                                    </div>
+                                </td>
+                                <td style="color:var(--text-muted);">retro@80s.com</td>
+                                <td style="color:var(--text-muted);">01 Dic, 2023</td>
+                                <td style="text-align:center;">
+                                    <span class="badge badge-success">Activo</span>
+                                </td>
+                                <td>
+                                    <div class="row-actions">
+                                        <button class="action-btn edit" title="Editar">
+                                            <span class="material-symbols-outlined">edit</span>
+                                        </button>
+                                        <button class="action-btn ban" title="Banear">
+                                            <span class="material-symbols-outlined">block</span>
+                                        </button>
+                                        <button class="action-btn del" title="Eliminar">
+                                            <span class="material-symbols-outlined">delete</span>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="font-family:monospace; color:var(--primary); font-weight:600;">#NX-005</td>
+                                <td>
+                                    <div class="user-cell">
+                                        <div class="user-avatar">DD</div>
+                                        <span class="user-name">Data_Drifter</span>
+                                    </div>
+                                </td>
+                                <td style="color:var(--text-muted);">void@null.org</td>
+                                <td style="color:var(--text-muted);">05 Dic, 2023</td>
+                                <td style="text-align:center;">
+                                    <span class="badge badge-success">Activo</span>
+                                </td>
+                                <td>
+                                    <div class="row-actions">
+                                        <button class="action-btn edit" title="Editar">
+                                            <span class="material-symbols-outlined">edit</span>
+                                        </button>
+                                        <button class="action-btn ban" title="Banear">
+                                            <span class="material-symbols-outlined">block</span>
+                                        </button>
+                                        <button class="action-btn del" title="Eliminar">
+                                            <span class="material-symbols-outlined">delete</span>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Paginación -->
+                <div class="pagination">
+                    <span class="pagination-info">Mostrando 1 a 5 de 128,492 registros</span>
+                    <div class="pagination-btns">
+                        <button class="page-btn" disabled>
+                            <span class="material-symbols-outlined">chevron_left</span>
+                        </button>
+                        <button class="page-btn active">1</button>
+                        <button class="page-btn">2</button>
+                        <button class="page-btn">3</button>
+                        <button class="page-btn">...</button>
+                        <button class="page-btn">
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div><!-- /.users-table-panel -->
+
+        </main>
+
+        <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+        <footer class="footer">
+            <p>Aplicaciones Web – Unidad 2</p>
+        </footer>
+
+    </div><!-- /.layout -->
+
+</body>
+
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexus Games — Catálogo Admin</title>
+    <link rel="stylesheet" href="../css/globals.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/sidebar.css" />
+    <link rel="stylesheet" href="../css/admin-catalog.css" />
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <!-- ══════════════════════════════════════
+       TOPBAR
+  ══════════════════════════════════════ -->
+        <header class="topbar">
+            <div class="topbar-brand">
+                <div class="topbar-logo">
+                    <span class="material-symbols-outlined">videogame_asset</span>
+                </div>
+                <span class="topbar-name">NEXUS GAMES</span>
+            </div>
+
+            <div style="flex:1; max-width:480px; margin:0 32px; position:relative;">
+                <span class="material-symbols-outlined"
+                    style="position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:18px;color:var(--text-dim);">search</span>
+                <input class="input" style="padding-left:40px;" placeholder="Buscar en el sistema..." type="text" />
+            </div>
+
+            <div class="topbar-actions">
+                <a href="profile.html" class="topbar-icon-btn" title="Perfil">
+                    <span class="material-symbols-outlined">person</span>
+                </a>
+                <a href="login.html" class="topbar-icon-btn" title="Cerrar sesión">
+                    <span class="material-symbols-outlined">logout</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- ══════════════════════════════════════
+       SIDEBAR
+  ══════════════════════════════════════ -->
+        <nav class="sidebar">
+            <span class="sidebar-section-label">Menú</span>
+
+            <a href="../index.html" class="sidebar-link">
+                <span class="material-symbols-outlined">home</span>
+                Inicio
+            </a>
+            <a href="catalog.html" class="sidebar-link">
+                <span class="material-symbols-outlined">storefront</span>
+                Catálogo
+            </a>
+            <a href="cart.html" class="sidebar-link">
+                <span class="material-symbols-outlined">shopping_cart</span>
+                Carrito
+            </a>
+            <a href="orders.html" class="sidebar-link">
+                <span class="material-symbols-outlined">receipt_long</span>
+                Mis Pedidos
+            </a>
+
+            <div class="sidebar-divider"></div>
+
+            <span class="sidebar-section-label">Admin</span>
+
+            <a href="admin-index.html" class="sidebar-link">
+                <span class="material-symbols-outlined">dashboard</span>
+                Panel Admin
+            </a>
+            <a href="admin-users.html" class="sidebar-link">
+                <span class="material-symbols-outlined">group</span>
+                Usuarios
+            </a>
+            <a href="admin-catalog.html" class="sidebar-link active">
+                <span class="material-symbols-outlined">category</span>
+                Catálogo Admin
+            </a>
+            <a href="admin-orders.html" class="sidebar-link">
+                <span class="material-symbols-outlined">shopping_bag</span>
+                Pedidos Admin
+            </a>
+            <a href="admin-reviews.html" class="sidebar-link">
+                <span class="material-symbols-outlined">reviews</span>
+                Reseñas Admin
+            </a>
+
+            <div class="sidebar-divider"></div>
+
+            <a href="login.html" class="sidebar-link">
+                <span class="material-symbols-outlined">login</span>
+                Iniciar sesión
+            </a>
+        </nav>
+
+        <!-- ══════════════════════════════════════
+       CONTENIDO PRINCIPAL
+  ══════════════════════════════════════ -->
+        <main class="content">
+
+            <!-- Encabezado -->
+            <div class="page-header">
+                <div class="page-header-text">
+                    <h2>Catálogo de Productos</h2>
+                    <p>Gestiona el inventario de juegos y activos digitales de la plataforma.</p>
+                </div>
+                <!-- Botón "Crear producto" que pide el doc sección 12.2 -->
+                <a href="admin-product-new.html" class="btn btn-primary">
+                    <span class="material-symbols-outlined">add</span>
+                    Agregar Producto
+                </a>
+            </div>
+
+            <!-- Toolbar: búsqueda y filtros -->
+            <div class="catalog-toolbar">
+                <div class="catalog-search-wrap">
+                    <span class="material-symbols-outlined">search</span>
+                    <input type="text" placeholder="Buscar por ID, título o categoría..." />
+                </div>
+                <button class="toolbar-btn">
+                    <span class="material-symbols-outlined">filter_list</span>
+                    Filtros
+                </button>
+                <button class="toolbar-btn">
+                    <span class="material-symbols-outlined">download</span>
+                    Exportar
+                </button>
+            </div>
+
+            <!-- Tabla de productos -->
+            <div class="catalog-table-panel">
+                <div class="table-wrap" style="border:none; border-radius:0;">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>ID Producto</th>
+                                <th>Nombre</th>
+                                <th style="text-align:right;">Precio</th>
+                                <th style="text-align:center;">Stock</th>
+                                <th>Categoría</th>
+                                <th style="text-align:right;">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <!-- Fila 1 -->
+                            <tr>
+                                <td style="font-family:monospace; color:var(--primary); font-weight:600;">#NX-001</td>
+                                <td>
+                                    <div class="product-cell">
+                                        <img class="product-thumb"
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ1-zJB3JYq1mdSuf6mC5nx-2lR6mJN69d1u9ciPqbSEJTBIpPqjJurIFIJXESOFpY-jOZEm1SEDUvDPsytIUlCASg3Jv9s2i67wvsnWHNO9awgawjz-TIM63gh0cV02leDj6-ZJzHpw1WkeksQws0sNg47OYaR7YTjb9FGD-VG2qYI6Q9KDyq4fPG_5Di92t0RtKIX-uf-OIqdsfCcrdPEve3uQxd_3cMG9G0gGYSc5JhZtqcOGTZxVtx3mcwZTk9k6YH-cZv0ZL0"
+                                            alt="Neon Overdrive" />
+                                        <span class="product-name">Neon Overdrive</span>
+                                    </div>
+                                </td>
+                                <td style="text-align:right; font-weight:700;">$59.99</td>
+                                <td style="text-align:center;">
+                                    <span class="badge badge-success">En stock (42)</span>
+                                </td>
+                                <td><span class="cat-badge">RPG</span></td>
+                                <td>
+                                    <div class="row-actions">
+                                        <button class="action-btn view" title="Ver detalles">
+                                            <span class="material-symbols-outlined">visibility</span>
+                                        </button>
+                                        <a href="admin-product-edit.html" class="action-btn edit" title="Editar">
+                                            <span class="material-symbols-outlined">edit</span>
+                                        </a>
+                                        <button class="action-btn del" title="Eliminar">
+                                            <span class="material-symbols-outlined">delete</span>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Fila 2 -->
+                            <tr>
+                                <td style="font-family:monospace; color:var(--primary); font-weight:600;">#NX-002</td>
+                                <td>
+                                    <div class="product-cell">
+                                        <img class="product-thumb"
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_BLxNUM9TnIY_fJeGGCTP3LQCuXDTHkj4HpQNkzSdZ5u6lIS6kBGC_m-4iaQlESuTJgR6J-fFOa7fKEp0Rr-uMwe8uxSs_ihPxIcjRL1khrZtsW4DSTX36-4r2ebyEFeGcTKhnocdcoLeZzitgoFyxBiT5E0Bmgc4i94zU5dIywwyY6YbombQZrWTIyB3lG-6qQP9lNxpBWSaF-72KUDsVUkBjwb61XKam0Pz2NZpVhnO2vnUrG9SEQ62m6Ovgr4iqAg7SVld4qy9"
+                                            alt="Cyber Strike" />
+                                        <span class="product-name">Cyber Strike</span>
+                                    </div>
+                                </td>
+                                <td style="text-align:right; font-weight:700;">$24.50</td>
+                                <td style="text-align:center;">
+                                    <span class="badge badge-warning">Stock bajo (5)</span>
+                                </td>
+                                <td><span class="cat-badge">Acción</span></td>
+                                <td>
+                                    <div class="row-actions">
+                                        <button class="action-btn view" title="Ver detalles">
+                                            <span class="material-symbols-outlined">visibility</span>
+                                        </button>
+                                        <a href="admin-product-edit.html" class="action-btn edit" title="Editar">
+                                            <span class="material-symbols-outlined">edit</span>
+                                        </a>
+                                        <button class="action-btn del" title="Eliminar">
+                                            <span class="material-symbols-outlined">delete</span>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Fila 3 -->
+                            <tr>
+                                <td style="font-family:monospace; color:var(--primary); font-weight:600;">#NX-003</td>
+                                <td>
+                                    <div class="product-cell">
+                                        <img class="product-thumb"
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjAEX47ncHDlg18Fw0tXWkHKuPdbOB75XVQkeUrcwwLvlz7lhpccTJwPZmBeNK4FYhtzScImGqWUv035kyMMcJ80f3JvK8r5YXhggmqRTuV9J2lrSk-zmBzUk5Ta5DRTCwjkFJEn_butB2uzSLcLLvvl6O7ot7N2zzlajp-wCuE9PVdMSX4Odvqfu1GIraH7QvbN8Iru21cyL16FZfjMnX4XEgGZHLpNahmvkAfrw8MQYe6zfm1TGoL-6BtcGnXGa833VBL2eHtrSL"
+                                            alt="Data Breach" />
+                                        <span class="product-name">Data Breach</span>
+                                    </div>
+                                </td>
+                                <td style="text-align:right; font-weight:700;">$15.00</td>
+                                <td style="text-align:center;">
+                                    <span class="badge badge-danger">Sin stock</span>
+                                </td>
+                                <td><span class="cat-badge">Puzzle</span></td>
+                                <td>
+                                    <div class="row-actions">
+                                        <button class="action-btn view" title="Ver detalles">
+                                            <span class="material-symbols-outlined">visibility</span>
+                                        </button>
+                                        <a href="admin-product-edit.html" class="action-btn edit" title="Editar">
+                                            <span class="material-symbols-outlined">edit</span>
+                                        </a>
+                                        <button class="action-btn del" title="Eliminar">
+                                            <span class="material-symbols-outlined">delete</span>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Fila 4 -->
+                            <tr>
+                                <td style="font-family:monospace; color:var(--primary); font-weight:600;">#NX-004</td>
+                                <td>
+                                    <div class="product-cell">
+                                        <img class="product-thumb"
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYFbgKXx9vLlC7TyfB5ZeVpXTuskNp6Bqel6n7ddgORKbcNShEY1kUIppfUP1iv4LybxanI2jDN9wDND3OgaIqJgV3vkGC2lZFT8WsS0YIzx7CD96Ivy8GPezndny2tKX063TZ8gQdHUl957EjGMSees9j7HzgBhvfKGcW04p9rKTwH5z2CacgQ8v5AxKCsplB7RjfN80fAXVFjS4HBOwSMSyFsOgPKGWw9jW9vN-6-5EWunh6VWSx7bCbYJHHOgPJ9gLGL49Tvjag"
+                                            alt="Synth Runner" />
+                                        <span class="product-name">Synth Runner</span>
+                                    </div>
+                                </td>
+                                <td style="text-align:right; font-weight:700;">$39.99</td>
+                                <td style="text-align:center;">
+                                    <span class="badge badge-success">En stock (128)</span>
+                                </td>
+                                <td><span class="cat-badge">Arcade</span></td>
+                                <td>
+                                    <div class="row-actions">
+                                        <button class="action-btn view" title="Ver detalles">
+                                            <span class="material-symbols-outlined">visibility</span>
+                                        </button>
+                                        <a href="admin-product-edit.html" class="action-btn edit" title="Editar">
+                                            <span class="material-symbols-outlined">edit</span>
+                                        </a>
+                                        <button class="action-btn del" title="Eliminar">
+                                            <span class="material-symbols-outlined">delete</span>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Paginación -->
+                <div class="pagination">
+                    <span class="pagination-info">Mostrando 1 a 4 de 24 registros</span>
+                    <div class="pagination-btns">
+                        <button class="page-btn" disabled>
+                            <span class="material-symbols-outlined">chevron_left</span>
+                        </button>
+                        <button class="page-btn active">1</button>
+                        <button class="page-btn">2</button>
+                        <button class="page-btn">3</button>
+                        <button class="page-btn">
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div><!-- /.catalog-table-panel -->
+
+        </main>
+
+        <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+        <footer class="footer">
+            <p>Aplicaciones Web – Unidad 2</p>
+        </footer>
+
+    </div><!-- /.layout -->
+
+</body>
+
+</html>

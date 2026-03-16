@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexus Games — Panel Admin</title>
+    <link rel="stylesheet" href="../css/globals.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/sidebar.css" />
+    <link rel="stylesheet" href="../css/admin-index.css" />
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <!-- ══════════════════════════════════════
+       TOPBAR
+  ══════════════════════════════════════ -->
+        <header class="topbar">
+            <div class="topbar-brand">
+                <div class="topbar-logo">
+                    <span class="material-symbols-outlined">videogame_asset</span>
+                </div>
+                <span class="topbar-name">NEXUS GAMES</span>
+            </div>
+
+            <div style="flex:1; max-width:480px; margin: 0 32px; position:relative;">
+                <span class="material-symbols-outlined"
+                    style="position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:18px;color:var(--text-dim);">search</span>
+                <input class="input" style="padding-left:40px;" placeholder="Scan system data..." type="text" />
+            </div>
+
+            <div class="topbar-actions">
+                <button class="topbar-icon-btn" style="position:relative;" title="Notificaciones">
+                    <span class="material-symbols-outlined">notifications</span>
+                    <span
+                        style="position:absolute;top:6px;right:6px;width:7px;height:7px;background:var(--primary);border-radius:50%;"></span>
+                </button>
+                <button class="topbar-icon-btn" title="Configuración">
+                    <span class="material-symbols-outlined">settings</span>
+                </button>
+                <a href="../pages/profile.html" class="topbar-icon-btn" title="Perfil">
+                    <span class="material-symbols-outlined">person</span>
+                </a>
+                <a href="../pages/login.html" class="topbar-icon-btn" title="Cerrar sesión">
+                    <span class="material-symbols-outlined">logout</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- ══════════════════════════════════════
+       SIDEBAR ADMIN
+  ══════════════════════════════════════ -->
+        <nav class="sidebar">
+            <span class="sidebar-section-label">Panel Admin</span>
+
+            <a href="admin-index.html" class="sidebar-link active">
+                <span class="material-symbols-outlined">dashboard</span>
+                Overview
+            </a>
+            <a href="admin-users.html" class="sidebar-link">
+                <span class="material-symbols-outlined">group</span>
+                Usuarios
+            </a>
+            <a href="admin-catalog.html" class="sidebar-link">
+                <span class="material-symbols-outlined">category</span>
+                Catálogo
+            </a>
+            <a href="admin-orders.html" class="sidebar-link">
+                <span class="material-symbols-outlined">shopping_cart</span>
+                Pedidos
+            </a>
+            <a href="admin-reviews.html" class="sidebar-link">
+                <span class="material-symbols-outlined">reviews</span>
+                Reseñas
+            </a>
+
+            <div class="sidebar-divider"></div>
+
+            <span class="sidebar-section-label">Tienda</span>
+            <a href="../index.html" class="sidebar-link">
+                <span class="material-symbols-outlined">home</span>
+                Ir al inicio
+            </a>
+            <a href="../pages/login.html" class="sidebar-link">
+                <span class="material-symbols-outlined">logout</span>
+                Cerrar sesión
+            </a>
+        </nav>
+
+        <!-- ══════════════════════════════════════
+       CONTENIDO PRINCIPAL
+  ══════════════════════════════════════ -->
+        <main class="content">
+
+            <!-- Encabezado de página -->
+            <div class="page-header">
+                <h2>System Overview</h2>
+                <p>Telemetría en tiempo real para Nexus Games e-commerce.</p>
+            </div>
+
+            <!-- Grid principal -->
+            <div class="dashboard-grid">
+
+                <!-- KPI: Ventas totales (ancho doble) -->
+                <div class="kpi-card kpi-sales">
+                    <div class="kpi-card-top">
+                        <div class="kpi-icon">
+                            <span class="material-symbols-outlined">payments</span>
+                        </div>
+                        <span class="kpi-trend">
+                            <span class="material-symbols-outlined">trending_up</span>
+                            +12.5%
+                        </span>
+                    </div>
+                    <div class="kpi-label">Total de Ventas</div>
+                    <div class="kpi-value large">$128,430.00</div>
+                </div>
+
+                <!-- KPI: Usuarios activos -->
+                <div class="kpi-card kpi-users">
+                    <div class="kpi-card-top">
+                        <div class="kpi-icon">
+                            <span class="material-symbols-outlined">person_pin</span>
+                        </div>
+                        <span class="kpi-trend">
+                            <span class="material-symbols-outlined">trending_up</span>
+                            +5.2%
+                        </span>
+                    </div>
+                    <div class="kpi-label">Usuarios Activos</div>
+                    <div class="kpi-value">14,202</div>
+                </div>
+
+                <!-- KPI: Nuevos pedidos -->
+                <div class="kpi-card kpi-orders">
+                    <div class="kpi-card-top">
+                        <div class="kpi-icon">
+                            <span class="material-symbols-outlined">package_2</span>
+                        </div>
+                        <span class="kpi-trend">
+                            <span class="material-symbols-outlined">trending_up</span>
+                            +8.1%
+                        </span>
+                    </div>
+                    <div class="kpi-label">Nuevos Pedidos</div>
+                    <div class="kpi-value">432</div>
+                </div>
+
+                <!-- KPI: Verificación -->
+                <div class="kpi-card kpi-verif">
+                    <div class="kpi-card-top">
+                        <div class="kpi-icon">
+                            <span class="material-symbols-outlined">pending_actions</span>
+                        </div>
+                        <span class="kpi-trend warn">12 Pendientes</span>
+                    </div>
+                    <div class="kpi-label">Verificación</div>
+                    <div class="kpi-value">24</div>
+                </div>
+
+                <!-- Panel de actividad reciente -->
+                <div class="activity-panel panel-activity">
+                    <div class="activity-panel-header">
+                        <h4>Actividad Reciente</h4>
+                        <p>Registros del sistema en vivo</p>
+                    </div>
+                    <div class="activity-list">
+
+                        <div class="activity-item">
+                            <div class="activity-dot purple"></div>
+                            <div>
+                                <div class="activity-item-title">Nuevo Pedido #8842</div>
+                                <div class="activity-item-desc">Ghost Runner 2077 — $59.99</div>
+                                <div class="activity-item-time">Hace 2 min</div>
+                            </div>
+                        </div>
+
+                        <div class="activity-item">
+                            <div class="activity-dot blue"></div>
+                            <div>
+                                <div class="activity-item-title">Registro de Usuario</div>
+                                <div class="activity-item-desc">Neon_Viper se unió</div>
+                                <div class="activity-item-time">Hace 14 min</div>
+                            </div>
+                        </div>
+
+                        <div class="activity-item">
+                            <div class="activity-dot amber"></div>
+                            <div>
+                                <div class="activity-item-title">Alerta de Stock</div>
+                                <div class="activity-item-desc">CyberDeck Pro — bajo inventario</div>
+                                <div class="activity-item-time">Hace 1 hora</div>
+                            </div>
+                        </div>
+
+                        <div class="activity-item">
+                            <div class="activity-dot purple"></div>
+                            <div>
+                                <div class="activity-item-title">Reseña Publicada</div>
+                                <div class="activity-item-desc">Elden Ring — 5 estrellas</div>
+                                <div class="activity-item-time">Hace 3 horas</div>
+                            </div>
+                        </div>
+
+                        <div class="activity-item">
+                            <div class="activity-dot blue"></div>
+                            <div>
+                                <div class="activity-item-title">Pedido Enviado</div>
+                                <div class="activity-item-desc">Pedido #8839 actualizado</div>
+                                <div class="activity-item-time">Hace 4 horas</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="activity-footer">
+                        <a href="admin-orders.html">Ver archivo completo</a>
+                    </div>
+                </div>
+
+                <!-- Panel: Tabla de transacciones -->
+                <div class="table-panel panel-table">
+                    <div class="table-panel-header">
+                        <h4>Matriz de Transacciones Recientes</h4>
+                        <button class="btn btn-outline btn-sm">
+                            <span class="material-symbols-outlined">download</span>
+                            Exportar CSV
+                        </button>
+                    </div>
+                    <div class="table-wrap" style="border:none; border-radius:0;">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID Transacción</th>
+                                    <th>Estado</th>
+                                    <th>Operador</th>
+                                    <th>Monto</th>
+                                    <th>Fecha</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="tx-id">#TX-9921</span></td>
+                                    <td><span class="badge badge-success">Completado</span></td>
+                                    <td>Alex_Rivers</td>
+                                    <td><strong>$1,240.00</strong></td>
+                                    <td style="color:var(--text-muted);">2023-11-24 14:22</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="tx-id">#TX-9920</span></td>
+                                    <td><span class="badge badge-warning">Procesando</span></td>
+                                    <td>S_Kuro</td>
+                                    <td><strong>$450.50</strong></td>
+                                    <td style="color:var(--text-muted);">2023-11-24 13:45</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="tx-id">#TX-9919</span></td>
+                                    <td><span class="badge badge-success">Completado</span></td>
+                                    <td>Neon_User_4</td>
+                                    <td><strong>$12.00</strong></td>
+                                    <td style="color:var(--text-muted);">2023-11-24 12:01</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="tx-id">#TX-9918</span></td>
+                                    <td><span class="badge badge-danger">Fallido</span></td>
+                                    <td>Ghost_X</td>
+                                    <td><strong>$89.99</strong></td>
+                                    <td style="color:var(--text-muted);">2023-11-24 11:30</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="tx-id">#TX-9917</span></td>
+                                    <td><span class="badge badge-success">Completado</span></td>
+                                    <td>Pixel_Runner</td>
+                                    <td><strong>$320.00</strong></td>
+                                    <td style="color:var(--text-muted);">2023-11-24 10:58</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div><!-- /.dashboard-grid -->
+
+        </main>
+
+        <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+        <footer class="footer">
+            <p>Aplicaciones Web – Unidad 2</p>
+        </footer>
+
+    </div><!-- /.layout -->
+
+</body>
+
+</html>
