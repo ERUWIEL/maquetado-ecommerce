@@ -1,0 +1,271 @@
+/* Header */
+.game-review-header {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin: 40px 0;
+}
+
+.game-poster img {
+    width: 180px;
+    height: 240px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.status-badge {
+    color: var(--color-primary);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.game-info h1 {
+    font-size: 48px;
+    font-family: var(--font-heading);
+    margin-bottom: 8px;
+}
+
+.game-info p {
+    color: var(--text-muted);
+    max-width: 500px;
+}
+
+/* Card Principal */
+.review-card {
+    background-color: var(--bg-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 24px;
+}
+
+.review-card h3 {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+/* Selector de Rating */
+.rating-selector {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.score-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.score-item span.material-icons { color: var(--text-muted); font-size: 28px; }
+.score-label { font-size: 10px; font-weight: 700; color: var(--text-muted); }
+
+.score-item.active {
+    border-color: var(--color-primary);
+    background: rgba(168, 36, 255, 0.1);
+    box-shadow: 0 0 20px rgba(168, 36, 255, 0.2);
+}
+
+.score-item.active span { color: var(--color-primary); }
+.score-item.active .score-label { color: var(--color-primary); }
+
+/* Switch de Recomendación */
+.recommend-box {
+    background: rgba(168, 36, 255, 0.05);
+    border-radius: 12px;
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.recommend-info { display: flex; align-items: center; gap: 16px; }
+.thumb-icon { color: var(--color-primary); font-size: 24px; }
+.recommend-info strong { font-size: 15px; display: block; }
+.recommend-info p { font-size: 12px; color: var(--text-muted); }
+
+/* Custom Switch Slider */
+.switch { position: relative; display: inline-block; width: 50px; height: 26px; }
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #333; transition: .4s; border-radius: 34px; }
+.slider:before { position: absolute; content: ""; height: 18px; width: 18px; left: 4px; bottom: 4px; background-color: white; transition: .4s; border-radius: 50%; }
+input:checked + .slider { background-color: var(--color-primary); }
+input:checked + .slider:before { transform: translateX(24px); }
+
+/* Textarea */
+.write-review label { display: block; margin-bottom: 12px; font-weight: 600; }
+.write-review textarea {
+    width: 100%;
+    height: 150px;
+    background: rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 12px;
+    padding: 20px;
+    color: white;
+    font-family: inherit;
+    resize: none;
+}
+
+.textarea-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 8px;
+}
+
+/* Post Actions */
+.post-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.post-btn { padding: 16px 48px; border-radius: 12px; font-size: 16px; box-shadow: 0 0 20px rgba(168, 36, 255, 0.4); }
+.visibility { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted); }
+
+/* Community Notice */
+.community-notice {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    gap: 16px;
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.info-icon { color: var(--color-primary); }
+
+/* Estilo base de los iconos de Material Symbols */
+.material-symbols-outlined {
+    font-size: 32px;
+    color: var(--text-muted);
+    /* Por defecto: contorno, sin relleno */
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    transition: all 0.3s ease;
+}
+
+/* Estado ACTIVO del ítem de puntuación */
+.score-item.active {
+    border-color: var(--color-primary);
+    background: rgba(168, 36, 255, 0.1);
+    box-shadow: 0 0 20px rgba(168, 36, 255, 0.2);
+}
+
+/* Modificamos el icono dentro del ítem activo */
+.score-item.active .material-symbols-outlined {
+    color: var(--color-primary);
+    /* LLENAMOS la estrella */
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    /* Efecto de resplandor neón */
+    text-shadow: 0 0 12px rgba(168, 36, 255, 0.6);
+}
+
+/* Estilo de las cajas de puntuación */
+.score-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.score-label {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+}
+
+.score-item.active .score-label {
+    color: var(--color-primary);
+}
+
+/* Estilo base de los iconos de Material Symbols (contorno, sin relleno) */
+.material-symbols-outlined {
+    font-size: 32px;
+    color: var(--text-muted);
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    transition: all 0.3s ease;
+}
+
+/* Estilo base de las cajas de puntuación (label) */
+.score-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative; /* Para posicionar el input oculto si es necesario */
+}
+
+/* Estilo de la etiqueta de puntuación */
+.score-label {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+}
+
+/* Ocultar visualmente el radio button, pero mantenerlo accesible */
+.score-item input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* --- ESTILOS CUANDO EL RADIO BUTTON ESTÁ MARCADO (:checked) --- */
+
+/* Estilo del label (.score-item) cuando su input está checked */
+.score-item:has(input[type="radio"]:checked) {
+    border-color: var(--color-primary);
+    background: rgba(168, 36, 255, 0.1);
+    box-shadow: 0 0 20px rgba(168, 36, 255, 0.2);
+}
+
+/* Icono dentro del ítem seleccionado: LLENAMOS la estrella y cambiamos color */
+.score-item input[type="radio"]:checked + .material-symbols-outlined {
+    color: var(--color-primary);
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    text-shadow: 0 0 12px rgba(168, 36, 255, 0.6);
+}
+
+/* Etiqueta dentro del ítem seleccionado: cambiamos color */
+.score-item input[type="radio"]:checked ~ .score-label {
+    color: var(--color-primary);
+}

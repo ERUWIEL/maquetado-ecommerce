@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexus Games - Tu tienda de juegos</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL,GRAD@400,1,0" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="review.css" />
+    <link rel="stylesheet" href="global.css" />
+
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container navbar-container">
+            <div class="brand">
+                <div class="brand-icon">
+                    <span class="material-symbols-outlined">stadia_controller</span>
+                </div>
+                <h1 class="brand-name">Nexus Games</h1>
+            </div>
+
+            <nav class="nav-links">
+                <a href="/home.html">Home</a>
+                <a href="/store.html" >Store</a>
+                <a href="/library.html" class="active">Library</a>
+            </nav>
+
+            <div class="nav-actions">
+                <div class="search-bar">
+                    <span class="material-symbols-outlined search-icon">search</span>
+                    <input type="text" placeholder="Search games..." />
+                </div>
+                
+                <a href="cart.html" class="icon-btn">
+                    <img src="assets/carrito.png" alt="Ir al carrito" class="custom-icon" />
+                </a>
+                
+                <a href="profile.html" class="icon-btn">
+                    <img src="assets/perfil.png" alt="Ir al perfil" class="custom-icon" />
+                </a>
+            </div>
+        </div>
+    </header>
+
+        <main class="container review-page">
+    <section class="game-review-header">
+        <div class="game-poster">
+            <img src="https://imgproxy.eneba.games/Kk1mWTA0TMMatgVLj9rGDIfECsoShPpp66WKCIrU0_U/rs:fit:300/ar:1/czM6Ly9wcm9kdWN0/cy5lbmViYS5nYW1l/cy9wcm9kdWN0cy80/WDZkWGlZRzA5dEpF/dmNuYjc4TEE5T1l4/V2VrYzlWUEk3S1FF/dWV4aGs0LmpwZWc" alt="Cyberpunk 2077">
+        </div>
+        <div class="game-info">
+            <span class="status-badge">
+                <span class="material-symbols-outlined" style="font-size: 16px; font-variation-settings: 'FILL' 1;">check_circle</span> 
+                CURRENTLY PLAYING
+            </span>
+            <h1>Cyberpunk 2077</h1>
+            <p>Night City is waiting for your story. Share your experience with the community.</p>
+        </div>
+    </section>
+
+    <form action="/submit-review" method="POST">
+        <section class="review-card">
+            <h3>How would you rate your time in Night City?</h3>
+            
+            <div class="rating-selector">
+                <label class="score-item" for="rating1">
+                    <input type="radio" id="rating1" name="game_rating" value="1" required>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="score-label"> 1</span>
+                </label>
+                <label class="score-item" for="rating2">
+                    <input type="radio" id="rating2" name="game_rating" value="2">
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="score-label"> 2</span>
+                </label>
+                <label class="score-item" for="rating3">
+                    <input type="radio" id="rating3" name="game_rating" value="3">
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="score-label"> 3</span>
+                </label>
+                <label class="score-item" for="rating4">
+                    <input type="radio" id="rating4" name="game_rating" value="4" checked>
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="score-label"> 4</span>
+                </label>
+                <label class="score-item" for="rating5">
+                    <input type="radio" id="rating5" name="game_rating" value="5">
+                    <span class="material-symbols-outlined">star</span>
+                    <span class="score-label"> 5</span>
+                </label>
+            </div>
+
+            <div class="recommend-box">
+                <div class="recommend-info">
+                    <span class="material-symbols-outlined thumb-icon">thumb_up</span>
+                    <div class="text">
+                        <strong>Would you recommend this game?</strong>
+                        <p>This helps other players decide.</p>
+                    </div>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" name="recommend" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <div class="write-review">
+                <label for="review-text">Write your review</label>
+                <textarea id="review-text" name="review_content" 
+                          placeholder="What did you think of the story, the gameplay, or the graphics?" 
+                          required minlength="50" maxlength="2000"></textarea>
+                <div class="textarea-footer">
+                    <span>Minimum 50 characters</span>
+                    <span id="char-count">0 / 2000</span>
+                </div>
+            </div>
+
+            <div class="post-actions">
+                <button type="submit" class="btn btn-primary post-btn">Post Review</button>
+                <span class="visibility">
+                    <span class="material-symbols-outlined" style="font-size: 18px;">public</span> 
+                    Visible to everyone
+                </span>
+            </div>
+        </section>
+    </form>
+
+    <div class="community-notice">
+        <span class="material-symbols-outlined info-icon">info</span>
+        <p>Please ensure your review follows our community guidelines. Avoid spoilers if possible, or use spoiler tags. Reviews that contain hate speech, harassment, or promotional content will be removed.</p>
+    </div>
+</main>
+    
+
+</body>
+</html>

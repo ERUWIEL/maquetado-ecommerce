@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexus Games - Tu tienda de juegos</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL,GRAD@400,1,0" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="checkout.css" />
+    <link rel="stylesheet" href="global.css" />
+
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container navbar-container">
+            <div class="brand">
+                <div class="brand-icon">
+                    <span class="material-symbols-outlined">stadia_controller</span>
+                </div>
+                <h1 class="brand-name">Nexus Games</h1>
+            </div>
+
+            <nav class="nav-links">
+                <a href="/home.html" class="active">Home</a>
+                <a href="/store.html">Store</a>
+                <a href="/library.html">Library</a>
+            </nav>
+
+            <div class="nav-actions">
+                <div class="search-bar">
+                    <span class="material-symbols-outlined search-icon">search</span>
+                    <input type="text" placeholder="Search games..." />
+                </div>
+                
+                <a href="cart.html" class="icon-btn">
+                    <img src="assets/carrito.png" alt="Ir al carrito" class="custom-icon" />
+                </a>
+                
+                <a href="profile.html" class="icon-btn">
+                    <img src="assets/perfil.png" alt="Ir al perfil" class="custom-icon" />
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container review-page">
+        
+        <div class="stepper-wrapper">
+            <div class="step completed">
+                <div class="step-circle">1</div>
+                <span class="step-label">Cart</span>
+            </div>
+            <div class="step-line active-line"></div>
+            
+            <div class="step completed">
+                <div class="step-circle">2</div>
+                <span class="step-label">Payment</span>
+            </div>
+            <div class="step-line active-line"></div>
+            
+            <div class="step active">
+                <div class="step-circle glow">3</div>
+                <span class="step-label active-label">Review</span>
+            </div>
+        </div>
+
+        <div class="review-grid">
+            
+            <div class="review-details-column">
+                
+                <section class="review-box">
+                    <div class="box-header">
+                        <span class="material-symbols-filled icon-purple">inventory_2</span>
+                        <h2 class="box-title">Order Items</h2>
+                    </div>
+                    
+                    <div class="order-item-list">
+                        <div class="order-item">
+                            <div class="item-left">
+                                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=80&q=80" alt="Neon Protocol">
+                                <div class="item-text">
+                                    <h4>Neon Protocol: Zero</h4>
+                                    <p>Digital Edition</p>
+                                </div>
+                            </div>
+                            <div class="item-price">$39.99</div>
+                        </div>
+                        
+                        <div class="order-item">
+                            <div class="item-left">
+                                <img src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?auto=format&fit=crop&w=80&q=80" alt="Starbound Nexus">
+                                <div class="item-text">
+                                    <h4>Starbound Nexus</h4>
+                                    <p>Premium Expansion</p>
+                                </div>
+                            </div>
+                            <div class="item-price">$37.99</div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="info-split-grid">
+                    <section class="review-box small-box">
+                        <div class="box-header split-header">
+                            <div class="header-left">
+                                <span class="material-symbols-filled icon-purple">location_on</span>
+                                <h2 class="box-title">Billing Address</h2>
+                            </div>
+                            <a href="#" class="edit-link">EDIT</a>
+                        </div>
+                        <div class="box-content text-details">
+                            <p class="bold-text">Alex Jensen</p>
+                            <p>123 Gaming Ave</p>
+                            <p>New York, NY 10001</p>
+                            <p>United States</p>
+                        </div>
+                    </section>
+
+                    <section class="review-box small-box">
+                        <div class="box-header split-header">
+                            <div class="header-left">
+                                <span class="material-symbols-filled icon-purple">credit_card</span>
+                                <h2 class="box-title">Payment Method</h2>
+                            </div>
+                            <a href="#" class="edit-link">EDIT</a>
+                        </div>
+                        <div class="box-content payment-details">
+                            <span class="material-symbols-outlined card-icon">payments</span>
+                            <div>
+                                <p class="bold-text">Credit Card</p>
+                                <p>Ending in **** 1234</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <aside class="review-summary-column">
+                
+                <div class="summary-card glow-card">
+                    <h3 class="summary-box-title">Order Summary</h3>
+                    
+                    <div class="cost-breakdown">
+                        <div class="cost-row">
+                            <span>Subtotal</span>
+                            <span class="text-white">$77.98</span>
+                        </div>
+                        <div class="cost-row">
+                            <span>Platform Fee</span>
+                            <span class="text-green">FREE</span>
+                        </div>
+                        <div class="cost-row">
+                            <span>Sales Tax</span>
+                            <span class="text-white">$0.00</span>
+                        </div>
+                    </div>
+
+                    <hr class="divider">
+
+                    <div class="cost-row total-row">
+                        <span>Total</span>
+                        <span class="total-price">$77.98</span>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="btn btn-primary btn-large">Confirm Purchase</button>
+                        <button class="btn btn-dark">
+                            <span class="material-symbols-outlined icon-small">arrow_back</span> Back to Payment
+                        </button>
+                        <button class="btn btn-ghost">
+                            <span class="material-symbols-outlined icon-small">cancel</span> CANCEL ORDER
+                        </button>
+                    </div>
+                    
+                    <p class="disclaimer-text">
+                        By clicking "Confirm Purchase", you agree to the Nexus Games Terms of Sale and acknowledge the immediate delivery of digital goods.
+                    </p>
+                </div>
+
+                <div class="help-box">
+                    <div class="help-icon-wrapper">
+                        <span class="material-symbols-filled">help</span>
+                    </div>
+                    <div class="help-text">
+                        <h4>Need help?</h4>
+                        <p>Our support team is available 24/7 to assist with your purchase or account inquiries.</p>
+                    </div>
+                </div>
+
+            </aside>
+            
+        </div>
+    </main>
+    
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Nexus Games Inc. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

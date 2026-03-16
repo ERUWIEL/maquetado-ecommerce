@@ -1,0 +1,189 @@
+/* ==========================================================================
+   PANTALLA: REVIEW (review.css)
+   ========================================================================== */
+
+.review-page {
+    padding-top: 40px;
+    padding-bottom: 80px;
+    color: var(--text-white);
+}
+
+/* ==========================================================================
+   STEPPER
+   ========================================================================== */
+.stepper-wrapper {
+    display: flex; align-items: center; justify-content: center;
+    margin: 24px 0 64px 0; gap: 16px;
+}
+
+.step { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+
+.step-circle {
+    width: 40px; height: 40px; border-radius: 50%;
+    display: flex; justify-content: center; align-items: center;
+    font-weight: 700; font-size: 14px;
+}
+
+/* Pasos completados */
+.step.completed .step-circle { background-color: var(--color-primary); color: var(--text-white); }
+/* Paso activo con glow */
+.step.active .step-circle.glow { background-color: var(--color-primary); color: var(--text-white); box-shadow: 0 0 20px 2px var(--color-primary-glow); }
+
+.step-label { font-size: 12px; color: var(--text-gray); font-weight: 500; }
+.step-label.active-label { color: var(--text-white); font-weight: 600;}
+
+.step-line { width: 60px; height: 2px; background-color: var(--border-subtle); margin-bottom: 24px; }
+.step-line.active-line { background-color: var(--color-primary); }
+
+/* ==========================================================================
+   LAYOUT
+   ========================================================================== */
+.review-grid {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 40px;
+    align-items: start;
+}
+
+/* ==========================================================================
+   COLUMNA IZQUIERDA: CAJAS DE DETALLES
+   ========================================================================== */
+.review-box {
+    background-color: var(--bg-box);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.box-header { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
+.icon-purple { color: var(--color-primary); font-size: 24px; }
+.box-title { font-family: var(--font-heading); font-size: 18px; font-weight: 700; }
+
+.order-item-list { display: flex; flex-direction: column; gap: 16px; }
+
+.order-item {
+    display: flex; justify-content: space-between; align-items: center;
+    background-color: rgba(0,0,0,0.2);
+    padding: 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.02);
+}
+
+.item-left { display: flex; align-items: center; gap: 16px; }
+.item-left img { width: 56px; height: 56px; border-radius: 6px; object-fit: cover; }
+.item-text h4 { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+.item-text p { font-size: 13px; color: var(--text-gray); }
+.item-price { font-size: 16px; font-weight: 700; color: var(--text-white); }
+
+/* Grid Inferior (Billing & Payment) */
+.info-split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.small-box { margin-bottom: 0; padding: 24px; }
+
+.split-header { justify-content: space-between; margin-bottom: 16px; }
+.header-left { display: flex; align-items: center; gap: 8px; }
+.header-left .box-title { font-size: 16px; }
+
+.edit-link { font-size: 11px; font-weight: 700; color: var(--color-primary); letter-spacing: 0.5px; }
+.edit-link:hover { text-decoration: underline; }
+
+.text-details p { font-size: 13px; color: var(--text-gray); margin-bottom: 6px; line-height: 1.4;}
+.text-details .bold-text { font-weight: 600; color: var(--text-white); margin-bottom: 8px; }
+
+.payment-details { display: flex; align-items: center; gap: 12px; }
+.card-icon { font-size: 32px; color: var(--color-primary); opacity: 0.8; }
+.payment-details p { font-size: 13px; color: var(--text-gray); }
+.payment-details .bold-text { font-weight: 600; color: var(--text-white); margin-bottom: 2px;}
+
+/* ==========================================================================
+   COLUMNA DERECHA: TARJETA DE RESUMEN
+   ========================================================================== */
+.glow-card {
+    background-color: var(--bg-box);
+    border: 1px solid rgba(168, 36, 255, 0.3); /* Borde morado visible */
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 0 40px rgba(168, 36, 255, 0.12); /* Efecto Resplandor */
+    margin-bottom: 24px;
+}
+
+.summary-box-title { font-family: var(--font-heading); font-size: 20px; font-weight: 700; margin-bottom: 24px; }
+
+.cost-breakdown { display: flex; flex-direction: column; gap: 16px; }
+.cost-row { display: flex; justify-content: space-between; align-items: center; font-size: 14px; color: var(--text-gray); }
+.text-white { color: var(--text-white) !important; font-weight: 500; }
+.text-green { color: var(--text-green) !important; font-weight: 600; letter-spacing: 0.5px;}
+
+.divider { border: none; border-top: 1px solid var(--border-subtle); margin: 24px 0; }
+
+.total-row span:first-child { font-size: 18px; font-weight: 700; color: var(--text-white); }
+.total-price { font-size: 28px; font-weight: 800; color: var(--color-primary); }
+
+.action-buttons { display: flex; flex-direction: column; gap: 12px; margin-top: 32px; }
+
+.btn {
+    width: 100%; padding: 16px; border-radius: 8px; font-size: 14px; font-weight: 600; 
+    display: flex; justify-content: center; align-items: center; gap: 8px; transition: 0.2s;
+}
+.btn-primary { background-color: var(--color-primary); color: var(--text-white); }
+.btn-primary:hover { filter: brightness(1.1); }
+
+.btn-dark { background-color: rgba(0,0,0,0.3); border: 1px solid var(--border-subtle); color: var(--text-white); }
+.btn-dark:hover { background-color: rgba(255,255,255,0.05); }
+
+.btn-ghost { color: var(--text-gray); font-size: 12px; letter-spacing: 0.5px; background: transparent;}
+.btn-ghost:hover { color: #ff4a4a; }
+.icon-small { font-size: 18px; }
+
+.disclaimer-text {
+    font-size: 10px; color: var(--text-gray); text-align: center; margin-top: 24px; line-height: 1.5; opacity: 0.7;
+}
+
+/* Caja Need Help */
+.help-box {
+    background-color: var(--bg-box); border: 1px solid var(--border-subtle); border-radius: 12px;
+    padding: 24px; display: flex; gap: 16px; align-items: flex-start;
+}
+.help-icon-wrapper {
+    background-color: var(--color-primary); border-radius: 50%; width: 28px; height: 28px;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.help-icon-wrapper span { color: white; font-size: 18px; }
+.help-text h4 { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
+.help-text p { font-size: 12px; color: var(--text-gray); line-height: 1.5; }
+
+/* ==========================================================================
+   FOOTER (Específico de la imagen)
+   ========================================================================== */
+.review-footer { background-color: var(--bg-dark); border-top: 1px solid var(--border-subtle); padding: 40px 0; }
+.footer-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+
+.secure-badge { display: flex; align-items: center; gap: 8px; color: var(--color-primary); font-size: 13px; font-weight: 500; }
+.shield-icon { font-size: 18px; }
+
+.footer-links { display: flex; gap: 24px; font-size: 13px; color: var(--text-gray); }
+.footer-links a:hover { color: var(--text-white); }
+
+.footer-divider { border: none; border-top: 1px solid var(--border-subtle); margin-bottom: 24px; }
+
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; }
+.copyright-info { display: flex; align-items: center; gap: 16px; }
+.footer-logo { font-family: var(--font-heading); font-size: 14px; font-weight: 700; color: var(--text-gray); letter-spacing: 1px;}
+.copyright-info p { font-size: 11px; color: var(--text-gray); opacity: 0.6; }
+
+.payment-badges { display: flex; gap: 8px; }
+.badge { background-color: var(--bg-box); border: 1px solid var(--border-subtle); border-radius: 4px; padding: 4px 8px; font-size: 10px; font-weight: 700; color: var(--text-gray); }
+
+/* ==========================================================================
+   RESPONSIVO
+   ========================================================================== */
+@media (max-width: 992px) {
+    .review-grid { grid-template-columns: 1fr; }
+    .footer-top { flex-direction: column; gap: 24px; text-align: center; }
+    .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+}
+
+@media (max-width: 768px) {
+    .info-split-grid { grid-template-columns: 1fr; }
+    .stepper-wrapper { gap: 8px; }
+    .step-line { width: 30px; }
+    .footer-links { flex-wrap: wrap; justify-content: center; }
+}
