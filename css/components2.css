@@ -21,6 +21,39 @@ body::before {
     z-index: 0;
 }
 
+/* ── Brand Logo ── */
+.topbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.topbar-logo {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 14px var(--primary-glow);
+}
+
+.topbar-logo .material-symbols-outlined {
+    font-size: 18px;
+    color: #fff;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.topbar-name {
+    font-family: var(--font-title);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--text);
+}
+
 /* ── Botones ── */
 .btn {
     display: inline-flex;
