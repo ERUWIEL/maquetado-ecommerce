@@ -1,0 +1,374 @@
+/* ==========================================================================
+   VARIABLES Y RESET
+   ========================================================================== */
+
+
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-light);
+    font-family: var(--font-body);
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.2s ease;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+    outline: none;
+}
+
+/* ==========================================================================
+   CABECERA (NAVBAR)
+   ========================================================================== */
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   BREADCRUMBS & TITULO
+   ========================================================================== */
+.cart-page {
+    padding-top: 32px;
+    padding-bottom: 80px;
+}
+
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    margin-bottom: 24px;
+}
+
+.link-home {
+    color: var(--color-primary);
+}
+
+.link-home:hover {
+    text-decoration: underline;
+}
+
+.separator, .current-page {
+    color: var(--text-muted);
+}
+
+.separator {
+    font-size: 16px;
+}
+
+.page-title {
+    font-family: var(--font-heading);
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+/* ==========================================================================
+   LAYOUT DEL CARRITO
+   ========================================================================== */
+.cart-layout {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 48px;
+    align-items: start;
+}
+
+/* --- TABLA IZQUIERDA --- */
+.cart-table-header {
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr;
+    align-items: center;
+    padding: 24px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.col-game { justify-self: start; }
+.col-price { justify-self: start; font-weight: 700; font-size: 16px; }
+.col-action { justify-self: end; }
+
+.item-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.item-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+}
+
+.item-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.item-subtitle {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.btn-remove {
+    background: transparent;
+    color: var(--color-danger);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.btn-remove:hover { opacity: 0.8; }
+.btn-remove span { font-size: 18px; }
+
+/* Acciones Inferiores */
+.cart-bottom-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 32px;
+}
+
+.btn-continue {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.btn-continue span { font-size: 20px; }
+
+.btn-clear {
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.btn-clear:hover { color: var(--text-light); }
+
+/* ==========================================================================
+   COLUMNA DERECHA: RESUMEN DE ORDEN
+   ========================================================================== */
+.summary-card {
+    background-color: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+}
+
+.summary-title {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+.summary-label { color: var(--text-muted); }
+.summary-value { font-weight: 600; }
+
+.summary-divider {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.05);
+    margin: 24px 0;
+}
+
+.total-row {
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.summary-label-total {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.summary-value-total {
+    font-size: 26px;
+    font-weight: 900;
+    color: var(--color-primary);
+}
+
+.btn-checkout {
+    width: 100%;
+    padding: 16px;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: var(--radius-sm);
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: 0.2s ease;
+}
+
+.btn-checkout:hover { background-color: var(--color-primary-hover); }
+
+.payment-methods {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 16px;
+    color: var(--text-muted);
+}
+
+/* Promo Code */
+.promo-label {
+    display: block;
+    font-size: 13px;
+    color: var(--text-light);
+    margin-bottom: 12px;
+}
+
+.promo-input-group {
+    display: flex;
+    gap: 12px;
+}
+
+.promo-input-group input {
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-light);
+    padding: 12px 16px;
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+}
+
+.promo-input-group input:focus { border-color: var(--color-primary); }
+
+.btn-apply {
+    background-color: rgba(168, 36, 255, 0.15);
+    color: var(--color-primary);
+    font-weight: 600;
+    padding: 0 20px;
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+}
+
+.btn-apply:hover { background-color: rgba(168, 36, 255, 0.25); }
+
+/* Caja de Info Segura */
+.secure-info-box {
+    display: flex;
+    gap: 16px;
+    background-color: var(--bg-card);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    margin-top: 24px;
+    align-items: flex-start;
+}
+
+.info-icon-wrapper {
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.info-icon {
+    color: white;
+    font-size: 16px;
+}
+
+.secure-info-box p {
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* ==========================================================================
+   FOOTER (Específico de la imagen)
+   ========================================================================== */
+.footer-simple {
+    background-color: var(--bg-main);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 32px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.shield-icon {
+    font-size: 20px;
+    color: var(--text-muted);
+}
+
+.footer-center {
+    display: flex;
+    gap: 32px;
+}
+
+.footer-center a:hover {
+    color: var(--text-light);
+}
+
+/* ==========================================================================
+   RESPONSIVO
+   ========================================================================== */
+@media (max-width: 992px) {
+    .cart-layout { grid-template-columns: 1fr; }
+    .footer-container { flex-direction: column; gap: 20px; text-align: center; }
+}
+
+@media (max-width: 576px) {
+    .cart-table-header { display: none; }
+    .cart-item { grid-template-columns: 1fr; gap: 16px; position: relative; }
+    .col-price { justify-self: start; margin-left: 100px; }
+    .col-action { position: absolute; top: 24px; right: 0; }
+    .btn-remove span { font-size: 24px; }
+    .btn-remove { font-size: 0; } 
+    .cart-bottom-actions { flex-direction: column; gap: 24px; align-items: stretch; text-align: center; }
+    .btn-continue { justify-content: center; }
+    .footer-center { flex-direction: column; gap: 12px; }
+}

@@ -1,0 +1,171 @@
+/* ==========================================================================
+   RESET Y VARIABLES BASE (Adaptadas a la imagen)
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; border: none; font-family: inherit; background: none;}
+ul { list-style: none; }
+
+
+
+/* ==========================================================================
+   STEPPER
+   ========================================================================== */
+.stepper-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 48px 0 64px 0;
+}
+
+.step { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+
+.step-circle {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    display: flex; justify-content: center; align-items: center;
+    font-weight: 700; font-size: 14px;
+}
+
+.step-circle.completed { background-color: rgba(168, 36, 255, 0.15); color: var(--color-primary); }
+.step-circle.active { background-color: var(--color-primary); color: var(--text-white); }
+.step-circle.active.glow { box-shadow: 0 0 20px 2px rgba(168, 36, 255, 0.5); }
+.step-circle.pending { background-color: var(--bg-input); color: var(--text-gray); border: 1px solid var(--border-color); }
+
+.step-label { font-size: 12px; color: var(--text-gray); font-weight: 500; }
+.step-label.active-label { color: var(--text-white); }
+
+.step-line { width: 80px; height: 2px; background-color: var(--bg-input); margin-bottom: 24px; margin-left: 16px; margin-right: 16px; }
+.step-line.active-line { background-color: var(--color-primary); }
+
+/* ==========================================================================
+   LAYOUT PRINCIPAL
+   ========================================================================== */
+.checkout-grid {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 64px;
+    align-items: start;
+    margin-bottom: 80px;
+}
+
+/* ==========================================================================
+   FORMULARIOS
+   ========================================================================== */
+.form-section { margin-bottom: 48px; }
+
+.section-title {
+    display: flex; align-items: center; gap: 12px;
+    font-family: var(--font-heading);
+    font-size: 22px; font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.icon-purple { color: var(--color-primary); font-size: 26px; }
+
+.form-group { display: flex; flex-direction: column; margin-bottom: 20px; }
+.form-group label { font-size: 13px; font-weight: 500; color: var(--text-white); margin-bottom: 8px; }
+
+.form-group input {
+    background-color: var(--bg-input);
+    border: 1px solid var(--border-color);
+    color: var(--text-white);
+    padding: 14px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+.form-group input::placeholder { color: var(--text-gray); opacity: 0.6; }
+.form-group input:focus { border-color: var(--color-primary); outline: none; }
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+.input-with-icon { position: relative; display: flex; align-items: center; }
+.input-with-icon input { width: 100%; padding-right: 48px; }
+.icon-inside { position: absolute; right: 16px; color: var(--text-gray); }
+
+/* ==========================================================================
+   ORDER SUMMARY (Derecha)
+   ========================================================================== */
+.summary-box {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 0 40px rgba(168, 36, 255, 0.12); /* Efecto Resplandor */
+
+}
+
+.summary-box-title {
+    font-family: var(--font-heading); font-size: 20px; font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.summary-items { display: flex; flex-direction: column; gap: 20px; }
+
+.item { display: flex; gap: 16px; align-items: center; }
+.item img { width: 56px; height: 56px; border-radius: 8px; object-fit: cover; }
+.item-info h4 { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+.item-info p { font-size: 12px; color: var(--text-gray); margin-bottom: 4px; }
+.item-price { font-size: 14px; font-weight: 700; color: var(--color-primary); }
+
+.divider { border: none; border-top: 1px solid var(--border-color); margin: 24px 0; }
+
+.cost-breakdown { display: flex; flex-direction: column; gap: 12px; }
+.cost-row { display: flex; justify-content: space-between; font-size: 14px; color: var(--text-gray); }
+.text-white { color: var(--text-white) !important; font-weight: 500; }
+
+.discount { color: var(--color-success); }
+.discount span { color: var(--color-success); }
+
+.total-row { align-items: center; }
+.total-row span:first-child { font-size: 18px; font-weight: 700; color: var(--text-white); }
+.total-price { font-size: 24px; font-weight: 700; color: var(--color-primary); }
+
+.action-buttons { display: flex; flex-direction: column; gap: 16px; margin-top: 32px; }
+
+.btn {
+    width: 100%; padding: 16px; border-radius: 8px; font-size: 14px; font-weight: 600; text-align: center; transition: 0.2s; display: flex; justify-content: center; align-items: center; gap: 8px;
+}
+
+.btn-primary { background-color: var(--color-primary); color: var(--text-white); }
+.btn-primary:hover { filter: brightness(1.1); }
+
+.btn-outline { background-color: transparent; border: 1px solid var(--border-color); color: var(--color-primary); }
+.btn-outline:hover { background-color: rgba(168, 36, 255, 0.05); border-color: var(--color-primary); }
+
+.btn-ghost { color: var(--text-gray); font-size: 12px; letter-spacing: 0.5px; }
+.btn-ghost:hover { color: #ff4a4a; }
+
+.secure-checkout-badge { text-align: center; margin-top: 24px; font-size: 10px; font-weight: 700; color: var(--text-gray); letter-spacing: 1px; opacity: 0.5; }
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.footer { border-top: 1px solid var(--border-color); padding: 32px 0; font-size: 13px; color: var(--text-gray); }
+.footer-content { display: flex; justify-content: space-between; align-items: center; }
+.footer-links { display: flex; gap: 32px; }
+.footer-links a:hover { color: var(--text-white); }
+
+/* ==========================================================================
+   RESPONSIVO
+   ========================================================================== */
+@media (max-width: 992px) {
+    .checkout-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+
+@media (max-width: 576px) {
+    .form-row { grid-template-columns: 1fr; gap: 0; }
+    .step-line { width: 30px; }
+    .footer-content { flex-direction: column; gap: 16px; text-align: center; }
+    .footer-links { justify-content: center; flex-wrap: wrap; gap: 16px; }
+    .nav-links, .search-bar { display: none; }
+}

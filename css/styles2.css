@@ -1,0 +1,45 @@
+body {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* public-home.html */
+.custom-scrollbar-x::-webkit-scrollbar {
+    height: 4px;
+}
+
+.custom-scrollbar-x::-webkit-scrollbar-track {
+    background: rgba(159, 31, 239, 0.1);
+}
+
+.custom-scrollbar-x::-webkit-scrollbar-thumb {
+    background: #9f1fef;
+    border-radius: 10px;
+}
+
+/* public-catalog.html */
+.custom-scrollbar-y::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-scrollbar-y::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.custom-scrollbar-y::-webkit-scrollbar-thumb {
+    background: #3a2348;
+    border-radius: 10px;
+}
+
+/* public-gameDetails.html */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.material-symbols-fill {
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* public-login.html */
+.glow-overlay {
+    background: radial-gradient(circle at 50% 50%, rgba(159, 31, 239, 0.15) 0%, rgba(27, 16, 34, 0) 70%);
+}

@@ -1,0 +1,273 @@
+/* ==========================================================================
+   FOOTER SIMPLIFICADO
+   ========================================================================== */
+.footer {
+    width: 100%;
+    background-color: var(--bg-secondary);
+    padding: 32px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center; 
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+/* ==========================================================================
+   VARIABLES GLOBALES
+   ========================================================================== */
+:root {
+    --bg-main: #17111e;
+    --bg-secondary: #1d1425;
+    --bg-card: #22182c;
+    --bg-dark: #100b16;
+    --bg-input: #1a1222;
+    --bg-box: #17101f;
+    
+    --color-primary: #a824ff;
+    --color-primary-hover: #901ad9;
+    --color-primary-glow: rgba(168, 36, 255, 0.4);
+    --color-success: #00e676;
+    
+    --text-light: #ffffff;
+    --text-white: #ffffff;
+    --text-muted: #9c92a6;
+    --text-gray: #8b8297;
+    --text-green: #00e676;
+    
+    --border-color: #2a1d38;
+    --border-subtle: #251933;
+    
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    
+    --transition: 0.3s ease;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--bg-main);
+    color: var(--text-light);
+    font-family: var(--font-body);
+    line-height: 1.5;
+    overflow-x: hidden; /* Evita scroll horizontal indeseado */
+}
+
+/* ==========================================================================
+   CONTENEDOR PRINCIPAL (El secreto de los márgenes correctos)
+   ========================================================================== */
+.container {
+    width: 95%;           /* Ocupa casi todo el ancho de la pantalla */
+    max-width: 1700px;    /* Límite muy amplio para monitores 2K o 4K */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==========================================================================
+   BOTONES BASE
+   ========================================================================== */
+.btn {
+    padding: 12px 24px;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: 14px;
+    transition: var(--transition);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--text-light);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-hover);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   CABECERA (NAVBAR)
+   ========================================================================== */
+.navbar {
+    width: 100%;
+    background-color: rgba(23, 17, 30, 0.9);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-icon {
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+}
+
+.brand-icon span {
+    font-size: 32px;
+}
+
+.brand-name {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    margin-left: 48px;
+    margin-right: auto;
+}
+
+.nav-links a {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--text-light);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.search-bar {
+    position: relative;
+    width: 250px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    font-size: 20px;
+}
+
+.search-bar input {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid transparent;
+    color: var(--text-light);
+    padding: 10px 16px 10px 40px;
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+.search-bar input:focus {
+    border-color: var(--color-primary);
+    background-color: rgba(255, 255, 255, 0.1);
+    outline: none;
+}
+
+.icon-btn {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--text-light);
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.icon-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ==========================================================================
+   RESPONSIVO (SOLO CELULARES - Máx 576px)
+   ========================================================================== */
+@media (max-width: 576px) {
+    /* 1. Permitimos que el Navbar tenga múltiples filas */
+    .navbar-container {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 16px 24px;
+    }
+
+    /* 2. TRUCO MAGICO: Hacemos que el contenedor de acciones desaparezca 
+          estructuralmente para poder separar el buscador de los iconos */
+    .nav-actions {
+        display: contents;
+    }
+
+    /* 3. FILA 1: Logo a la izquierda */
+    .brand {
+        order: 1;
+        margin-right: auto; /* Empuja los iconos a la derecha del todo */
+    }
+
+    /* 4. FILA 1: Iconos a la derecha */
+    .icon-btn {
+        order: 2;
+        margin-left: 8px; /* Pequeño espacio entre carrito y perfil */
+    }
+
+    /* 5. FILA 2: El buscador baja y ocupa toda la pantalla */
+    .search-bar {
+        order: 3;
+        width: 100%;
+        margin-top: 16px;
+        display: block; /* Por si lo tenías oculto en otra media query */
+    }
+
+    .search-bar input {
+        padding: 14px 16px 14px 40px; /* Más gordito para que sea fácil tocarlo */
+    }
+
+    /* 6. FILA 3: Los links se van al fondo con su línea separadora */
+    .nav-links {
+        order: 4;
+        display: flex; /* Aseguramos que estén visibles */
+        width: 100%;
+        margin: 16px 0 0 0;
+        padding-top: 16px;
+        justify-content: space-around;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .nav-links a {
+        font-size: 15px;
+        padding: 8px 12px; /* Área táctil más grande */
+    }
+}

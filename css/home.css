@@ -1,0 +1,303 @@
+
+
+/* ==========================================================================
+   RESET BÁSICO
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Controla el tamaño de tus imágenes personalizadas para los iconos */
+.custom-icon {
+    width: 24px;  /* Ajusta este tamaño según lo necesites */
+    height: 24px;
+    object-fit: contain; /* Asegura que la imagen no se deforme */
+}
+
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+    outline: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+/* ==========================================================================
+   SECCIONES Y COMPONENTES
+   ========================================================================== */
+.section {
+    padding: 60px 0;
+    width: 100%;
+}
+
+.section-dark {
+    background-color: var(--bg-secondary);
+    width: 100%; /* Asegura que el fondo oscuro vaya de lado a lado */
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.see-all {
+    color: var(--color-primary);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.see-all:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   BOTONES Y BADGES
+   ========================================================================== */
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-hover);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    backdrop-filter: blur(5px);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.icon-btn-outline {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--text-light);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.icon-btn-outline:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+.nav-arrows {
+    display: flex;
+    gap: 8px;
+}
+
+.badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    padding: 4px 8px;
+}
+
+.badge-primary {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.badge-new {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: var(--color-primary);
+    backdrop-filter: blur(5px);
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    z-index: 10;
+}
+
+/* ==========================================================================
+   SECCIÓN HERO (Banner Starfield)
+   ========================================================================== */
+.hero-section {
+    margin-top: 32px;
+}
+
+.hero-card {
+    width: 100%;
+    height: 600px; /* Más alto para que acompañe el ancho */
+    border-radius: var(--radius-lg);
+    background-image: 
+        linear-gradient(to top, var(--bg-main) 0%, transparent 60%),
+        url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 48px;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 600px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-family: var(--font-heading);
+    font-size: 80px;
+    font-weight: 900;
+    margin: 16px 0;
+    line-height: 1.1;
+}
+
+.hero-desc {
+    color: var(--text-muted);
+    font-size: 16px;
+    margin-bottom: 32px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+/* ==========================================================================
+   GRID Y TARJETAS DE JUEGOS
+   ========================================================================== */
+/* ==========================================================================
+   GRID Y TARJETAS DE JUEGOS
+   ========================================================================== */
+/* Grid para 5 elementos (New Releases) */
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 20px;
+}
+
+/* NUEVO: Grid para 4 elementos (Trending Now) */
+.grid-trending {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas exactas */
+    gap: 24px;
+    width: 100%;
+}
+
+.game-card {
+    cursor: pointer;
+    width: 100%; /* Evita que la tarjeta se encoja si falla la imagen */
+}
+
+.card-image {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 16px;
+    width: 100%; /* Forzar el ancho */
+    background-color: var(--bg-card); /* Color de fondo por si la imagen se rompe */
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.game-card:hover .card-image img {
+    transform: scale(1.08);
+}
+
+.landscape .card-image {
+    aspect-ratio: 16 / 9;
+}
+
+.portrait .card-image {
+    aspect-ratio: 3 / 4;
+}
+
+.game-title {
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    transition: var(--transition);
+}
+
+.game-card:hover .game-title {
+    color: var(--color-primary);
+}
+
+.game-price {
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.game-tags {
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+/* ==========================================================================
+   FOOTER SIMPLIFICADO
+   ========================================================================== */
+.footer {
+    width: 100%;
+    background-color: var(--bg-secondary);
+    padding: 32px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center; 
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+/* ==========================================================================
+   RESPONSIVO (Para que no se rompa en tablets y celulares)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .grid-4 { grid-template-columns: repeat(2, 1fr); }
+    .hero-title { font-size: 48px; }
+    .nav-links { display: none; }
+    .search-bar { display: none; }
+}
+
+@media (max-width: 576px) {
+    .grid-4 { grid-template-columns: 1fr; }
+    .hero-card { padding: 24px; height: 400px; }
+    .hero-title { font-size: 36px; }
+    .hero-buttons { flex-direction: column; }
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexus Games - Join the Universe</title>
+    <link rel="stylesheet" href="../css/globals.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/sidebar.css" />
+    <link rel="stylesheet" href="../css/auth.css" />
+</head>
+
+<body>
+    <div style="display: flex; flex-direction: column; min-height: 100vh; position: relative;">
+        <!-- EXACT AUTH HEADER -->
+        <header
+            style="width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 24px 48px; box-sizing: border-box; position: absolute; top: 0; left: 0; z-index: 100;">
+            <a href="../index.html" style="text-decoration: none; display: flex; align-items: center; gap: 12px;">
+                <img src="../images/2-removebg-preview.png" alt="Nexus Games"
+                    style="height: 32px; padding: 2px; background: rgba(139, 92, 246, 0.1); border-radius: 8px;">
+                <span style="font-size: 20px; font-weight: 700; color: #fff; letter-spacing: 1px;">NEXUS GAMES</span>
+            </a>
+            <a href="pulbic-home.html"
+                style="color: var(--text-muted); font-size: 14px; font-weight: 500; text-decoration: none; transition: color 0.2s; display: flex; align-items: center; gap: 8px;"
+                onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-muted)'">
+                <span class="material-symbols-outlined" style="font-size: 18px;">arrow_back</span> Return to Store
+            </a>
+        </header>
+
+        <main class="register-main">
+            <div class="auth-container register">
+                <div class="auth-card">
+                    <div class="auth-title-wrapper" style="text-align: left; margin-bottom: 24px;">
+                        <h1 class="auth-title">Create Account</h1>
+                        <p class="auth-subtitle">Embark on your journey across the Nexus multiverse.</p>
+                    </div>
+
+                    <form class="auth-form">
+                        <div class="input-group">
+                            <label>Username</label>
+                            <div class="auth-input-wrapper">
+                                <span class="material-symbols-outlined">person</span>
+                                <input class="input" placeholder="Unique explorer name" required="" type="text" />
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Email Address</label>
+                            <div class="auth-input-wrapper">
+                                <span class="material-symbols-outlined">mail</span>
+                                <input class="input" placeholder="email@nexus.com" required="" type="email" />
+                            </div>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                            <div class="input-group">
+                                <label>Password</label>
+                                <div class="auth-input-wrapper">
+                                    <span class="material-symbols-outlined">lock</span>
+                                    <input class="input" placeholder="••••••••" required="" type="password" />
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>Confirm Password</label>
+                                <div class="auth-input-wrapper">
+                                    <span class="material-symbols-outlined">verified_user</span>
+                                    <input class="input" placeholder="••••••••" required="" type="password" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="auth-terms-checkbox">
+                            <input id="terms" required="" type="checkbox" />
+                            <label for="terms">
+                                I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>, and
+                                I am at least 13 years old.
+                            </label>
+                        </div>
+
+                        <button class="btn btn-primary"
+                            style="width: 100%; justify-content: center; height: 48px; gap: 8px;" type="submit">
+                            <span>Create Account</span>
+                            <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
+                        </button>
+
+                        <div class="auth-divider">
+                            <span>Or register with</span>
+                        </div>
+
+                        <div class="auth-social-grid">
+                            <button class="auth-btn-social" type="button">
+                                <svg fill="currentColor" viewbox="0 0 24 24">
+                                    <path
+                                        d="M12.48 10.92v3.28h7.84c-.24 1.84-.908 3.152-1.928 4.176-1.228 1.224-3.136 2.58-6.6 2.58-5.392 0-9.712-4.384-9.712-9.72s4.32-9.72 9.712-9.72c2.928 0 5.12 1.152 6.696 2.64l2.304-2.304C18.528 1.848 15.936 0 12.48 0 6.132 0 1.044 5.088 1.044 11.424s5.088 11.424 11.436 11.424c3.696 0 6.48-1.212 8.688-3.512 2.268-2.268 2.976-5.4 2.976-7.896 0-.588-.048-1.14-.144-1.536h-11.52z">
+                                    </path>
+                                </svg>
+                                Google
+                            </button>
+                            <button class="auth-btn-social" type="button">
+                                <svg fill="currentColor" viewbox="0 0 24 24">
+                                    <path
+                                        d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z">
+                                    </path>
+                                </svg>
+                                Meta
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer class="auth-footer"
+            style="padding: 24px; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); margin-top: auto;">
+            <p style="color: var(--text-muted); font-size: 14px;">© 2024 Nexus Games. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
